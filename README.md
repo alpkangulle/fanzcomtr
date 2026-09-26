@@ -1,4 +1,10 @@
-# Fans — bağımsız sunucu sürümü
+# Fanz — sanatçı topluluk platformu
+
+Bu depo, çalışan Fans uygulamasının bağımsız Next.js kaynak kodudur. `alpkangulle/wai.com.tr` içindeki `apps/fans` ağacından 27 Eylül 2026'da dosya içerikleri doğrulanarak ayrıldı. Bundan sonraki Fans geliştirmeleri burada tutulur.
+
+**Şu anki yayın:** https://fans.wai.com.tr — VPS üzerindeki `/home/deploy/fans/current` ve paylaşılan SQLite/medya dizini.
+
+**Hedef domain:** `fanz.com.tr`. DNS, HTTPS, Nginx, `SITE_ORIGIN`, canonical/sitemap ve eski adresten 301 geçişi tamamlanana kadar yeni domain canlı kabul edilmez. Bu GitHub deposuna kod yüklemek sunucuyu otomatik yayımlamaz.
 
 Next.js + Node 22 + SQLite. Marka geçicidir; `lib/site-config.ts` üzerinden yönetilir.
 
