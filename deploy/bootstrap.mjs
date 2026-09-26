@@ -1,0 +1,4 @@
+import {existsSync,mkdirSync,writeFileSync,chmodSync} from 'node:fs';
+import {randomBytes,scryptSync} from 'node:crypto';
+const root='/home/deploy/fans/shared';mkdirSync(root,{recursive:true,mode:0o700});const file=root+'/runtime.env';
+if(!existsSync(file)){const password=randomBytes(24).toString('base64url'),salt=randomBytes(16).toString('hex');const hash=scryptSync(password,salt,64).toString('hex');writeFileSync(file,`SITE_ORIGIN=https://fans.wai.com.tr\nDATABASE_PATH=${root}/fans.sqlite\nADMIN_PASSWORD_HASH=${salt}:${hash}\nADMIN_SESSION_SECRET=${randomBytes(48).toString('hex')}\n`,{mode:0o600});writeFileSync(root+'/admin-initial-password.txt',password+'\n',{mode:0o600});console.log('Admin credentials created in protected shared directory; values not printed.')}else console.log('Existing runtime settings preserved.');chmodSync(file,0o600);

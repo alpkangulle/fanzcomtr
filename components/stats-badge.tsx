@@ -1,0 +1,8 @@
+'use client';
+import {useEffect,useState} from 'react';
+import {Heart,MessageCircle,Eye} from 'lucide-react';
+type Stats={likes:number;comments:number;views:number};
+const waiting=new Map<string,Array<(stats:Stats)=>void>>();let timer:ReturnType<typeof setTimeout>|null=null;
+async function flush(){timer=null;const batch=[...waiting.entries()];waiting.clear();for(let i=0;i<batch.length;i+=40){const group=batch.slice(i,i+40);try{const r=await fetch('/api/engagement/stats?targets='+encodeURIComponent(group.map(([key])=>key).join(',')),{cache:'no-store'});const data=await r.json();for(const [key,callbacks] of group)for(const fn of callbacks)fn(data.stats?.[key]??{likes:0,comments:0,views:0})}catch{for(const [,callbacks] of group)for(const fn of callbacks)fn({likes:0,comments:0,views:0})}}}
+function query(target:string,fn:(stats:Stats)=>void){waiting.set(target,[...(waiting.get(target)??[]),fn]);if(!timer)timer=setTimeout(()=>void flush(),0)}
+export default function StatsBadge({target}:{target:string}){const [stats,setStats]=useState<Stats>({likes:0,comments:0,views:0});useEffect(()=>{query(target,setStats);const change=(e:Event)=>{const d=(e as CustomEvent<{target:string;likes:number;comments:number;views:number}>).detail;if(d.target===target)setStats(s=>({likes:d.likes??s.likes,comments:d.comments??s.comments,views:d.views??s.views}))};document.addEventListener('fans:stats',change);return()=>document.removeEventListener('fans:stats',change)},[target]);return <span className="stats-badge" aria-label={`${stats.views} görüntülenme, ${stats.likes} beğeni, ${stats.comments} yorum`}><span><Eye size={12}/>{stats.views}</span><span><Heart size={12}/>{stats.likes}</span><span><MessageCircle size={12}/>{stats.comments}</span></span>}

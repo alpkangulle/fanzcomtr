@@ -1,0 +1,4 @@
+import media from '@/lib/artist-media.json';
+export const artistMedia:Record<string,{src:string;source:string;author:string;license:string;licenseUrl:string;caption:string}>=media;
+export function MediaCredit({artist}:{artist:string}){const m=artistMedia[artist];return <p className="credit">Arşiv fotoğrafı · {m.author} · <a href={m.licenseUrl} target="_blank" rel="noreferrer">{m.license}</a> · <a href={m.source} target="_blank" rel="noreferrer">Orijinal ve kaynak</a>. Kartlarda kadraja uyarlanmıştır; duyurulan etkinliğin fotoğrafı değildir.</p>}
+export function ArtistPhoto({artist,name}:{artist:string;name:string}){return <figure className="gallery-photo"><img src={artistMedia[artist].src} alt={name+' arşiv fotoğrafı'} loading="lazy"/><figcaption><MediaCredit artist={artist}/></figcaption></figure>}

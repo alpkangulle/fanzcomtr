@@ -1,0 +1,74 @@
+{
+  "semicenk": {
+    "src": "/images/artists/semicenk.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Semicenk_(Dec_2024)_(cropped).png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/5/51/Semicenk_%28Dec_2024%29_%28cropped%29.png",
+    "author": "Magazin Burada",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "caption": "Semicenk during a 2024 interview"
+  },
+  "tarkan": {
+    "src": "/images/artists/tarkan.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Tarkan_(9).jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/6/62/Tarkan_%289%29.jpg",
+    "author": "Hakki.T (Hakki Topcu)",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "caption": "Turkish singer Tarkan."
+  },
+  "mabel-matiz": {
+    "src": "/images/artists/mabel-matiz.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mabel_Matiz_-_15._Radyo_Bo%C4%9Fazi%C3%A7i_%C3%96d%C3%BClleri_(1)_-_cropped.jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Mabel_Matiz_-_15._Radyo_Bo%C4%9Fazi%C3%A7i_%C3%96d%C3%BClleri_%281%29_-_cropped.jpg",
+    "author": "MHIRM",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "caption": "Turkish singer Mabel Matiz during 15th Radio Boğaziçi Music Awards."
+  },
+  "manifest": {
+    "src": "/images/artists/manifest.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Manifest_Bursa_050626.jpg",
+    "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Manifest_Bursa_050626.jpg/1280px-Manifest_Bursa_050626.jpg",
+    "author": "ZethRod",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "caption": "Manifest Bursa Konseri"
+  },
+  "sezen-aksu": {
+    "src": "/images/artists/sezen-aksu.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Sezen_Aksu_IT%C3%9C_cropped.JPG",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Sezen_Aksu_IT%C3%9C_cropped.JPG",
+    "author": "Lubunya",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "caption": "Sezen Aksu'nun İstanbul Teknik Üniversitesi'nde gerçekleşen konserinden sahne performansını sergilerken görünüm, 2013."
+  },
+  "duman": {
+    "src": "/images/artists/duman.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Turkish_rock_band_Duman_performing_live_at_the_100th_MayDay_festival_of_%C3%9Csk%C3%BCdar_American_Academy,_2024.jpg",
+    "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Turkish_rock_band_Duman_performing_live_at_the_100th_MayDay_festival_of_%C3%9Csk%C3%BCdar_American_Academy%2C_2024.jpg/1280px-Turkish_rock_band_Duman_performing_live_at_the_100th_MayDay_festival_of_%C3%9Csk%C3%BCdar_American_Academy%2C_2024.jpg",
+    "author": "Ua1876",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Renowned Turkish rock band Duman performing at the 100th MayDay Festival, Üsküdar American Academy, 2024."
+  },
+  "hadise": {
+    "src": "/images/artists/hadise.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hadise_A%C3%A7%C4%B1kg%C3%B6z.jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/d/db/Hadise_A%C3%A7%C4%B1kg%C3%B6z.jpg",
+    "author": "Michel Vuijlsteke",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "caption": "Hadise, 0110 concert on 1 November 2006 in Gent, Belgium"
+  },
+  "ceza": {
+    "src": "/images/artists/ceza.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Bilgin_%C3%96z%C3%A7alkan_(cropped).jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Bilgin_%C3%96z%C3%A7alkan_%28cropped%29.jpg",
+    "author": "Akdenizaslanı",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "caption": "Veron Algos, Ceza ile Birlikte (2018)"
+  }
+}

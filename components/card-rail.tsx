@@ -1,0 +1,11 @@
+'use client';
+import {Children,useRef,type ReactNode} from 'react';
+import {ArrowLeft,ArrowRight} from 'lucide-react';
+export default function CardRail({label,children,className=''}:{label:string;children:ReactNode;className?:string}){
+ const rail=useRef<HTMLDivElement>(null),drag=useRef<{x:number;scroll:number;moved:boolean}|null>(null),suppress=useRef(false),cards=Children.toArray(children);
+ function move(direction:number){const el=rail.current,first=el?.firstElementChild as HTMLElement|null;if(!el||!first)return;const gap=parseFloat(getComputedStyle(el).gap)||0;el.scrollBy({left:direction*(first.offsetWidth+gap)*2,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})}
+ function down(e:React.MouseEvent){if(e.button!==0)return;const el=rail.current;if(!el)return;drag.current={x:e.clientX,scroll:el.scrollLeft,moved:false};suppress.current=false}
+ function dragging(e:React.MouseEvent){if(!drag.current||!rail.current)return;const delta=e.clientX-drag.current.x;if(Math.abs(delta)>5){drag.current.moved=true;rail.current.style.scrollSnapType='none';rail.current.style.userSelect='none';rail.current.style.cursor='grabbing';rail.current.scrollLeft=drag.current.scroll-delta}}
+ function end(){if(!drag.current)return;suppress.current=drag.current.moved;drag.current=null;if(rail.current){rail.current.style.scrollSnapType='';rail.current.style.userSelect='';rail.current.style.cursor=''}if(suppress.current)setTimeout(()=>suppress.current=false,100)}
+ return <div className="rail-shell"><div className="desktop-rail-controls"><button type="button" aria-label={label+' önceki kartlar'} onClick={()=>move(-1)}><ArrowLeft size={20}/></button><button type="button" aria-label={label+' sonraki kartlar'} onClick={()=>move(1)}><ArrowRight size={20}/></button></div><div ref={rail} className={'content-rail peek-rail '+className} role="region" aria-label={label+' · yatay kaydır'} tabIndex={0} onDragStart={e=>e.preventDefault()} onMouseDown={down} onMouseMove={dragging} onMouseUp={end} onMouseLeave={end} onClickCapture={e=>{if(suppress.current){e.preventDefault();e.stopPropagation();suppress.current=false}}} onKeyDown={e=>{if(e.target!==e.currentTarget)return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();move(e.key==='ArrowRight'?1:-1)}}}>{cards}</div></div>
+}
