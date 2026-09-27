@@ -13,11 +13,11 @@ export async function POST(req:Request){if(!sameOrigin(req))return json({error:'
  if(data.action==='sync'){
   if(!Array.isArray(data.artists)||data.artists.length>20||!data.artists.every(a=>typeof a==='string'&&validArtist(a)))return json({error:'Geçersiz sanatçı.'},400);
   for(const artist of data.artists)await db.prepare('INSERT OR IGNORE INTO artist_follows(artist,visitor_key,created) VALUES(?,?,?)').bind(artist,key,now).run();
- }else if(data.action==='toggle'){
+ }else if((data.action==='toggle'||data.action==='remove')){
   const artist=typeof data.artist==='string'?data.artist:'';if(!validArtist(artist))return json({error:'Geçersiz sanatçı.'},400);
   const row=await db.prepare('SELECT 1 FROM artist_follows WHERE artist=? AND visitor_key=?').bind(artist,key).first();
   if(row)await db.prepare('DELETE FROM artist_follows WHERE artist=? AND visitor_key=?').bind(artist,key).run();
-  else await db.prepare('INSERT INTO artist_follows(artist,visitor_key,created) VALUES(?,?,?)').bind(artist,key,now).run();
+  else if(data.action!=='remove')await db.prepare('INSERT INTO artist_follows(artist,visitor_key,created) VALUES(?,?,?)').bind(artist,key,now).run();
  }else return json({error:'Geçersiz işlem.'},400);
  const cookie=token?`${COOKIE}=${token}; HttpOnly; SameSite=Lax; Path=/; Max-Age=31536000${process.env.SITE_ORIGIN?.startsWith('https:')?'; Secure':''}`:undefined;
  return json(await snapshot(key),200,cookie);

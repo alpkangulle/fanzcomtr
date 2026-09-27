@@ -28,7 +28,7 @@ export default async function sitemap():Promise<MetadataRoute.Sitemap>{
   for(const song of songs)if(song.videoId||song.info)pages.push({url:siteOrigin+songHref(song),lastModified:song.updated?new Date(song.updated):latest(own.filter(r=>r.id===song.albumId))});
  }
  for(const r of entries)pages.push({url:`${siteOrigin}/${r.artist}/${r.kind}/${r.slug}`,lastModified:modified(r.updated)});
- pages.push({url:siteOrigin+'/top-listeler'},{url:siteOrigin+'/gorsel-kaynaklari'});
+ pages.push({url:siteOrigin+'/sohbetler'},{url:siteOrigin+'/top-listeler'},{url:siteOrigin+'/gorsel-kaynaklari'});
  const pilotCatalog=await artistCatalog('semicenk');
  for(const p of pages)if(['/semicenk','/semicenk/sarkilar','/semicenk/sarki-sozleri','/semicenk/galeri'].includes(new URL(p.url).pathname))p.lastModified=new Date(Math.max(p.lastModified?new Date(p.lastModified).getTime():0,pilotCatalog.updated));
  const bios=(await channelDb().prepare('SELECT artist,updated FROM artist_content').all()).results;

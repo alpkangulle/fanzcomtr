@@ -7,13 +7,11 @@ export default function SiteHeader(){
  const path=usePathname();
  if(path.startsWith('/admin'))return null;
  const artist=path.split('/')[1];
- const chat=artistIds.some(id=>id===artist)?`/${artist}#kanal`:'/semicenk#kanal';
  const links=[
   {href:'/akis',label:'Ana',active:path==='/akis'},
   {href:'/',label:'Keşfet',active:path==='/'||artistIds.some(id=>id===artist)},
   {href:'/top-listeler',label:'Top listeler',active:path==='/top-listeler'},
-  {href:'/takip',label:'Takip',active:path==='/takip'},
-  {href:chat,label:'Sohbet',active:false},
+  {href:'/sohbetler',label:'Sohbet',active:path==='/sohbetler'},
   {href:'/profil',label:'Profil',active:path==='/profil'||path.startsWith('/fanz/')}
  ];
  return <header className="global-header">
