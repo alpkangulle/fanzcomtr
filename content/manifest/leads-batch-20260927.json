@@ -1,0 +1,135 @@
+{
+  "artist": "manifest",
+  "operations": [
+    {
+      "type": "entry",
+      "id": "manifest-albumler-zamansizdik",
+      "kind": "albumler",
+      "slug": "zamansizdik",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Manifest’in 7 Şubat 2025 tarihli Zamansızdık single’ı, ilk albümden önceki başlangıç kaydı; yayın tarihi ve albüm bağlantısı."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-ariyo",
+      "kind": "albumler",
+      "slug": "ariyo",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Manifest’in 11 Nisan 2025 tarihli Arıyo single’ı; özgün kayıt ile daha sonra yayımlanan Zeki Arkun remiksinin ayrımı."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "real-manifest-albumler",
+      "kind": "albumler",
+      "slug": "manifestival",
+      "expectedRevision": 4,
+      "values": {
+        "summary": "Manifest’in 13 Haziran 2025’te yayımladığı ilk albüm: 11 şarkılık sıra, yayın künyesi ve resmî dinleme bağlantısı."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-manifestival-deluxe",
+      "kind": "albumler",
+      "slug": "manifestival-deluxe",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Manifest’in 5 Eylül 2025 tarihli 16 parçalık deluxe albümü; ilk 11 şarkıya eklenen beş farklı düzenleme."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-ruya",
+      "kind": "albumler",
+      "slug": "ruya",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Manifest’in 3 Ekim 2025 tarihli RÜYA single’ı, ilk albüm sonrası bağımsız yayın; albümden ayrı künye ve dinleme adresi."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-amator",
+      "kind": "albumler",
+      "slug": "amator",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Manifest’in 5 Aralık 2025 tarihli Amatör single’ı; resmî video, yayın künyesi ve RÜYA sonrası diskografi bağlamı."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-basrol-sensin",
+      "kind": "albumler",
+      "slug": "basrol-sensin",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Manifest’in 13 Şubat 2026 tarihli Başrol Sensin (1. Yıl Özel) single’ı; yayın adı, tarih ve şarkı bağlantısı."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-manifest-arem-arman-remix",
+      "kind": "albumler",
+      "slug": "manifest-arem-arman-remix",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Manifest şarkısının 27 Şubat 2026 tarihli Arem & Arman remiksi; 2025 albüm kaydından ayrı bir sürüm."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-zehir-arem-arman-remix",
+      "kind": "albumler",
+      "slug": "zehir-arem-arman-remix",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Zehir’in 6 Mart 2026 tarihli Arem & Arman remiksi; albümdeki özgün kayıt ve Motive remiksinden ayrı."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-daha-iyi",
+      "kind": "albumler",
+      "slug": "daha-iyi",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Manifest’in 3 Nisan 2026 tarihli Daha İyi single’ı; kendi kapak görseli, resmî videosu ve dinleme bağlantısı."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-hileli",
+      "kind": "albumler",
+      "slug": "hileli",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Manifest ve Ajda Pekkan’ın 8 Mayıs 2026 tarihli ortak Hileli single’ı; iki sanatçı adıyla doğrulanan yayın."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-toz-pembe",
+      "kind": "albumler",
+      "slug": "toz-pembe",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Manifest’in 3 Temmuz 2026 tarihli Toz Pembe single’ı; şarkı künyesi, resmî video ve dinleme adresi."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-pvg-manifest-live-remix",
+      "kind": "albumler",
+      "slug": "pvg-manifest-live-remix",
+      "expectedRevision": 3,
+      "values": {
+        "summary": "Manifest, Motive ve Pango’nun 24 Temmuz 2026 tarihli pVg canlı remiksi; ortak sanatçı künyesi ve sürüm bilgisi."
+      }
+    }
+  ]
+}

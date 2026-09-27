@@ -1,0 +1,835 @@
+{
+  "artist": "manifest",
+  "operations": [
+    {
+      "type": "entry",
+      "id": "manifest-albumler-zamansizdik",
+      "kind": "albumler",
+      "slug": "zamansizdik",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\nZamansızdık, Manifest’in 7 Şubat 2025 tarihli single yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. Grubun ilk dönemine açılan bu kayıt, manifestival albümünden önce bağımsız bir single olarak dinleyiciye ulaştı. Albümde aynı adlı şarkı da yer alır; iki ayrı çıkış sayfası yerine bu single’ın tarihini ve albümdeki parça konumunu birlikte okumak daha açıklayıcıdır. Grubun ilk yayınından albüm aşamasına geçişini izlemek isteyenler için başlangıç noktasıdır.\n\n## Şarkılar ve katalogdaki yeri\nTek şarkılık yayın aşağıdaki parça bağlantısıyla kendi künye sayfasına gider. Manifest şarkıları arasında bu kaydın dönemini görmek için Arıyo ve manifestival sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 7 Şubat 2025 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in Zamansızdık yayını: 7 Şubat 2025 çıkış tarihi, şarkı künyesi, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-ariyo",
+      "kind": "albumler",
+      "slug": "ariyo",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\nArıyo, Manifest’in 11 Nisan 2025 tarihli single yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. Zamansızdık’tan sonra ve manifestival albümünden önce gelen Arıyo, albümün şarkı listesinde de bulunur. Deluxe sürümdeki Arıyo (Zeki Arkun Remix) ise özgün kaydın farklı düzenlemesidir; tarih ve sürüm bilgilerini birbirinden ayırmak gerekir. Bu sayfa Nisan single’ının künyesine odaklanır.\n\n## Şarkılar ve katalogdaki yeri\nTek şarkılık yayın aşağıdaki parça bağlantısıyla kendi künye sayfasına gider. Manifest şarkıları arasında bu kaydın dönemini görmek için Zamansızdık ve manifestival (deluxe) sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 11 Nisan 2025 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in Arıyo yayını: 11 Nisan 2025 çıkış tarihi, şarkı künyesi, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "real-manifest-albumler",
+      "kind": "albumler",
+      "slug": "manifestival",
+      "expectedRevision": 3,
+      "values": {
+        "body": "## Yayın ve bağlam\nmanifestival, Manifest’in 13 Haziran 2025 tarihli albüm yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. İlk albümün sırası Intro ile açılır; Snap, KTS, Arıyo ve Manifest’in ardından Zehir, Hayır, Zamansızdık, Yaşanacaksa, Durma ve Outro gelir. Parça listesi ve yayın tarihi Apple Music üzerinden kontrol edildi. Yaşanacaksa, Çıtır Kızlar’ın Yaşanacaksa Yaşanacak eserine dayanan yeni yorum olarak ayrıca not edilir. Albümün özgün sürümünü sonradan çıkan deluxe düzenlemelerle karıştırmıyoruz.\n\n## Şarkılar ve katalogdaki yeri\nBu sürümde 11 parça bulunur; ayrıntılı sıralama aşağıdadır. Manifest şarkıları arasında bu kaydın dönemini görmek için Zamansızdık ve manifestival (deluxe) sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 13 Haziran 2025 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in manifestival yayını: 13 Haziran 2025 çıkış tarihi, 11 parçalık liste, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-manifestival-deluxe",
+      "kind": "albumler",
+      "slug": "manifestival-deluxe",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\nmanifestival (deluxe), Manifest’in 5 Eylül 2025 tarihli albüm yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. Bu sürüm ilk albümün 11 şarkısını koruyup beş ek düzenleme getirir: Rampapapam (Arem Ozguc & Arman Aydin Remix), Arıyo (Zeki Arkun Remix), Zehir (Motive Remix), Hayır (AYDEED Remix) ve Outro (Extended Version). Aynı özgün kayıtları iki kez yeni şarkıymış gibi saymıyoruz. Deluxe parça sırası ve süreleri Shazam ile MusicBrainz kayıtlarıyla karşılaştırıldı.\n\n## Şarkılar ve katalogdaki yeri\nBu sürümde 16 parça bulunur; ayrıntılı sıralama aşağıdadır. Manifest şarkıları arasında bu kaydın dönemini görmek için manifestival ve Arıyo (Zeki Arkun Remix) sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 5 Eylül 2025 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in manifestival (deluxe) yayını: 5 Eylül 2025 çıkış tarihi, 16 parçalık liste, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-ruya",
+      "kind": "albumler",
+      "slug": "ruya",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\nRÜYA, Manifest’in 3 Ekim 2025 tarihli single yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. RÜYA, manifestival ve deluxe sürümün ardından 2025 sonbaharında yayımlanan ayrı bir single’dır. İlk albümün 11 şarkılık sırasına sonradan eklenmiş bir parça gibi gösterilmemesi diskografiyi doğru okumayı sağlar. Bu dönemi takip ederken Aralık ayında gelen Amatör kaydına da bakılabilir.\n\n## Şarkılar ve katalogdaki yeri\nTek şarkılık yayın aşağıdaki parça bağlantısıyla kendi künye sayfasına gider. Manifest şarkıları arasında bu kaydın dönemini görmek için manifestival (deluxe) ve Amatör sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 3 Ekim 2025 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in RÜYA yayını: 3 Ekim 2025 çıkış tarihi, şarkı künyesi, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-amator",
+      "kind": "albumler",
+      "slug": "amator",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\nAmatör, Manifest’in 5 Aralık 2025 tarihli single yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. Amatör, RÜYA’dan sonraki 2025 sonu yayınıdır. Apple Music’te bağımsız single olarak yer alması, onu manifestival albümündeki şarkılardan ayırır. Resmî YouTube videosu doğrulanan kayıtlar arasında olduğundan bu sayfadaki şarkı bağlantısı dinleme ve video bilgisine de götürür.\n\n## Şarkılar ve katalogdaki yeri\nTek şarkılık yayın aşağıdaki parça bağlantısıyla kendi künye sayfasına gider. Manifest şarkıları arasında bu kaydın dönemini görmek için RÜYA ve Başrol Sensin (1. Yıl Özel) sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 5 Aralık 2025 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in Amatör yayını: 5 Aralık 2025 çıkış tarihi, şarkı künyesi, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-basrol-sensin",
+      "kind": "albumler",
+      "slug": "basrol-sensin",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\nBaşrol Sensin (1. Yıl Özel), Manifest’in 13 Şubat 2026 tarihli single yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. Başrol Sensin (1. Yıl Özel) adıyla çıkan kayıt, grubun 2026 başındaki yayın takviminde tek şarkılık bir sürümdür. Başlığındaki “1. Yıl Özel” ifadesi yayının resmî adının parçasıdır; albüm adı veya ayrı bir konser serisi değildir. Şubat sonundaki Manifest remiksiyle birlikte dönemin yayın sırasını görmeye yardımcı olur.\n\n## Şarkılar ve katalogdaki yeri\nTek şarkılık yayın aşağıdaki parça bağlantısıyla kendi künye sayfasına gider. Manifest şarkıları arasında bu kaydın dönemini görmek için Amatör ve Manifest (Arem & Arman Remix) sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 13 Şubat 2026 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in Başrol Sensin (1. Yıl Özel) yayını: 13 Şubat 2026 çıkış tarihi, şarkı künyesi, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-manifest-arem-arman-remix",
+      "kind": "albumler",
+      "slug": "manifest-arem-arman-remix",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\nManifest (Arem & Arman Remix), Manifest’in 27 Şubat 2026 tarihli single yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. Manifest (Arem & Arman Remix), manifestival albümündeki Manifest parçasıyla aynı ad kökünü taşır; ancak 27 Şubat 2026 tarihli ayrı düzenlemedir. Bu kaydı albümün 2025 orijinal parçasına dönüştürmeden, remiks kimliği ve kendi yayın tarihiyle listeliyoruz. Hemen ardından Mart ayında Zehir için başka bir Arem & Arman remiksi yayımlandı.\n\n## Şarkılar ve katalogdaki yeri\nTek şarkılık yayın aşağıdaki parça bağlantısıyla kendi künye sayfasına gider. Manifest şarkıları arasında bu kaydın dönemini görmek için Manifest ve Zehir (Arem & Arman Remix) sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 27 Şubat 2026 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in Manifest (Arem & Arman Remix) yayını: 27 Şubat 2026 çıkış tarihi, şarkı künyesi, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-zehir-arem-arman-remix",
+      "kind": "albumler",
+      "slug": "zehir-arem-arman-remix",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\nZehir (Arem & Arman Remix), Manifest’in 6 Mart 2026 tarihli single yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. Zehir (Arem & Arman Remix), aynı adlı albüm kaydının 6 Mart 2026 tarihli yeni düzenlemesidir. manifestival (deluxe) içindeki Zehir (Motive Remix) ile de aynı sürüm değildir. Zehir adına bağlı bu üç kayıt arasındaki ayrım, doğru şarkı sayfasına ve dinleme bağlantısına ulaşmak için önemlidir.\n\n## Şarkılar ve katalogdaki yeri\nTek şarkılık yayın aşağıdaki parça bağlantısıyla kendi künye sayfasına gider. Manifest şarkıları arasında bu kaydın dönemini görmek için Zehir (Motive Remix) ve Daha İyi sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 6 Mart 2026 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in Zehir (Arem & Arman Remix) yayını: 6 Mart 2026 çıkış tarihi, şarkı künyesi, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-daha-iyi",
+      "kind": "albumler",
+      "slug": "daha-iyi",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\nDaha İyi, Manifest’in 3 Nisan 2026 tarihli single yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. Daha İyi, 2026 ilkbaharında yayımlanan tek şarkılık bağımsız kayıttır. manifestival albümü ve Şubat–Mart remiks dizisinden sonra geldiği için diskografide ayrı tutulur. Resmî YouTube videosu da doğrulanmış olduğundan şarkı sayfasında hem kayıt künyesi hem video bağlantısı bulunur.\n\n## Şarkılar ve katalogdaki yeri\nTek şarkılık yayın aşağıdaki parça bağlantısıyla kendi künye sayfasına gider. Manifest şarkıları arasında bu kaydın dönemini görmek için Zehir (Arem & Arman Remix) ve Hileli sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 3 Nisan 2026 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in Daha İyi yayını: 3 Nisan 2026 çıkış tarihi, şarkı künyesi, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-hileli",
+      "kind": "albumler",
+      "slug": "hileli",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\nHileli (Ajda Pekkan ile), Manifest’in 8 Mayıs 2026 tarihli single yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. Hileli’de Manifest’e Ajda Pekkan eşlik eder. Apple Music iki adı birlikte sanatçı olarak listeler; bu yüzden sayfa yalnız grubun solo single’ı gibi kurgulanmaz. Daha İyi’den sonra, Toz Pembe’den önce gelen bu Mayıs yayını iş birliklerinin diskografide nasıl gösterildiğine de örnektir.\n\n## Şarkılar ve katalogdaki yeri\nTek şarkılık yayın aşağıdaki parça bağlantısıyla kendi künye sayfasına gider. Manifest şarkıları arasında bu kaydın dönemini görmek için Daha İyi ve Toz Pembe sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 8 Mayıs 2026 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in Hileli (Ajda Pekkan ile) yayını: 8 Mayıs 2026 çıkış tarihi, şarkı künyesi, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-toz-pembe",
+      "kind": "albumler",
+      "slug": "toz-pembe",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\nToz Pembe, Manifest’in 3 Temmuz 2026 tarihli single yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. Toz Pembe, 3 Temmuz 2026 tarihli tek şarkılık Manifest yayınıdır. Hileli iş birliğinden sonraki döneme yerleşir; pVg canlı remiksinden daha erken çıkar. Şarkının doğrulanmış resmî YouTube videosu bulunduğu için ayrı şarkı sayfasından izleme ve dinleme bağlantılarına geçilebilir.\n\n## Şarkılar ve katalogdaki yeri\nTek şarkılık yayın aşağıdaki parça bağlantısıyla kendi künye sayfasına gider. Manifest şarkıları arasında bu kaydın dönemini görmek için Hileli ve pVg (Manifest Live Remix) sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 3 Temmuz 2026 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in Toz Pembe yayını: 3 Temmuz 2026 çıkış tarihi, şarkı künyesi, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-pvg-manifest-live-remix",
+      "kind": "albumler",
+      "slug": "pvg-manifest-live-remix",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Yayın ve bağlam\npVg (Manifest Live Remix), Manifest’in 24 Temmuz 2026 tarihli single yayınıdır. Apple Music kaydındaki sanatçı, biçim ve tarih bu arşivde esas alınır. pVg (Manifest Live Remix) kaydında Manifest, Motive ve Pango birlikte anılır. Başlıktaki “Live Remix” sürüm bilgisidir; kayıt yeni bir Manifest stüdyo albümü ya da manifestival’in ek parçası değildir. Temmuz 2026 yayın sırasını okurken Toz Pembe ile karıştırılmaması gerekir.\n\n## Şarkılar ve katalogdaki yeri\nTek şarkılık yayın aşağıdaki parça bağlantısıyla kendi künye sayfasına gider. Manifest şarkıları arasında bu kaydın dönemini görmek için Toz Pembe ve Manifest konserleri sayfalarına da bakılabilir. Albüm ve remiksleri tarihlerine göre ayırmak, aynı parçayı yanlış bir yeni yayın gibi saymayı önler.\n\n## Dinleme ve kaynak\nResmî Apple Music bağlantısı sayfanın sonunda yer alır. Parça listesi ilgili şarkı sayfalarına, Manifest üyeleri grup geçmişine, Manifest konserleri ise sahne duyurularına bağlanır. Kapak bu yayının Apple Music görseliyle eşleştirilmiştir; kaynak 24 Temmuz 2026 tarihli kayıt üzerinden 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in pVg (Manifest Live Remix) yayını: 24 Temmuz 2026 çıkış tarihi, şarkı künyesi, resmî dinleme bağlantısı ve ilişkili diskografi kayıtları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "real-manifest-haberler",
+      "kind": "haberler",
+      "slug": "manifestival-yayinda",
+      "expectedRevision": 3,
+      "values": {
+        "body": "## Gelişme\nManifest’in 11 parçalık ilk albümü manifestival, 13 Haziran 2025’te yayımlandı. Albüm, daha önce yayımlanan Zamansızdık ve Arıyo gibi kayıtları ilk uzunçalar çerçevesinde bir araya getiriyor. Intro ve Outro ile sınırlandırılmış 11 parçalık sıra, grubun ilk yayın yılını tek sayfada izlemenin yolunu açıyor. Haziran albümünün Eylül’de gelecek deluxe sürümünden hangi yönleriyle ayrıldığını da diskografi kayıtlarında açıkça gösteriyoruz.\n\n## İlgili yayın\nmanifestival için diskografi sayfasında çıkış tarihi, sanatçı künyesi ve kapak; şarkı arşivinde ise ilgili kayıt ve varsa resmî video bulunur. Haber, dinleme kaydını tekrar eden boş bir duyuru olarak bırakılmadı: yayın sırasındaki yeri ve önceki/sonraki çalışmalarla ilişkisi burada açıklandı.\n\n## Kaynak ve arşiv\nYayın bilgisi bağlantı verilen Apple Music kaydından 27 Eylül 2026’da kontrol edildi. Manifest üyeleri ve manifestival albümü grubun başlangıcını, Manifest şarkıları dönemler arasındaki geçişi, Manifest konserleri sahne duyurularını gösterir.",
+        "seo_description": "Manifest’in 11 parçalık ilk albümü manifestival, 13 Haziran 2025’te yayımlandı. Yayın bağlamı, ilgili şarkılar ve resmî dinleme kaynağıyla Manifest haber arşivinde.",
+        "summary": "Manifest’in 11 parçalık ilk albümü manifestival, 13 Haziran 2025’te yayımlandı."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-manifestival-deluxe-yayinda",
+      "kind": "haberler",
+      "slug": "manifestival-deluxe-yayinda",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Gelişme\nmanifestival (deluxe) 16 parçaya çıktı. İlk albüme beş yeni düzenleme eklendi. Beş ek düzenleme ilk albümün sırasını genişletiyor; özgün 11 parça ortadan kalkmıyor. Rampapapam, Arıyo, Zehir, Hayır ve Outro için eklenen sürümler, birbirinin yerine konacak yeni single tarihleri değildir. Dinleyici hangi kaydı açtığını anlamak için iki albümün ayrı parça listelerini karşılaştırabilir.\n\n## İlgili yayın\nmanifestival (deluxe) için diskografi sayfasında çıkış tarihi, sanatçı künyesi ve kapak; şarkı arşivinde ise ilgili kayıt ve varsa resmî video bulunur. Haber, dinleme kaydını tekrar eden boş bir duyuru olarak bırakılmadı: yayın sırasındaki yeri ve önceki/sonraki çalışmalarla ilişkisi burada açıklandı.\n\n## Kaynak ve arşiv\nYayın bilgisi bağlantı verilen Apple Music kaydından 27 Eylül 2026’da kontrol edildi. Manifest üyeleri ve manifestival albümü grubun başlangıcını, Manifest şarkıları dönemler arasındaki geçişi, Manifest konserleri sahne duyurularını gösterir.",
+        "seo_description": "manifestival (deluxe) 16 parçaya çıktı. İlk albüme beş yeni düzenleme eklendi. Yayın bağlamı, ilgili şarkılar ve resmî dinleme kaynağıyla Manifest haber arşivinde.",
+        "summary": "manifestival (deluxe) 16 parçaya çıktı. İlk albüme beş yeni düzenleme eklendi."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-ruya-single-yayinda",
+      "kind": "haberler",
+      "slug": "ruya-single-yayinda",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Gelişme\nRÜYA, 3 Ekim 2025 tarihli Apple Music kaydıyla ayrı bir single olarak yayımlandı. İlk albümün genişletilmiş sürümünden sonraki RÜYA, kendi yayın sayfası olan bağımsız bir single. Bu tarih, 2025 katalog akışında Haziran albümü, Eylül deluxe sürümü ve Aralık Amatör yayını arasına düşüyor. Albüm kapağı ve dinleme adresi yayın kaydına aittir; haberin görseli genel grup portresi değildir.\n\n## İlgili yayın\nRÜYA için diskografi sayfasında çıkış tarihi, sanatçı künyesi ve kapak; şarkı arşivinde ise ilgili kayıt ve varsa resmî video bulunur. Haber, dinleme kaydını tekrar eden boş bir duyuru olarak bırakılmadı: yayın sırasındaki yeri ve önceki/sonraki çalışmalarla ilişkisi burada açıklandı.\n\n## Kaynak ve arşiv\nYayın bilgisi bağlantı verilen Apple Music kaydından 27 Eylül 2026’da kontrol edildi. Manifest üyeleri ve manifestival albümü grubun başlangıcını, Manifest şarkıları dönemler arasındaki geçişi, Manifest konserleri sahne duyurularını gösterir.",
+        "seo_description": "RÜYA, 3 Ekim 2025 tarihli Apple Music kaydıyla ayrı bir single olarak yayımlandı. Yayın bağlamı, ilgili şarkılar ve resmî dinleme kaynağıyla Manifest haber arşivinde.",
+        "summary": "RÜYA, 3 Ekim 2025 tarihli Apple Music kaydıyla ayrı bir single olarak yayımlandı."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-amator-single-yayinda",
+      "kind": "haberler",
+      "slug": "amator-single-yayinda",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Gelişme\nAmatör, 5 Aralık 2025’te ayrı single olarak yayımlandı. Amatör, 2025 takvimini kapatan dönem yayınlarından biridir. Aynı adı taşıyan şarkının resmî videosu da doğrulandığı için haberden şarkı ayrıntısına geçmek mümkündür. RÜYA ile birlikte okunduğunda grubun manifestival sonrası yeni şarkıları albüm içine sonradan eklemeden nasıl yayımladığı görülür.\n\n## İlgili yayın\nAmatör için diskografi sayfasında çıkış tarihi, sanatçı künyesi ve kapak; şarkı arşivinde ise ilgili kayıt ve varsa resmî video bulunur. Haber, dinleme kaydını tekrar eden boş bir duyuru olarak bırakılmadı: yayın sırasındaki yeri ve önceki/sonraki çalışmalarla ilişkisi burada açıklandı.\n\n## Kaynak ve arşiv\nYayın bilgisi bağlantı verilen Apple Music kaydından 27 Eylül 2026’da kontrol edildi. Manifest üyeleri ve manifestival albümü grubun başlangıcını, Manifest şarkıları dönemler arasındaki geçişi, Manifest konserleri sahne duyurularını gösterir.",
+        "seo_description": "Amatör, 5 Aralık 2025’te ayrı single olarak yayımlandı. Yayın bağlamı, ilgili şarkılar ve resmî dinleme kaynağıyla Manifest haber arşivinde.",
+        "summary": "Amatör, 5 Aralık 2025’te ayrı single olarak yayımlandı."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-daha-iyi-single-yayinda",
+      "kind": "haberler",
+      "slug": "daha-iyi-single-yayinda",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Gelişme\nDaha İyi, Manifest’in 3 Nisan 2026 tarihli single kaydıdır. Daha İyi, 2026 baharındaki single sırasına ekleniyor. Şubat ve Mart aylarındaki remikslerden sonra gelen kayıt, kendi kapağı ve yayın tarihiyle bağımsız listelenir. Şarkının resmî videosu bulunan ayrıntı sayfası, yalnız tarih ve dinleme adresi yerine künyeyi de gösterir.\n\n## İlgili yayın\nDaha İyi için diskografi sayfasında çıkış tarihi, sanatçı künyesi ve kapak; şarkı arşivinde ise ilgili kayıt ve varsa resmî video bulunur. Haber, dinleme kaydını tekrar eden boş bir duyuru olarak bırakılmadı: yayın sırasındaki yeri ve önceki/sonraki çalışmalarla ilişkisi burada açıklandı.\n\n## Kaynak ve arşiv\nYayın bilgisi bağlantı verilen Apple Music kaydından 27 Eylül 2026’da kontrol edildi. Manifest üyeleri ve manifestival albümü grubun başlangıcını, Manifest şarkıları dönemler arasındaki geçişi, Manifest konserleri sahne duyurularını gösterir.",
+        "seo_description": "Daha İyi, Manifest’in 3 Nisan 2026 tarihli single kaydıdır. Yayın bağlamı, ilgili şarkılar ve resmî dinleme kaynağıyla Manifest haber arşivinde.",
+        "summary": "Daha İyi, Manifest’in 3 Nisan 2026 tarihli single kaydıdır."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-manifest-ajda-pekkan-hileli",
+      "kind": "haberler",
+      "slug": "manifest-ajda-pekkan-hileli",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Gelişme\nHileli, Manifest ve Ajda Pekkan’ın ortak 8 Mayıs 2026 tarihli single yayını. Yayın künyesinde Manifest ile Ajda Pekkan birlikte görünür. Bu ayrıntı, parçayı yalnız Manifest’in solo şarkısı gibi etiketlememek ve ortak çalışmayı doğru adlandırmak için önemlidir. Mayıs 2026 tarihli Hileli, Daha İyi ile Toz Pembe arasındaki yayın sırasındadır.\n\n## İlgili yayın\nHileli (Ajda Pekkan ile) için diskografi sayfasında çıkış tarihi, sanatçı künyesi ve kapak; şarkı arşivinde ise ilgili kayıt ve varsa resmî video bulunur. Haber, dinleme kaydını tekrar eden boş bir duyuru olarak bırakılmadı: yayın sırasındaki yeri ve önceki/sonraki çalışmalarla ilişkisi burada açıklandı.\n\n## Kaynak ve arşiv\nYayın bilgisi bağlantı verilen Apple Music kaydından 27 Eylül 2026’da kontrol edildi. Manifest üyeleri ve manifestival albümü grubun başlangıcını, Manifest şarkıları dönemler arasındaki geçişi, Manifest konserleri sahne duyurularını gösterir.",
+        "seo_description": "Hileli, Manifest ve Ajda Pekkan’ın ortak 8 Mayıs 2026 tarihli single yayını. Yayın bağlamı, ilgili şarkılar ve resmî dinleme kaynağıyla Manifest haber arşivinde.",
+        "summary": "Hileli, Manifest ve Ajda Pekkan’ın ortak 8 Mayıs 2026 tarihli single yayını."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-toz-pembe-single-yayinda",
+      "kind": "haberler",
+      "slug": "toz-pembe-single-yayinda",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Gelişme\nToz Pembe, 3 Temmuz 2026 tarihinde Hypers Music etiketiyle yayımlandı. Toz Pembe için hem tek şarkılık yayın hem resmî video kaydı bulunur. Temmuz başındaki tarih, ay sonundaki pVg canlı remiksiyle karıştırılmamalıdır. Haber kartındaki görsel kendi kapağına, şarkı sayfasındaki bağlantılar ise resmî dinleme ve video adreslerine gider.\n\n## İlgili yayın\nToz Pembe için diskografi sayfasında çıkış tarihi, sanatçı künyesi ve kapak; şarkı arşivinde ise ilgili kayıt ve varsa resmî video bulunur. Haber, dinleme kaydını tekrar eden boş bir duyuru olarak bırakılmadı: yayın sırasındaki yeri ve önceki/sonraki çalışmalarla ilişkisi burada açıklandı.\n\n## Kaynak ve arşiv\nYayın bilgisi bağlantı verilen Apple Music kaydından 27 Eylül 2026’da kontrol edildi. Manifest üyeleri ve manifestival albümü grubun başlangıcını, Manifest şarkıları dönemler arasındaki geçişi, Manifest konserleri sahne duyurularını gösterir.",
+        "seo_description": "Toz Pembe, 3 Temmuz 2026 tarihinde Hypers Music etiketiyle yayımlandı. Yayın bağlamı, ilgili şarkılar ve resmî dinleme kaynağıyla Manifest haber arşivinde.",
+        "summary": "Toz Pembe, 3 Temmuz 2026 tarihinde Hypers Music etiketiyle yayımlandı."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-pvg-live-remix-yayinda",
+      "kind": "haberler",
+      "slug": "pvg-live-remix-yayinda",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Gelişme\npVg (Manifest Live Remix), 24 Temmuz 2026 tarihli ortak kayıt. Ortak sanatçı künyesinde Manifest, Motive ve Pango bir aradadır. “Live Remix” ibaresi yayının biçimini açıklar; grubun ilk albümüne yeni bir stüdyo şarkısı eklenmiş olduğu anlamına gelmez. Temmuz 2026 kataloğunda Toz Pembe’nin ardından gelen bu kayıt, ayrı single ve şarkı sayfalarında izlenebilir.\n\n## İlgili yayın\npVg (Manifest Live Remix) için diskografi sayfasında çıkış tarihi, sanatçı künyesi ve kapak; şarkı arşivinde ise ilgili kayıt ve varsa resmî video bulunur. Haber, dinleme kaydını tekrar eden boş bir duyuru olarak bırakılmadı: yayın sırasındaki yeri ve önceki/sonraki çalışmalarla ilişkisi burada açıklandı.\n\n## Kaynak ve arşiv\nYayın bilgisi bağlantı verilen Apple Music kaydından 27 Eylül 2026’da kontrol edildi. Manifest üyeleri ve manifestival albümü grubun başlangıcını, Manifest şarkıları dönemler arasındaki geçişi, Manifest konserleri sahne duyurularını gösterir.",
+        "seo_description": "pVg (Manifest Live Remix), 24 Temmuz 2026 tarihli ortak kayıt. Yayın bağlamı, ilgili şarkılar ve resmî dinleme kaynağıyla Manifest haber arşivinde.",
+        "summary": "pVg (Manifest Live Remix), 24 Temmuz 2026 tarihli ortak kayıt."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "real-manifest-konserler",
+      "kind": "konserler",
+      "slug": "konser-2026-06-06",
+      "expectedRevision": 3,
+      "values": {
+        "body": "## İlk festival günü\nBiletix’in Manifestival Ankara duyurusunda 6–7 Haziran 2026 tarihleri ve Atatürk Orman Çiftliği yer alır. Bu sayfa iki günlük festivalin 6 Haziran gününe ayrılmış arşiv kaydıdır. Organizatör, Manifest için iki akşam özel sahne gösterisi ve gün boyunca başka etkinlikler duyurmuştur. Buradan grubun kesin sahne saatini veya geçmiş performansın gerçekleştiğini ayrıca teyit ettiğimiz sonucu çıkarılmamalıdır.\n\n## Mekân ve program\nAtatürk Orman Çiftliği, duyurudaki Ankara konumudur. Festival programı, giriş koşulları ve bilet türleri için resmî Biletix sayfası esas alınır. 7 Haziran için ayrı bir konser kaydı vardır; iki günü tek tarih gibi göstermiyoruz. Görsel organizatörün etkinlik afişidir.\n\n## Arşivde devam et\nManifest konserleri takviminden ikinci festival gününe, manifestival albümünden festivalle aynı adı taşıyan müzik yayınına, Manifest şarkıları sayfasından da kayıt künyelerine geçilebilir. Kaynak 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in 6 Haziran 2026 Ankara konser duyurusu: Atatürk Orman Çiftliği, resmî etkinlik kaynağı, program ve arşiv bilgileri."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-konserler-konser-2026-06-07",
+      "kind": "konserler",
+      "slug": "konser-2026-06-07",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## İkinci festival günü\nManifestival Ankara duyurusundaki ikinci tarih 7 Haziran 2026’dır. Mekân yine Atatürk Orman Çiftliği olarak verilmiştir. Biletix’in iki günlük festival açıklaması, Manifest’in her akşam özel bir sahne gösterisi planladığını belirtir; fakat kesin grup sahne saati burada belgelenmediği için saat uydurulmaz.\n\n## 6 Haziran’dan farkı\nİlk gün ayrı bir konser arşivi kaydında tutulur. Böylece her tarihin kendi adresi, şehir ve mekân bilgisi vardır. Geçmiş etkinliğin fiilen gerçekleştiğine dair bağımsız teyit bu kayıtla iddia edilmez. Sayfadaki fotoğraf başka bir Manifest performansının açık kaynak arşivinden seçilmiştir; bu festival günündenmiş gibi gösterilmez.\n\n## Bağlantılar ve kaynak\nGüncel bilet veya organizatör bilgisi için resmî Biletix bağlantısı kullanılır. Manifest konserleri içinde başka tarihler, manifestival albümünde şarkı listesi, Manifest üyeleri sayfasında grup geçmişi bulunur. Kaynak 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in 7 Haziran 2026 Ankara konser duyurusu: Atatürk Orman Çiftliği, resmî etkinlik kaynağı, program ve arşiv bilgileri."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-konserler-konser-2026-10-16",
+      "kind": "konserler",
+      "slug": "konser-2026-10-16",
+      "expectedRevision": 2,
+      "values": {
+        "body": "## Londra konser duyurusu\nOVO Arena Wembley’in resmî etkinlik sayfası Manifest’i 16 Ekim 2026 Cuma günü Londra’da listeliyor. Salon duyurusunda XO da eşlikçi olarak anılıyor. 27 Eylül 2026 itibarıyla bu tarih gelecektedir; gerçekleşmiş konser fotoğrafı veya sonradan kesinleşmiş bir setlist varmış gibi anlatmıyoruz.\n\n## Yer ve saat bilgisi\nMekân OVO Arena Wembley’dir. Resmî sayfada etkinlik saati henüz kesin açıklanmadığı için takvim kaydında saat boş bırakıldı. Bilet, giriş ve yaş koşulları değişebileceğinden seyahat planlamadan önce salonun güncel sayfası kontrol edilmelidir. Sayfadaki görsel salonun duyuru fotoğrafından alınmıştır.\n\n## Manifest arşivi\nManifest konserleri sayfası geçmiş Ankara duyuruları ile yaklaşan Londra tarihini ayrı gösterir. manifestival albümü ve Manifest şarkıları bağlantıları, grubun yayımlanmış kayıtlarına götürür. Salon kaynağı 27 Eylül 2026’da kontrol edildi.",
+        "seo_description": "Manifest’in 16 Ekim 2026 Londra konser duyurusu: OVO Arena Wembley, resmî etkinlik kaynağı, program ve arşiv bilgileri."
+      }
+    },
+    {
+      "type": "song",
+      "slug": "amator",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Amatör",
+        "slug": "amator",
+        "albumId": "manifest-albumler-amator",
+        "albumSlug": "amator",
+        "albumTitle": "Amatör",
+        "date": "2025-12-05",
+        "cover": "/images/manifest/amator.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 164,
+        "url": "https://music.apple.com/tr/album/amat%C3%B6r-single/1855827116",
+        "description": "Manifest’in Amatör kaydı 5 Aralık 2025 tarihli Amatör yayınında yer alır. Süre 2 dakika 44 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nAmatör, Aralık 2025 tarihli bağımsız single’dır. Grubun resmî YouTube videosu doğrulanan parçalardan biridir; bu sayfada hem dinleme adresi hem video yer alır. RÜYA’dan sonraki dönemi temsil eder.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": "JzH6uWBtC3I",
+        "videoSource": "https://www.youtube.com/watch?v=JzH6uWBtC3I"
+      }
+    },
+    {
+      "type": "song",
+      "slug": "ariyo",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Arıyo",
+        "slug": "ariyo",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 4,
+        "credits": "Manifest · Hypers Music",
+        "duration": 133,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in Arıyo kaydı 13 Haziran 2025 tarihli manifestival yayınında yer alır. Süre 2 dakika 13 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nArıyo, Nisan 2025’te single olarak da yayımlandı ve Haziran’daki manifestival sırasına girdi. Deluxe albümündeki Arıyo (Zeki Arkun Remix) farklı bir düzenlemedir; bu sayfa özgün şarkının künye ve dinleme adresini taşır.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "ariyo-zeki-arkun-remix",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Arıyo (Zeki Arkun Remix)",
+        "slug": "ariyo-zeki-arkun-remix",
+        "albumId": "manifest-albumler-manifestival-deluxe",
+        "albumSlug": "manifestival-deluxe",
+        "albumTitle": "manifestival (deluxe)",
+        "date": "2025-09-05",
+        "cover": "/images/manifest/manifestival-deluxe.webp",
+        "position": 13,
+        "credits": "Manifest · Hypers Music",
+        "duration": 174,
+        "url": "https://music.apple.com/tr/album/manifestival-deluxe/1836369123",
+        "description": "Manifest’in Arıyo (Zeki Arkun Remix) kaydı 5 Eylül 2025 tarihli manifestival (deluxe) yayınında yer alır. Süre 2 dakika 54 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nArıyo (Zeki Arkun Remix), Nisan 2025 single’ı ve Haziran albümündeki Arıyo ile aynı kayıt değildir. Deluxe parça listesi içindeki yeni düzenleme kendi süresi ve bağlantısıyla ayrı tutulur.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "basrol-sensin-1-yil-ozel",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Başrol Sensin (1. Yıl Özel)",
+        "slug": "basrol-sensin-1-yil-ozel",
+        "albumId": "manifest-albumler-basrol-sensin",
+        "albumSlug": "basrol-sensin",
+        "albumTitle": "Başrol Sensin (1. Yıl Özel)",
+        "date": "2026-02-13",
+        "cover": "/images/manifest/basrol-sensin.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 193,
+        "url": "https://music.apple.com/tr/album/ba%C5%9Frol-sensin-1-y%C4%B1l-%C3%B6zel-single/1875885663",
+        "description": "Manifest’in Başrol Sensin (1. Yıl Özel) kaydı 13 Şubat 2026 tarihli Başrol Sensin (1. Yıl Özel) yayınında yer alır. Süre 3 dakika 13 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nBaşrol Sensin (1. Yıl Özel) adındaki parantezli ifade resmî yayın adının parçasıdır. Şubat 2026 tarihli tek şarkılık kayıt, aynı ayın sonundaki Manifest remiksinden farklıdır.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "daha-iyi",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Daha İyi",
+        "slug": "daha-iyi",
+        "albumId": "manifest-albumler-daha-iyi",
+        "albumSlug": "daha-iyi",
+        "albumTitle": "Daha İyi",
+        "date": "2026-04-03",
+        "cover": "/images/manifest/daha-iyi.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 199,
+        "url": "https://music.apple.com/tr/album/daha-i-yi-single/1889304032",
+        "description": "Manifest’in Daha İyi kaydı 3 Nisan 2026 tarihli Daha İyi yayınında yer alır. Süre 3 dakika 19 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nDaha İyi, Nisan 2026 tek şarkılık Manifest yayınıdır. Doğrulanmış resmî video bağlantısı bu sayfadadır; şarkı, 2025 manifestival albümünün parçası gibi gösterilmez.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": "vso1LpaQRbo",
+        "videoSource": "https://www.youtube.com/watch?v=vso1LpaQRbo"
+      }
+    },
+    {
+      "type": "song",
+      "slug": "durma",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Durma",
+        "slug": "durma",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 10,
+        "credits": "Manifest · Hypers Music",
+        "duration": 189,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in Durma kaydı 13 Haziran 2025 tarihli manifestival yayınında yer alır. Süre 3 dakika 9 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nDurma, özgün manifestival listesinin kapanışına yaklaşırken Yaşanacaksa’dan sonra gelir. Outro’dan önceki bu parça, albüm sırasını sona kadar takip etmek isteyenler için önemli bir duraktır; bağımsız single yayını olarak gösterilmez.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "hayir",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Hayır",
+        "slug": "hayir",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 7,
+        "credits": "Manifest · Hypers Music",
+        "duration": 129,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in Hayır kaydı 13 Haziran 2025 tarihli manifestival yayınında yer alır. Süre 2 dakika 9 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nHayır, manifestival’in özgün şarkı listesinde Zehir’in ardından gelir. Deluxe sürümdeki Hayır (AYDEED Remix) onun başka bir düzenlemesidir. Bu kayıt özgün albüm sırasını ve Apple Music dinleme adresini esas alır.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "hayir-aydeed-remix",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Hayır (AYDEED Remix)",
+        "slug": "hayir-aydeed-remix",
+        "albumId": "manifest-albumler-manifestival-deluxe",
+        "albumSlug": "manifestival-deluxe",
+        "albumTitle": "manifestival (deluxe)",
+        "date": "2025-09-05",
+        "cover": "/images/manifest/manifestival-deluxe.webp",
+        "position": 15,
+        "credits": "Manifest · Hypers Music",
+        "duration": 172,
+        "url": "https://music.apple.com/tr/album/manifestival-deluxe/1836369123",
+        "description": "Manifest’in Hayır (AYDEED Remix) kaydı 5 Eylül 2025 tarihli manifestival (deluxe) yayınında yer alır. Süre 2 dakika 52 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nHayır (AYDEED Remix), deluxe sürümde yer alan farklı bir düzenlemedir. Haziran 2025 albümündeki Hayır özgün kayıt olarak durur; burada Eylül tarihli deluxe yayındaki yeri ve kendi süresi gösterilir.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "hileli",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Hileli",
+        "slug": "hileli",
+        "albumId": "manifest-albumler-hileli",
+        "albumSlug": "hileli",
+        "albumTitle": "Hileli (Ajda Pekkan ile)",
+        "date": "2026-05-08",
+        "cover": "/images/manifest/hileli.webp",
+        "position": 1,
+        "credits": "Manifest ve Ajda Pekkan",
+        "duration": 202,
+        "url": "https://music.apple.com/tr/album/hileli-single/1895942716",
+        "description": "Manifest’in Hileli kaydı 8 Mayıs 2026 tarihli Hileli (Ajda Pekkan ile) yayınında yer alır. Süre 3 dakika 22 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nHileli, Manifest ile Ajda Pekkan’ın birlikte adlandırıldığı Mayıs 2026 single’ıdır. Sanatçı künyesinde iki tarafın görünmesi, kaydı grubun solo parçalarından ayırır. Ardından gelen Toz Pembe başka bir yayındır.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "intro",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Intro",
+        "slug": "intro",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 62,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in Intro kaydı 13 Haziran 2025 tarihli manifestival yayınında yer alır. Süre 1 dakika 2 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nAlbümün açılışındaki Intro, 11 parçalık özgün sıranın ilk kaydıdır. Ardından Snap ve KTS gelir; bu sayfa onu ayrı bir single gibi sunmaz. Kısa süresine rağmen albüm akışındaki yerini görmek için parça listesinden devam edilebilir.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "kts",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "KTS",
+        "slug": "kts",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 3,
+        "credits": "Manifest · Hypers Music",
+        "duration": 147,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in KTS kaydı 13 Haziran 2025 tarihli manifestival yayınında yer alır. Süre 2 dakika 27 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nKTS, manifestival albümünde üçüncü parçadır; öncesinde Snap, sonrasında Arıyo bulunur. İlk albümün 11 parçalık sırasını takip ederken bu kaydı remiks veya sonraki dönem single’larıyla karıştırmamak gerekir.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "manifest",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Manifest",
+        "slug": "manifest",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 5,
+        "credits": "Manifest, Arem Ozguc ve Arman Aydin",
+        "duration": 150,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in Manifest kaydı 13 Haziran 2025 tarihli manifestival yayınında yer alır. Süre 2 dakika 30 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nGrubun adını taşıyan Manifest, ilk albümün orta bölümündeki kayıttır. Sonradan çıkan Manifest (Arem & Arman Remix) ayrı tarih ve düzenlemeye sahiptir. Aynı adın iki farklı sürümü için katalogda ayrı kayıt tutulur.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "manifest-arem-arman-remix",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Manifest (Arem & Arman Remix)",
+        "slug": "manifest-arem-arman-remix",
+        "albumId": "manifest-albumler-manifest-arem-arman-remix",
+        "albumSlug": "manifest-arem-arman-remix",
+        "albumTitle": "Manifest (Arem & Arman Remix)",
+        "date": "2026-02-27",
+        "cover": "/images/manifest/manifest-arem-arman-remix.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 153,
+        "url": "https://music.apple.com/us/album/manifest-arem-arman-remix-single/1879510798",
+        "description": "Manifest’in Manifest (Arem & Arman Remix) kaydı 27 Şubat 2026 tarihli Manifest (Arem & Arman Remix) yayınında yer alır. Süre 2 dakika 33 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nManifest (Arem & Arman Remix), albümdeki Manifest şarkısının 2026 tarihli yeni düzenlemesidir. Şarkı adı benzer olsa da 2025 özgün albüm kaydıyla aynı künyeye sahip değildir.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "outro",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Outro",
+        "slug": "outro",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 11,
+        "credits": "Manifest · Hypers Music",
+        "duration": 86,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in Outro kaydı 13 Haziran 2025 tarihli manifestival yayınında yer alır. Süre 1 dakika 26 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nOutro, 11 parçalık manifestival albümünün kapanış kaydıdır. Deluxe sürümdeki Outro (Extended Version) aynı adın uzatılmış düzenlemesi olarak ayrı gösterilir. Şarkı arşivinde orijinal ve genişletilmiş kayıt birbirinin yerine geçmez.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "outro-extended-version",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Outro (Extended Version)",
+        "slug": "outro-extended-version",
+        "albumId": "manifest-albumler-manifestival-deluxe",
+        "albumSlug": "manifestival-deluxe",
+        "albumTitle": "manifestival (deluxe)",
+        "date": "2025-09-05",
+        "cover": "/images/manifest/manifestival-deluxe.webp",
+        "position": 16,
+        "credits": "Manifest · Hypers Music",
+        "duration": 181,
+        "url": "https://music.apple.com/tr/album/manifestival-deluxe/1836369123",
+        "description": "Manifest’in Outro (Extended Version) kaydı 5 Eylül 2025 tarihli manifestival (deluxe) yayınında yer alır. Süre 3 dakika 1 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nOutro (Extended Version), ilk albümün kapanış parçasının genişletilmiş sürümüdür. Deluxe listesindeki son ek kayıttır; özgün Outro için ilk albüm sayfasına bakılabilir.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "pvg-manifest-live-remix",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "pVg (Manifest Live Remix)",
+        "slug": "pvg-manifest-live-remix",
+        "albumId": "manifest-albumler-pvg-manifest-live-remix",
+        "albumSlug": "pvg-manifest-live-remix",
+        "albumTitle": "pVg (Manifest Live Remix)",
+        "date": "2026-07-24",
+        "cover": "/images/manifest/pvg-manifest-live-remix.webp",
+        "position": 1,
+        "credits": "Manifest, Motive ve Pango",
+        "duration": 246,
+        "url": "https://music.apple.com/us/album/pvg-manifest-live-remix-single/6793467822",
+        "description": "Manifest’in pVg (Manifest Live Remix) kaydı 24 Temmuz 2026 tarihli pVg (Manifest Live Remix) yayınında yer alır. Süre 4 dakika 6 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\npVg (Manifest Live Remix), Manifest, Motive ve Pango’nun birlikte anıldığı ortak kayıttır. Adındaki canlı remiks ibaresi sürüm türünü belirtir; bunu grubun solo stüdyo albümü veya manifestival’e ek parça olarak göstermiyoruz.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "rampapapam-arem-ozguc-arman-aydin-remix",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Rampapapam (Arem Ozguc & Arman Aydin Remix)",
+        "slug": "rampapapam-arem-ozguc-arman-aydin-remix",
+        "albumId": "manifest-albumler-manifestival-deluxe",
+        "albumSlug": "manifestival-deluxe",
+        "albumTitle": "manifestival (deluxe)",
+        "date": "2025-09-05",
+        "cover": "/images/manifest/manifestival-deluxe.webp",
+        "position": 12,
+        "credits": "Manifest · Hypers Music",
+        "duration": 132,
+        "url": "https://music.apple.com/tr/album/manifestival-deluxe/1836369123",
+        "description": "Manifest’in Rampapapam (Arem Ozguc & Arman Aydin Remix) kaydı 5 Eylül 2025 tarihli manifestival (deluxe) yayınında yer alır. Süre 2 dakika 12 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nRampapapam (Arem Ozguc & Arman Aydin Remix), manifestival (deluxe) sürümüne eklenen beş düzenlemenin ilkidir. Orijinal 11 parçalık manifestival listesinde bulunmaz; bu nedenle çıkış tarihi deluxe yayının tarihidir.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "ruya",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "RÜYA",
+        "slug": "ruya",
+        "albumId": "manifest-albumler-ruya",
+        "albumSlug": "ruya",
+        "albumTitle": "RÜYA",
+        "date": "2025-10-03",
+        "cover": "/images/manifest/ruya.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 195,
+        "url": "https://music.apple.com/us/album/r%C3%BCya-single/1839930351",
+        "description": "Manifest’in RÜYA kaydı 3 Ekim 2025 tarihli RÜYA yayınında yer alır. Süre 3 dakika 15 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nRÜYA, manifestival (deluxe) sonrasında Ekim 2025’te ayrı single olarak yayımlandı. Albümün 16 parçalık genişletilmiş listesine sonradan eklenmez. Aralık ayında gelen Amatör ile yayın sırasını karşılaştırmak mümkündür.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "snap",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Snap",
+        "slug": "snap",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 2,
+        "credits": "Manifest · Hypers Music",
+        "duration": 150,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in Snap kaydı 13 Haziran 2025 tarihli manifestival yayınında yer alır. Süre 2 dakika 30 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nSnap, Intro’dan sonra ikinci sırada yer alır. Onu KTS ve Arıyo izler; bu dizilim albümün Haziran 2025 sürümüne aittir. Single bağlantılarını arayan dinleyici için albümün kendi şarkı listesindeki konumu ayrıca belirtilir.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "toz-pembe",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Toz Pembe",
+        "slug": "toz-pembe",
+        "albumId": "manifest-albumler-toz-pembe",
+        "albumSlug": "toz-pembe",
+        "albumTitle": "Toz Pembe",
+        "date": "2026-07-03",
+        "cover": "/images/manifest/toz-pembe.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 161,
+        "url": "https://music.apple.com/tr/album/toz-pembe-single/6784751861",
+        "description": "Manifest’in Toz Pembe kaydı 3 Temmuz 2026 tarihli Toz Pembe yayınında yer alır. Süre 2 dakika 41 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nToz Pembe, Temmuz 2026 başındaki bağımsız single’dır. Resmî müzik videosu doğrulanan parçalardan biridir; Apple Music dinleme kaydı ve video aynı sayfadan açılır. Ayın sonundaki pVg remiksiyle karıştırılmamalıdır.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": "0pg0raFMNIU",
+        "videoSource": "https://www.youtube.com/watch?v=0pg0raFMNIU"
+      }
+    },
+    {
+      "type": "song",
+      "slug": "yasanacaksa",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Yaşanacaksa",
+        "slug": "yasanacaksa",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 9,
+        "credits": "Manifest · Hypers Music",
+        "duration": 166,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in Yaşanacaksa kaydı 13 Haziran 2025 tarihli manifestival yayınında yer alır. Süre 2 dakika 46 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nYaşanacaksa, Çıtır Kızlar’ın Yaşanacaksa Yaşanacak eserine dayanan Manifest yorumudur. Bu nedenle özgün beste gibi tanıtılmaz. İlk albümün son bölümünde Zamansızdık ve Durma arasında yer alır.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "zamansizdik",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Zamansızdık",
+        "slug": "zamansizdik",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 8,
+        "credits": "Manifest · Hypers Music",
+        "duration": 170,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in Zamansızdık kaydı 13 Haziran 2025 tarihli manifestival yayınında yer alır. Süre 2 dakika 50 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nZamansızdık’ın 7 Şubat 2025 single yayını grubun ilk dönemine uzanır; aynı şarkı ilk albümün parça listesinde de vardır. Burada albümdeki kayıt konumu gösterilir; çıkışa dair ayrıntı single sayfasındadır.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "zehir",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Zehir",
+        "slug": "zehir",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 6,
+        "credits": "Manifest ve Pango",
+        "duration": 185,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in Zehir kaydı 13 Haziran 2025 tarihli manifestival yayınında yer alır. Süre 3 dakika 5 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nZehir’in özgün albüm kaydı Pango ile birlikte anılır. manifestival (deluxe) içinde Zehir (Motive Remix), 2026’da ayrıca Zehir (Arem & Arman Remix) yayımlanmıştır. Bu üç sürümün künyelerini ayrı sayfalarda karşılaştırmak gerekir.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "zehir-arem-arman-remix",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Zehir (Arem & Arman Remix)",
+        "slug": "zehir-arem-arman-remix",
+        "albumId": "manifest-albumler-zehir-arem-arman-remix",
+        "albumSlug": "zehir-arem-arman-remix",
+        "albumTitle": "Zehir (Arem & Arman Remix)",
+        "date": "2026-03-06",
+        "cover": "/images/manifest/zehir-arem-arman-remix.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 174,
+        "url": "https://music.apple.com/us/album/zehir-arem-arman-remix-single/1880680385",
+        "description": "Manifest’in Zehir (Arem & Arman Remix) kaydı 6 Mart 2026 tarihli Zehir (Arem & Arman Remix) yayınında yer alır. Süre 2 dakika 54 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nZehir (Arem & Arman Remix), Mart 2026’da çıkan ayrı remiks sürümüdür. Deluxe albümdeki Zehir (Motive Remix) ve ilk albümdeki Zehir ile yayın tarihi ve düzenleme bilgisi bakımından ayrılır.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "zehir-motive-remix",
+      "expectedRevision": 2,
+      "status": "published",
+      "values": {
+        "name": "Zehir (Motive Remix)",
+        "slug": "zehir-motive-remix",
+        "albumId": "manifest-albumler-manifestival-deluxe",
+        "albumSlug": "manifestival-deluxe",
+        "albumTitle": "manifestival (deluxe)",
+        "date": "2025-09-05",
+        "cover": "/images/manifest/manifestival-deluxe.webp",
+        "position": 14,
+        "credits": "Manifest · Hypers Music",
+        "duration": 232,
+        "url": "https://music.apple.com/tr/album/manifestival-deluxe/1836369123",
+        "description": "Manifest’in Zehir (Motive Remix) kaydı 5 Eylül 2025 tarihli manifestival (deluxe) yayınında yer alır. Süre 3 dakika 52 saniye; resmî dinleme bağlantısı Apple Music kaydıdır.\n\nZehir (Motive Remix), deluxe albümdeki ek düzenlemeler arasındadır. Albümdeki Pango’lu özgün Zehir ve 2026’daki Arem & Arman remiksiyle karıştırılmaması için sürüm adı eksiksiz korunur.\n\nŞarkı sayfasındaki yayın bağlantısı parça listesini ve kapak kaynağını, Manifest şarkı rehberi diğer dönemleri, grup biyografisi ise Manifest’in kuruluş ve yayın kronolojisini gösterir. Doğrulanmış resmî video varsa ayrıca gösterilir; tam sözler için hizmetin kendi söz ekranı kullanılabilir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "biography",
+      "expectedRevision": 4,
+      "values": {
+        "biography": "## Manifest kimdir?\nManifest, 2025 yılında Big5 Türkiye seçmelerinin ardından kurulan altı üyeli bir Türk pop grubudur. Esin Bahat, Hilal Yelekçi, Lidya Pınar, Mina Solak, Sueda Uluca ve Zeynep Sude Oktay; vokal, dans ve koreografiyi birlikte kullanan sahne anlayışıyla tanındı. Grup, ilk şarkısı Zamansızdık ile Şubat 2025’te dinleyiciyle buluştu.\n\n## İlk albüm: manifestival\nZamansızdık, Arıyo, KTS ve Snap yayınları ilk albüme giden yolu açtı. manifestival 13 Haziran 2025’te Hypers Music etiketiyle 11 şarkı olarak yayımlandı. Intro, Manifest, Zehir, Hayır, Yaşanacaksa, Durma ve Outro albümün diğer parçaları arasında. 5 Eylül’de çıkan manifestival (deluxe), beş ek düzenlemeyle toplam 16 parçaya ulaştı. Remiksler ile özgün kayıtları ayrı şarkılar olarak listeliyoruz; bir remiksi yeni bir stüdyo albümü gibi göstermiyoruz.\n\n## 2025–2026 yayınları\n2025 sonbaharında RÜYA, Aralık ayında Amatör yayımlandı. 2026’da Başrol Sensin (1. Yıl Özel), Daha İyi, Ajda Pekkan ile Hileli, Toz Pembe ve Motive ile Pango’nun da yer aldığı pVg (Manifest Live Remix) dinleyiciyle buluştu. Yayın tarihleri ve iş birlikleri Apple Music kayıtlarıyla karşılaştırıldı. Albümdeki Yaşanacaksa, Çıtır Kızlar’ın Yaşanacaksa Yaşanacak eserine dayanan yeni bir yorum olarak ayrıca belirtilir.\n\n## Manifest müziğine nereden başlamalı?\nİlk dönemi kronolojik dinlemek isteyen biri önce Zamansızdık ve Arıyo single’larına, ardından 11 parçalık manifestival albümüne bakabilir. Albümün Intro ve Outro arasında kurduğu sıra, parçaları bağımsız single listesiyle karıştırmadan dinlemeye yardım eder. manifestival (deluxe) ilk albümün bütün kayıtlarını korur ve beş yeni düzenleme ekler; böylece Arıyo, Zehir, Hayır ve Outro’nun özgün sürümleriyle remiksleri karşılaştırılabilir.\n\n2025 sonundaki RÜYA ve Amatör, ilk albüm dışındaki ayrı yayınlardır. 2026 arşivinde Daha İyi, Ajda Pekkan ile Hileli ve Toz Pembe farklı single dönemlerini gösterir. pVg (Manifest Live Remix) ise Motive ve Pango ile ortak kayıttır. Her şarkı sayfası tarih, süre, sanatçı künyesi, resmî dinleme adresi ve varsa doğrulanmış videoya gider; ayrı yayınları tek albüm sanmamak için diskografi bağlantıları korunur.\n\n## Konserler ve sahne\nManifestival Ankara için Biletix, 6–7 Haziran 2026 tarihlerini ve Atatürk Orman Çiftliği’ni duyurdu. OVO Arena Wembley, grubun 16 Ekim 2026 Londra konserini listeliyor. Bu sayfadaki geçmiş konser kaydı etkinliğin gerçekleştiğine dair bağımsız teyit değildir; gelecek etkinlik için saat ve bilet koşullarında organizatörün sayfası geçerlidir.\n\nBu arşiv bağımsız bir hayran sayfasıdır; grubun resmî hesabı değildir. Kaynaklar 27 Eylül 2026 itibarıyla kontrol edilmiştir.",
+        "sources": "https://www.ovoarena.co.uk/events/detail/manifest\nhttps://music.apple.com/tr/album/manifestival/1813439256\nhttps://music.apple.com/tr/album/manifestival-deluxe/1836369123\nhttps://music.apple.com/us/artist/manifest/1793856618\nhttps://www.biletix.com/etkinlik-grup/536572193/TURKIYE/tr/manifestival\nhttps://www.shazam.com/tr-tr/album/1836369123/manifestival-deluxe"
+      }
+    }
+  ]
+}

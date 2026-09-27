@@ -1,5 +1,5 @@
 export const manifestSeo:Record<string,{title:string;description:string}>={
- '':{title:'Manifest: Şarkıları, Albümleri, Biyografisi ve Konserleri',description:'Manifest grubunun üyeleri, manifestival albümü, şarkıları, resmî videoları, haberleri ve 2026 konserleri. Kaynaklı fan arşivini keşfet.'},
+ '':{title:'Manifest Fan Club Topluluğu: Sohbet, Şarkılar ve Haberler',description:'Manifest Fan Club topluluğunda hayranlarla sohbet et; grubun üyelerini, manifestival albümünü, şarkılarını, resmî videolarını, haberlerini ve konserlerini keşfet.'},
  biyografi:{title:'Manifest Kimdir? Üyeleri, Big5 ve Müzik Kariyeri',description:'Manifest üyeleri kimler? Big5 Türkiye’den manifestival albümüne, 2025 ve 2026 şarkılarına uzanan kaynaklı grup biyografisi.'},
  albumler:{title:'Manifest Albümleri ve Single’ları: manifestival ve Diskografi',description:'Manifest’in manifestival, deluxe sürümü ve 2026 single’ları: çıkış tarihleri, şarkı listeleri, künyeler ve resmî dinleme bağlantıları.'},
  haberler:{title:'Manifest Haberleri: Yeni Şarkılar, Albüm ve Konserler',description:'Manifest’in 2025–2026 yayın haberleri: manifestival, Hileli, Toz Pembe, pVg ve Londra konseri. Tarihli, kaynaklı haber arşivi.'},

@@ -1,5 +1,5 @@
 export const semicenkSeo:Record<string,{title:string;description:string}>={
- '':{title:'Semicenk: Şarkıları, Albümleri, Biyografisi ve Konserleri',description:'Semicenk’in şarkılarını ve resmî videolarını keşfet. Cenk Baş’ın biyografisi, albüm ve single arşivi, yayın haberleri ve konser duyuruları.'},
+ '':{title:'Semicenk Fan Club Topluluğu: Sohbet, Şarkılar ve Haberler',description:'Semicenk Fan Club topluluğunda hayranlarla sohbet et; Cenk Baş’ın şarkılarını, resmî videolarını, albümlerini, biyografisini, haberlerini ve konser arşivini keşfet.'},
  biyografi:{title:'Semicenk Kimdir? Cenk Baş’ın Hayatı ve Müzik Kariyeri',description:'Semicenk adıyla tanınan Cenk Baş’ın O Ses Türkiye’den Düşer Aklıma’ya, düetlerden Karışık Kaset albümlerine uzanan müzik kariyeri ve kaynaklı biyografisi.'},
  albumler:{title:'Semicenk Albümleri ve Single’ları: 2021–2026 Diskografi',description:'Semicenk’in Karışık Kaset, Geçiyor Zaman ve diğer yayınları: albüm, EP ve single kapakları, çıkış tarihleri, şarkı listeleri ve dinleme bağlantıları.'},
  haberler:{title:'Semicenk Haberleri: Yeni Şarkılar, Ödüller ve Konserler',description:'Semicenk’in müzik yayınları, Altın Kelebek ödülleri, Eşref Rüya’da Sen Kaldın ve konser gelişmeleri. Tarihli, kaynaklı ve özgün haber arşivi.'},

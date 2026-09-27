@@ -7,14 +7,14 @@ Bu dosya, her anlamlı çalışma sonunda güncellenir. “Hazırlandı” ile �
 1. GÜNCEL YAYIN DURUMU
 
 Son doğrulanan canlı sürüm:
-20260927-manifest-media
-Kaynak commit: 0bc6d27dd4318387af361207cbf44444685c5d44
-27 Eylül canlı kontrolü: current bu sürüme işaret ediyor; Manifest kaynaklı görsel galerisi ve görsel kredileri canlı sürüme dahildir.
+20260927-artist-sections
+Kaynak commit: dbad15238258aab46b17f55317f72288396c0cce
+27 Eylül canlı kontrolü: current bu sürüme işaret ediyor; sekiz sanatçıda ayrı Haberler, Konserler, Şarkılar, Albümler sıraları canlı sürüme dahildir.
 
-Hazırlanan paket: 20260927-artist-sections — sekiz sanatçının ana sayfa bölüm düzeni henüz canlıda değil.
-Kullanıcının ekran görüntüsünde Manifest ana sayfasındaki “Haberler, konserler ve albümler” tek karma kaydırma alanı ile “Şarkılar ve daha fazlası” başlığı vardı. Yeni sürümde her sanatçının ana sayfasında Haberler, Konserler, Şarkılar ve Albümler ayrı başlıklar, ayrı kart sıraları ve ilgili “Tümünü gör” bağlantılarıyla bu sırada yer alır. Semicenk’in zaten ayrı bölümleri aynı düzene getirildi. Konserde yaklaşan kayıt yoksa geçmiş arşiv gösterilir; şarkı kartları var olan katalog veya album şarkı kayıtlarından oluşturulur. Manifest’in şarkı rehberi kartında eski hazırlık metni kaldırıldı.
+Hazırlanan paket: 20260927-fanclub-editorial — sekiz sanatçı kök SEO metadatası ve Manifest iç bağlantı arayüzü henüz canlıda değil.
+Manifest üretim veritabanına 50 işlemlik uzun içerik ve 13 işlemlik özgün giriş özeti paketi uygulanmıştır. Yedekler: /home/deploy/fans/shared/content-backups/manifest-20260927T164646613327Z.sqlite ve /home/deploy/fans/shared/content-backups/manifest-20260927T164834412207Z.sqlite. Mevcut canlı kod uzun gövdeleri ve yeni giriş cümlelerini gösteriyor; tüm sanatçıların Fan Club başlığı ile Manifest’in ek iç bağlantı bileşenleri yeni sürümün aktivasyonunu bekliyor. Aktivasyon sonrası canlı HTTP metadata ve içerik kontrollerini tekrar yap.
 Yayın komutu (sunucuda root):
-bash /home/deploy/fans/releases/20260927-artist-sections/deploy/activate-release.sh
+bash /home/deploy/fans/releases/20260927-fanclub-editorial/deploy/activate-release.sh
 
 2. HEDEF VE ÇALIŞMA ŞEKLİ
 
@@ -62,6 +62,16 @@ Ayrı veritabanı ve port 3045 denetiminde 55 ilgili adres HTTP 200, tek H1, ind
 
 Her sanatçının ana sayfasında içerikler türüne göre ayrı sunulur: Haberler → Konserler → Şarkılar → Albümler. Karma “Haberler, konserler ve albümler” ve belirsiz “Şarkılar ve daha fazlası” başlıkları kullanılmaz. Her sıranın kendi ilgili bölüm bağlantısı vardır; kartlar kendi sayfasına gider. Tek H1 sanatçı adıdır; dört bölüm H2 olarak kalır.
 Ayrı test veritabanı ve port 3046 üzerinde sekiz ana sayfa HTTP 200, H2 sırası doğru, tek H1; tüm görünür kart hedefleri HTTP 200. Üretim derlemesi SITE_ORIGIN=https://fanz.com.tr ile başarılı. Gerçek mobil cihaz ve canlı aktivasyon sonucu ayrıca kontrol edilmelidir.
+
+3D. FAN CLUB KİMLİĞİ VE MANIFEST EDİTORYAL DERİNLİK
+
+Sekiz sanatçının yalnız ana topluluk adresinde title ve meta description “{Sanatçı} Fan Club Topluluğu” önceliğiyle başlar; sohbet, haber, şarkı, albüm ve konser keşfine bağlanır. Sanatçı fan sayfası resmî sanatçı hesabı olarak işaretlenmez. Bölüm ve içerik sayfalarında arama niyetine uygun mevcut özgün başlıklar korunur.
+
+Manifest için 24 içerik gövdesi tarih, yayın biçimi, parça/sürüm ayrımı, kaynak, sanatçı/konser bağlamı ve ilgili arşiv yoluyla yeniden yazıldı; kısa şablon cümleleri bırakılmadı. 25 şarkı açıklaması tarih, süre, albüm konumu, sürüm farkı ve doğrulanmış dinleme/video bilgisiyle genişletildi. Biyografiye dönemlere göre dinleme rehberi eklendi. 13 yayın sayfasının görünen giriş özeti de tarih ve özgün bağlamla yeniden yazıldı. Tam şarkı sözleri kopyalanmaz; resmî ekran bağlantısı verilir.
+Yazma paketleri: content/manifest/editorial-batch-20260927.json (50 işlem) ve leads-batch-20260927.json (13 işlem). Yeniden üretim araçları build-editorial-batch.py ve build-leads-batch.py; revision kontrolü, ön doğrulama, yedek ve atomik kayıt korunur.
+İçerik içindeki doğal sanatçı/yayın/şarkı adları gerçek dahili bağlantıya dönüşür. Her Manifest yayın, haber ve konser sayfasında biyografi, şarkı ve konser arşivine; ilgiliyse yayın/şarkı ayrıntılarına açık bağlantılar bulunur. Şarkı ayrıntısı albüm, şarkı rehberi ve biyografiye gider; kaynak Apple Music ve doğrulanmış video ayrıca sunulur. Sırf uzunluk için tekrar, uydurma söz/yorum/etkinlik veya alakasız bağlantı eklenmez.
+Ayrı veritabanı ve port 3048 ile sekiz topluluk kökü ve 56 Manifest adresi (64 adres) kontrol edildi: HTTP 200, tek H1, canonical, uygun robots, benzersiz başlık; sekiz kökte Fan Club başlık/açıklaması; 49 Manifest içerik ayrıntısında en az dört dahili hedef, 44 benzersiz dahili hedef ve kırık bağlantı yok. İçerik gövdesi en az 901, şarkı açıklaması en az 608, biyografi 2651 karakter. Uzunluk tek başına SEO ölçütü değildir; olgular kaynaklı, metinler sayfaya özgü tutulur.
+Gelecek sanatçılar için aynı kalite kapısı geçerli: kök topluluk kimliği, kaynaklı özgün uzun içerik, ilgili iç bağlantı, görünen özgün özet, doğru sürüm/künye, sayfa içeriğine uygun SEO metadata ve gerçek HTTP denetimi. Toplu şablon metni doldurma yapılmaz.
 
 4. KORUNACAK SEO KURALLARI
 
