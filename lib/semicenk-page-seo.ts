@@ -1,4 +1,4 @@
-import {dateLabel,type Entry} from './entries-types';
+import {dateLabel,todayTR,type Entry} from './entries-types';
 import {isCancelled,isPostponed} from './semicenk-events';
 import type {Song} from './songs';
 const news:Record<string,{title:string;description:string}>={
@@ -15,7 +15,7 @@ export function semicenkEntrySeo(e:Entry){
   if(isCancelled(e))return {title:heading,heading,description:'Semicenk’in '+dateLabel(e.date)+' '+e.city+' konseri iptal edildi. '+e.venue+' için iptal duyurusu ve etkinliğin arşiv bilgileri.'};
   if(isPostponed(e))return {title:heading,heading,description:'Semicenk’in '+e.city+' konseri ertelendi. '+e.venue+' etkinliğinin güncel durumu ve resmî duyuru bağlantısı.'};
   const when=dateLabel(e.date)+(e.time?', saat '+e.time.replace(':','.'):'');
-  if(e.date<new Date().toISOString().slice(0,10))return {title:heading+' | Konser Arşivi',heading,description:heading+': '+e.venue+'. Geçmiş etkinliğin tarih, mekân ve kaynak bilgileri.'};
+  if(e.date<todayTR())return {title:heading+' | Konser Arşivi',heading,description:heading+': '+e.venue+'. Geçmiş etkinliğin tarih, mekân ve kaynak bilgileri.'};
   return {title:heading+' | Bilet ve Mekân',heading,description:'Semicenk '+e.city+' konseri '+when+': '+e.venue+'. Konser duyurusu, program bilgileri ve resmî bilet satış bağlantısı.'};
  }
  if(e.kind==='haberler'){const n=e.seo_title?{title:e.seo_title,description:e.seo_description||e.summary}:news[e.slug];return {...(n??{title:e.title.includes('Semicenk')?e.title:'Semicenk: '+e.title,description:e.summary}),heading:n?.title??e.title};}

@@ -1,6 +1,6 @@
 import {artists} from './artists';
 
-export const siteOrigin=(process.env.SITE_ORIGIN??'https://fans.wai.com.tr').replace(/\/$/,'');
+export const siteOrigin=(process.env.SITE_ORIGIN??'https://fanz.com.tr').replace(/\/$/,'');
 export const siteName='Fanz.com.tr';
 export function absoluteUrl(path:string){return new URL(path,siteOrigin+'/').toString()}
 export function artistName(id:string){return artists.find(a=>a.id===id)?.name??id}

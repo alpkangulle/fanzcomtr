@@ -11,4 +11,7 @@ const config:NextConfig={
   {key:'Referrer-Policy',value:'strict-origin-when-cross-origin'}
  ]}]}
 };
-export default config;
+export default function nextConfig(phase:string){
+ if(phase==='phase-production-build'&&!process.env.SITE_ORIGIN)throw new Error('SITE_ORIGIN must be explicitly set before building. Production: https://fanz.com.tr');
+ return config;
+}

@@ -8,6 +8,13 @@ origin="$(sed -n 's/^SITE_ORIGIN=//p' "$base/shared/runtime.env" | tail -1)"
 case "$origin" in https://fans.wai.com.tr|https://fanz.com.tr) ;; *) echo 'SITE_ORIGIN geçersiz'; exit 1;; esac
 previous="$(readlink -f "$base/current")"
 test -f "$release/.next/BUILD_ID"
+python3 - "$release/.next/routes-manifest.json" <<'PYSEO'
+import json,sys
+manifest=json.load(open(sys.argv[1]))
+for route in manifest.get('headers',[]):
+ if route.get('source')=='/:path*' and any(h['key'].lower()=='x-robots-tag' and 'noindex' in h['value'].lower() for h in route['headers']):
+  sys.exit('Bu derleme tüm siteyi noindex yapıyor. SITE_ORIGIN=https://fanz.com.tr ile yeniden derleyin.')
+PYSEO
 test -f "$release/public/images/artists/semicenk.png"
 test -f "$release/public/images/albums/semicenk.jpg"
 test -f "$release/public/fonts/dm-sans-latin.woff2"
@@ -55,4 +62,6 @@ for path in admin/seo indexnow.txt; do
  if ! curl -fsS --max-time 15 "$origin/$path" -o /dev/null; then rollback; exit 1; fi
 done
 if [ "$(curl -s --max-time 10 -o /dev/null -w '%{http_code}' "$origin/api/admin/seo")" != 401 ]; then rollback; exit 1; fi
+if ! curl -fsS --max-time 10 "$origin/robots.txt" | python3 -c 'import sys;s=sys.stdin.read();sys.exit(0 if "Sitemap: https://fanz.com.tr/sitemap.xml" in s and "fans.wai.com.tr" not in s else 1)'; then rollback; exit 1; fi
+if ! curl -fsSI --max-time 10 "$origin/semicenk" | python3 -c 'import sys;s=sys.stdin.read().lower();sys.exit(1 if any(line.startswith("x-robots-tag:") and ("noindex" in line or "none" in line) for line in s.splitlines()) else 0)'; then rollback; exit 1; fi
 printf 'Yayında: %s\nÖnceki sürüm: %s\n%s/semicenk\n' "$release" "$previous" "$origin"
