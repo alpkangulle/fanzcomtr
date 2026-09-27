@@ -1,4 +1,5 @@
 import {dateLabel,type Entry} from './entries-types';
+import {isCancelled} from './semicenk-events';
 import catalog from './semicenk-catalog.json';
 import type {Song} from './songs';
 const news:Record<string,{title:string;description:string}>={
@@ -11,8 +12,10 @@ const news:Record<string,{title:string;description:string}>={
 };
 export function semicenkEntrySeo(e:Entry){
  if(e.kind==='konserler'){
-  const heading='Semicenk '+e.city+' Konseri – '+dateLabel(e.date);
+  const heading='Semicenk '+e.city+' Konseri – '+dateLabel(e.date)+(isCancelled(e)?' (İptal)':'');
+  if(isCancelled(e))return {title:heading,heading,description:'Semicenk’in 27 Eylül 2026 Oberhausen konseri iptal edildi. Turbinenhalle 1’in resmî iptal duyurusu ve etkinliğin arşiv bilgileri.'};
   const when=dateLabel(e.date)+(e.time?', saat '+e.time.replace(':','.'):'');
+  if(e.date<new Date().toISOString().slice(0,10))return {title:heading+' | Konser Arşivi',heading,description:heading+': '+e.venue+'. Geçmiş etkinliğin tarih, mekân ve kaynak bilgileri.'};
   return {title:heading+' | Bilet ve Mekân',heading,description:'Semicenk '+e.city+' konseri '+when+': '+e.venue+'. Konser duyurusu, program bilgileri ve resmî bilet satış bağlantısı.'};
  }
  if(e.kind==='haberler'){const n=news[e.slug];return {...(n??{title:e.title.includes('Semicenk')?e.title:'Semicenk: '+e.title,description:e.summary}),heading:n?.title??e.title};}
@@ -27,4 +30,4 @@ export function semicenkSongSeo(s:Song){
  return {title:'Semicenk '+s.name+' – Şarkısı ve Resmî Video',description:credits+' – '+s.name+'. '+dateLabel(s.date)+' tarihli kaydın '+(duration?duration+' süresi, ':'')+'şarkı tanıtımı, sanatçı künyesi, resmî videosu ve dinleme bağlantısı.'};
 }
 export function entryDisplayTitle(e:Entry){return e.artist==='semicenk'?semicenkEntrySeo(e).heading:e.title}
-export const semicenkSectionHeading:Record<string,string>={haberler:'Semicenk Haberleri',konserler:'Semicenk Konser Takvimi ve Bilet Bilgileri',albumler:'Semicenk Diskografi: Albümler, EP’ler ve Single’lar',biyografi:'Semicenk Kimdir? Cenk Baş’ın Biyografisi',galeri:'Semicenk Fotoğraf ve Albüm Kapağı Galerisi','sarki-sozleri':'Semicenk Şarkı Rehberi'};
+export const semicenkSectionHeading:Record<string,string>={haberler:'Semicenk Haberleri',konserler:'Semicenk Konser Takvimi ve Bilet Bilgileri',albumler:'Semicenk Diskografi: Albümler, EP’ler ve Single’lar',biyografi:'Semicenk Kimdir? Cenk Baş’ın Biyografisi',galeri:'Semicenk Fotoğrafları, Kapakları ve Canlı Videoları','sarki-sozleri':'Semicenk Şarkı Rehberi'};
