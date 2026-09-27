@@ -8,10 +8,9 @@ type Comment={id:string;body:string;created:number;username:string;mine:number;l
 type Data={likes:number;liked:boolean;comments:Comment[];commentCount:number;member:Member|null;hasMore:boolean};
 export default function Engagement({target,follow}:{target:string;follow?:{count:number;followed:boolean;toggle:()=>void}}){
  const [mounted,setMounted]=useState(false),[dismissed,setDismissed]=useState(true),[data,setData]=useState<Data|null>(null),[views,setViews]=useState(0);
- const [open,setOpen]=useState(false),[gate,setGate]=useState(false),[sort,setSort]=useState<'popular'|'new'>('popular');
+ const [open,setOpen]=useState(false),[sort,setSort]=useState<'popular'|'new'>('popular');
  const [all,setAll]=useState<Comment[]>([]),[hasMore,setHasMore]=useState(false),[loading,setLoading]=useState(false);
  const [guestName,setGuestName]=useState(''),[body,setBody]=useState(''),[error,setError]=useState(''),[notice,setNotice]=useState(''),[busy,setBusy]=useState(false);
- const [mode,setMode]=useState<'register'|'login'>('login'),[name,setName]=useState(''),[password,setPassword]=useState(''),[loginError,setLoginError]=useState('');
  const startY=useRef<number|null>(null),[drag,setDrag]=useState(0),opener=useRef<HTMLElement|null>(null),requestVersion=useRef(0);
  const query='/api/engagement?target='+encodeURIComponent(target)+'&sort='+sort;
  const load=useCallback(async()=>{
@@ -30,19 +29,14 @@ export default function Engagement({target,follow}:{target:string;follow?:{count
  async function more(){setLoading(true);try{const r=await fetch(query+'&limit=50&offset='+all.length,{cache:'no-store'}),v=await r.json();if(!r.ok)throw Error(v.error);setAll(old=>[...old,...v.comments.filter((c:Comment)=>!old.some(o=>o.id===c.id))]);setHasMore(v.hasMore)}catch(e){setError(e instanceof Error?e.message:'Yorumlar yüklenemedi.')}finally{setLoading(false)}}
  function show(){opener.current=document.activeElement as HTMLElement;setOpen(true)}
  async function act(action:'like'|'comment'){
-  if(action==='like'&&!data?.member){setGate(true);return}
   setBusy(true);setError('');setNotice('');
   try{const r=await fetch('/api/engagement',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({target,action,body,name:guestName})}),v=await r.json();
    if(!r.ok)throw Error(v.error??'İşlem tamamlanamadı.');
    if(action==='comment'){setBody('');setNotice(v.message)}await load();
   }catch(e){setError(e instanceof Error?e.message:'Bağlantıyı kontrol edip tekrar dene.')}finally{setBusy(false)}
  }
- async function login(e:React.FormEvent){e.preventDefault();setBusy(true);setLoginError('');try{
-  const r=await fetch('/api/member/session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:mode,username:name,password})}),v=await r.json();
-  if(!r.ok)throw Error(v.error);setPassword('');setGate(false);await load();
- }catch(e){setLoginError(e instanceof Error?e.message:'Giriş yapılamadı.')}finally{setBusy(false)}}
  async function likeComment(id:string){
-  if(!data?.member){setGate(true);return}setBusy(true);
+  setBusy(true);
   try{const r=await fetch('/api/engagement',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({target,action:'comment_like',commentId:id})});if(!r.ok)throw Error('Beğeni kaydedilemedi.');
    setAll(old=>old.map(c=>c.id===id?{...c,liked:c.liked?0:1,likes:c.likes+(c.liked?-1:1)}:c));await load();
   }catch(e){setError(e instanceof Error?e.message:'İşlem başarısız.')}finally{setBusy(false)}
@@ -56,6 +50,6 @@ export default function Engagement({target,follow}:{target:string;follow?:{count
  <Dialog.Root open={open} onOpenChange={setOpen}><Dialog.Portal><Dialog.Overlay className="comments-overlay"/><Dialog.Content className="comments-drawer" style={drag?{transform:'translate(-50%,'+drag+'px)'}:undefined} onCloseAutoFocus={e=>{e.preventDefault();opener.current?.focus()}}>
  <button className="drawer-grip" aria-label="Yorumları aşağı indir" onClick={()=>setOpen(false)} onPointerDown={e=>{startY.current=e.clientY;e.currentTarget.setPointerCapture(e.pointerId)}} onPointerMove={e=>{if(startY.current!==null)setDrag(Math.max(0,e.clientY-startY.current))}} onPointerUp={e=>{if(startY.current!==null&&e.clientY-startY.current>70)setOpen(false);startY.current=null;setDrag(0)}} onPointerCancel={()=>{startY.current=null;setDrag(0)}}><span/></button>
  <div className="sheet-header"><Dialog.Title>Yorumlar ({data?.commentCount??0})</Dialog.Title><Dialog.Close aria-label="Yorumları kapat"><ChevronDown size={24}/></Dialog.Close></div><Dialog.Description className="drawer-description">Onaylanmış yorumları oku veya düşünceni paylaş.</Dialog.Description><div className="comment-sort"><button aria-pressed={sort==='popular'} onClick={()=>setSort('popular')}>En beğenilenler</button><button aria-pressed={sort==='new'} onClick={()=>setSort('new')}>En yeniler</button></div><div className="drawer-scroll"><div className="comments">{comments(all)}</div>{loading&&<p role="status">Yorumlar yükleniyor…</p>}{!loading&&!all.length&&<p>Henüz onaylanmış yorum yok.</p>}{hasMore&&<button className="load-comments" disabled={loading} onClick={()=>void more()}>Daha fazla yorum göster</button>}{composer}</div></Dialog.Content></Dialog.Portal></Dialog.Root>
- <Dialog.Root open={gate} onOpenChange={setGate}><Dialog.Portal><Dialog.Overlay className="comments-overlay member-gate-overlay"/><Dialog.Content className="member-dialog comment-member-dialog"><Dialog.Close className="member-close" aria-label="Girişi kapat"><X size={20}/></Dialog.Close><Dialog.Title>Beğenmek için giriş yap</Dialog.Title><Dialog.Description>Yorum yazmak için üyelik gerekmez. Beğeniler hesabına bağlıdır.</Dialog.Description><div className="member-modes"><button aria-pressed={mode==='login'} onClick={()=>setMode('login')}>Giriş yap</button><button aria-pressed={mode==='register'} onClick={()=>setMode('register')}>Üye ol</button></div><form onSubmit={login}><label>Kullanıcı adı<input autoComplete="username" required minLength={3} maxLength={24} value={name} onChange={e=>setName(e.target.value)}/></label><label>Şifre<input type="password" autoComplete={mode==='register'?'new-password':'current-password'} required minLength={10} value={password} onChange={e=>setPassword(e.target.value)}/></label>{loginError&&<p role="alert">{loginError}</p>}<button className="primary" disabled={busy}>{mode==='login'?'Giriş yap':'Hesap oluştur'}</button></form></Dialog.Content></Dialog.Portal></Dialog.Root>
+
  </section>;
 }

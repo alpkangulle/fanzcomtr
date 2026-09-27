@@ -6,7 +6,7 @@ export async function GET(req:Request){
  if(!targets.length||targets.length>40||targets.some(t=>t.length>220))return Response.json({error:'Geçersiz içerik.'},{status:400});
  const db=channelDb(),stats:Record<string,{likes:number;comments:number;views:number}>={};
  for(const t of targets)if(await validTarget(t)){
-  const r=await db.prepare('SELECT (SELECT COUNT(*) FROM content_likes WHERE target=?) AS likes,(SELECT COUNT(*) FROM approved_page_comments WHERE target=?) AS comments,(SELECT COUNT(*) FROM content_view_events WHERE target=?) AS views').bind(t,t,t).first<{likes:number;comments:number;views:number}>();
+  const r=await db.prepare('SELECT ((SELECT COUNT(*) FROM content_likes WHERE target=?)+(SELECT COUNT(*) FROM guest_content_likes WHERE target=?)) AS likes,(SELECT COUNT(*) FROM approved_page_comments WHERE target=?) AS comments,(SELECT COUNT(*) FROM content_view_events WHERE target=?) AS views').bind(t,t,t,t).first<{likes:number;comments:number;views:number}>();
   if(r)stats[t]=r;
  }
  return Response.json({stats},{headers:{'Cache-Control':'no-store'}});

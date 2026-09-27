@@ -11,7 +11,7 @@ Kullanıcı kararı: Semicenk pilotunda geliştirilen ve Manifest'te uygulanan i
 - Kaynaklı tarih, albüm/şarkı eşleşmesi ve kredi bilgisi doğrulanır. Deluxe sürümlerin ortak şarkıları çoğaltılmaz; konuk şarkı başka sanatçının tüm albümünün aktarılmasına yol açmaz.
 - Konserin duyurulması gerçekleştiğini kanıtlamaz. İptal, erteleme ve yeni tarih; liste, bilet çağrısı ve JSON-LD üzerinde tutarlı gösterilir. Saat bilinmiyorsa uydurulmaz.
 - Tam şarkı sözü, kopya haber, doğrulanmamış iddia veya sahte güncellik kullanılmaz. Resmî dinleme/video bağlantıları tercih edilir.
-- Tüm mevcut ve sonradan eklenen sanatçıların kök, bölüm, haber, konser, albüm ve şarkı sayfalarında misafirler adını ve mesajını yazarak üye olmadan yorum gönderebilir; yorum onaylanana kadar görünmez. Beğeni üyelik isteyebilir. Ortak yorum bileşeni ve API hedef doğrulaması yeni sanatçı eklenirken de kontrol edilir.
+- Tüm mevcut ve sonradan eklenen sanatçıların kök, bölüm, haber, konser, albüm ve şarkı sayfalarında misafirler adını ve mesajını yazarak üye olmadan yorum gönderebilir; yorum onaylanana kadar görünmez. İçerik ve onaylı yorum beğenisi üyelik gerektirmez; misafir için tarayıcı çereziyle tekil ve geri alınabilir kayıt tutulur. Sanatçı akış kartındaki beğeni ve yorum da aynı kurala uyar. Ortak yorum bileşeni ve API hedef doğrulaması yeni sanatçı eklenirken de kontrol edilir.
 - Mobil kullanım, okunabilirlik ve mevcut ortak sayfa düzeni korunur. Otomasyonun tasarım değişikliği yapması bu standardın parçası değildir.
 
 ## Yayın kalite kapısı
