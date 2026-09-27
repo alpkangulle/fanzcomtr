@@ -24,14 +24,13 @@ cp -a "$old_site" "$backup/old-nginx"
 if [ -e "$new_site" ]; then cp -a "$new_site" "$backup/new-nginx"; fi
 had_new_link=false
 if [ -L /etc/nginx/sites-enabled/fanz.com.tr ]; then had_new_link=true; fi
-switched=false
 rollback(){
  echo 'Geçiş başarısız; önceki servis ve Nginx yapılandırmasına dönülüyor.'
  cp -a "$backup/runtime.env" "$env_file"
  cp -a "$backup/old-nginx" "$old_site"
  if [ -f "$backup/new-nginx" ]; then cp -a "$backup/new-nginx" "$new_site"; else rm -f "$new_site"; fi
  if [ "$had_new_link" = false ]; then rm -f /etc/nginx/sites-enabled/fanz.com.tr; fi
- ln -s "$previous" "$base/current.next"
+ ln -sfn "$previous" "$base/current.next"
  mv -Tf "$base/current.next" "$base/current"
  nginx -t && systemctl reload nginx || true
  systemctl restart fans-platform.service || true
@@ -107,9 +106,8 @@ test "$(grep -c '^SITE_ORIGIN=https://fanz.com.tr$' "$temp_env")" -eq 1
 chown deploy:deploy "$temp_env"
 chmod 600 "$temp_env"
 mv -f "$temp_env" "$env_file"
-ln -s "$release" "$base/current.next"
+ln -sfn "$release" "$base/current.next"
 mv -Tf "$base/current.next" "$base/current"
-switched=true
 systemctl restart fans-platform.service
 for attempt in {1..20}; do
  if curl -fsS --max-time 2 http://127.0.0.1:3042/api/health | python3 -c 'import json,sys;d=json.load(sys.stdin);sys.exit(0 if d.get("status")=="ok" and d.get("database")=="ok" else 1)' 2>/dev/null; then break; fi
