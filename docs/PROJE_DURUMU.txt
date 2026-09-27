@@ -7,16 +7,14 @@ Bu dosya, her anlamlı çalışma sonunda güncellenir. “Hazırlandı” ile �
 1. GÜNCEL YAYIN DURUMU
 
 Son doğrulanan canlı sürüm:
-20260927-footer-clean
-Kaynak commit: 3035ffee96206a5e57fcb937f85ea04a066fd065
+20260927-chat-keyboard
+Kaynak commit: 1c447c4b29669a6c77f372f57229b379fbe57029
+27 Eylül canlı kontrolü: /home/deploy/fans/current bu sürüme işaret ediyor; ana sayfa HTTP 200. Klavye ve alt alan düzeltmeleri canlı sürüme dahildir.
 
-27 Eylül canlı kontrolü: current symlink alt alan temizliği sürümüne işaret ediyor; /semicenk HTTP 200. 67 adres HTTP 200 döndü. Evrensel HTTP noindex başlığı yok. Sekiz sanatçının ana sayfası index, follow; diğer yedi sanatçının şarkı sözleri bölümleri ile profil/admin bilinçli noindex.
-
-Hazırlanan paket: 20260927-chat-keyboard — henüz canlıda değil.
-Ana sayfanın altındaki Yönetim ve Önizleme hakkında bağlantıları, geliştirme sürümü bilgi penceresi ve kullanılmayan pencere kodu kaldırıldı. Fotoğraf kaynakları ve lisanslar bağlantısı doğrudan alt alanda korundu. Yönetici giriş adresi ve erişim denetimleri değişmedi.
-Yeni pakette mobil klavye açılırken sohbet penceresi görsel ekranın üst konumu ve yüksekliğiyle hizalanır; yazma kutusu klavyenin üstünde, mesajlar kaydırılabilir alanda kalır. Tam ekran sohbet ve sohbetler lobisi aynı düzeltmeyi paylaşır. Klavye açıkken görsel kaynak şeridi gizlenir. Alt alandaki eski fans metni yerine kullanıcının Z ikonu konur; site adı Fanz olarak düzeltilir. Mobil 390x844 tarayıcıda görsel ekranı 240px yukarı ve 430px yüksekliğe getiren klavye benzetiminde sohbet 240–670px alanına, gönderim kutusu 610–664px aralığına oturdu. Fiziksel iPhone testi bekliyor. Önceki alt alan yönetim/önizleme temizliği canlıda doğrulandı; bu sürümde de bulunur.
+Hazırlanan paket: 20260927-manifest-pilot — SEO ve arayüz kodu henüz canlıda değil.
+Manifest içerik paketi ayrı veritabanı kopyasında doğrulandı. Üretim içeriğine uygulanması ve yeni sürümün root tarafından etkinleştirilmesi ayrı adımlardır. Canlı durumunu her adımın ardından yeniden doğrula.
 Yayın komutu (sunucuda root):
-bash /home/deploy/fans/releases/20260927-chat-keyboard/deploy/activate-release.sh
+bash /home/deploy/fans/releases/20260927-manifest-pilot/deploy/activate-release.sh
 
 2. HEDEF VE ÇALIŞMA ŞEKLİ
 
@@ -43,6 +41,15 @@ Bu sayılar sabit hedef değildir. Yeni doğrulanmış içerikle değişebilir.
 Yazmadan önce --dry-run, güncel revision, otomatik yedek, atomik işlem ve yayın sonrası gerçek HTTP kontrolü kullanılır.
 
 Doğrulama kaynakları: sanatçı/yapımcı duyuruları, Eva Records, Apple Music, resmî YouTube yayınları, bilet sağlayıcıları ve konser salonları. Haber metinleri özgün hazırlanır. Kaynak ve kontrol zamanı tutulur. Konuk sanatçı kaydı başka sanatçının tüm albümünü Semicenk albümü hâline getirmez. Şarkı sözleri için mevcut uygulama resmî dinleme/söz ekranlarına bağlantı verir.
+
+3A. MANIFEST PİLOTU — 27 EYLÜL 2026 KAYNAK SINIRI
+
+Kaynaklı içerik paketi content/manifest/build-batch.py tarafından üretilir; dondurulmuş yazma dosyası content/manifest/batch-20260927.json. Yazma aracı Semicenk ve Manifest için aynı revision, ön kontrol, yedek ve atomik işlem kurallarını kullanır.
+Pakette biyografi, 13 albüm/single kaydı, 8 haber, 3 konser ve 25 şarkı kaydı vardır (toplam 50 işlem). 2025 manifestival özgün 11 parça, deluxe sürüm 16 parça; deluxe ortak parçaları şarkı sayfalarında tekrar edilmez. Ankara iki günü kaynaklı geçmiş duyuru arşividir; gerçekleştiği bağımsız doğrulanmış sayılmaz. OVO Arena Wembley 16 Ekim 2026 duyurusu, 27 Eylül itibarıyla gelecekteki konser olarak listelenir; saat kesinleşmemiştir. Habere tarihsiz salon sayfası üzerinden uydurma duyuru tarihi verilmez.
+Apple Music, Shazam/MusicBrainz, Biletix, OVO Arena Wembley ve resmî YouTube kayıtları kullanıldı. Kaynak kontrol sınırı 27 Eylül 2026’dır; sonrasını öngörme. Haberler özgün kısa özet, kaynak ve tarih taşır. Albüm kapağı ile grup portresi ayrılır. Tam söz yerine resmî söz ekranına bağlantı verilir.
+
+Manifest için ayrı kök, bölüm, şarkı ve içerik başlık/açıklamaları; MusicGroup, bölüm ve liste şemaları; tek H1; kendine canonical; uygun robots; site haritası ve iç bağlantılar eklendi. Şarkı rehberi ve kaynaklı galeri hazırlandı. Şarkı kayıtları veritabanından okunur; geçmişte yalnız Semicenk için çalışan ayrıntı yolu Manifest’e açıldı.
+Ayrı test veritabanı ve port 3044 ile 57 adres: HTTP 200, tek H1, canonical, açıklama, index ayarı ve benzersiz başlık. Manifest iç bağlantılarında kırık hedef bulunmadı; site haritasında 56 alt adres ve rehber var. Üretim derlemesi SITE_ORIGIN=https://fanz.com.tr ile başarılı. Google indeks durumu ve gerçek mobil cihaz doğrulanmadı.
 
 4. KORUNACAK SEO KURALLARI
 
