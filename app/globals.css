@@ -402,3 +402,14 @@ body:has(.chat-expanded) .global-header{display:none}
 }
 
 .editorial-keyword{font-weight:700;text-decoration:underline;text-underline-offset:3px;color:#ddf25b}.editorial-keyword:hover{color:#f0ff9b}.deferred-channel{scroll-margin-top:114px}.channel-placeholder{min-height:640px;background:#171b17;border:1px solid #343b31;border-radius:18px;padding:30px;margin-top:24px}.channel-placeholder h2{font-size:23px;margin-bottom:12px}.channel-placeholder p{margin-bottom:18px;color:#c7cfbf}
+
+/* iOS keeps fixed elements in the layout viewport when the keyboard pans the visual viewport. */
+@media(max-width:700px){
+ .artist-page .embedded-channel.chat-expanded,.song-page .embedded-channel.chat-expanded{top:var(--chat-viewport-top,0px);bottom:auto;height:var(--chat-viewport-height,100dvh)}
+ .chat-keyboard-open .chat-expanded .composer,.chat-keyboard-open .lobby-channel-dialog .composer{margin-bottom:6px}
+ .lobby-channel-dialog{top:var(--chat-viewport-top,0px);bottom:auto;height:var(--chat-viewport-height,100dvh)}
+ .chat-expanded .channel-photo-source,.lobby-channel-dialog .channel-photo-source{display:none}
+ .chat-expanded .composer,.lobby-channel-dialog .composer{position:relative;z-index:1;flex-shrink:0}
+}
+.footer-brand{display:inline-flex;align-items:center;gap:10px}
+.footer-brand img{display:block;width:38px;height:38px;object-fit:contain;border-radius:8px}

@@ -12,17 +12,17 @@ Kaynak commit: e74b72eb5e3e8bf6616b9013b1bebae0fd664906
 
 27 Eylül canlı kontrolü: current symlink ikon/hız sürümüne işaret ediyor. 67 adres HTTP 200 döndü. Evrensel HTTP noindex başlığı yok. Sekiz sanatçının ana sayfası index, follow; diğer yedi sanatçının şarkı sözleri bölümleri ile profil/admin bilinçli noindex.
 
-Hazırlanan paket: 20260927-footer-clean — henüz canlıda değil.
+Hazırlanan paket: 20260927-chat-keyboard — henüz canlıda değil.
 Ana sayfanın altındaki Yönetim ve Önizleme hakkında bağlantıları, geliştirme sürümü bilgi penceresi ve kullanılmayan pencere kodu kaldırıldı. Fotoğraf kaynakları ve lisanslar bağlantısı doğrudan alt alanda korundu. Yönetici giriş adresi ve erişim denetimleri değişmedi.
-Doğrulama: üretim derlemesi/TypeScript başarılı; alt alanın kaynak kontrolünde yönetim/önizleme öğeleri yok, lisans bağlantısı korunuyor. Derlemede evrensel noindex başlığı yok.
+Yeni pakette mobil klavye açılırken sohbet penceresi görsel ekranın üst konumu ve yüksekliğiyle hizalanır; yazma kutusu klavyenin üstünde, mesajlar kaydırılabilir alanda kalır. Tam ekran sohbet ve sohbetler lobisi aynı düzeltmeyi paylaşır. Klavye açıkken görsel kaynak şeridi gizlenir. Alt alandaki eski fans metni yerine kullanıcının Z ikonu konur; site adı Fanz olarak düzeltilir. Mobil 390x844 tarayıcıda görsel ekranı 240px yukarı ve 430px yüksekliğe getiren klavye benzetiminde sohbet 240–670px alanına, gönderim kutusu 610–664px aralığına oturdu. Fiziksel iPhone testi bekliyor. Önceki alt alan yönetim/önizleme temizliği de bu sürümde bulunur.
 Yayın komutu (sunucuda root):
-bash /home/deploy/fans/releases/20260927-footer-clean/deploy/activate-release.sh
+bash /home/deploy/fans/releases/20260927-chat-keyboard/deploy/activate-release.sh
 
 2. HEDEF VE ÇALIŞMA ŞEKLİ
 
 Semicenk pilot sanatçıdır. İçerik, SEO, tasarım, sohbet ve hız yaklaşımı bu sanatçı üzerinde doğrulanır. Kullanıcı beğendikten sonra diğer sanatçılara özgün içeriklerle uygulanır. Sekiz sanatçı: Semicenk, Tarkan, Mabel Matiz, Manifest, Sezen Aksu, Duman, Hadise, Ceza.
 
-Diğer sanatçıların sayfa düzeni ortak düzeltmelerden yararlanır; ancak Semicenk kadar ayrıntılı içeriklerinin tamamlandığı varsayılmaz. Sonraki sanatçı seçilmeden toplu içerik üretimi yapılmaz.
+Diğer sanatçıların sayfa düzeni ortak düzeltmelerden yararlanır; ancak Semicenk kadar ayrıntılı içeriklerinin tamamlandığı varsayılmaz. Sonraki sanatçı seçilmeden toplu içerik üretimi yapılmaz. Seçilen her yeni sanatçıda Semicenk pilotundaki bütün SEO denetimleri aynı kalite kapısından geçirilir: kaynaklı ve özgün biyografi/haber/konser/diskografi/şarkı içeriği, içerikle uyumlu benzersiz başlık ve açıklama, canonical, tek H1, doğru robots, paylaşım görseli, uygun JSON-LD, site haritası, bağlamsal iç bağlantı, kırık/yetim bağlantı ve gerçek HTTP denetimi. Geçerli içerik olmadan boş sayfayı index yapma veya sahte güncellik üretme.
 
 Kullanıcı Türkçe, kısa ve somut ilerleme bilgisi istiyor. İzin verilmiş işleri gereksiz tekrar onayına bağlamadan tamamlamak; gerçek erişim/yayın engellerini açıkça belirtmek gerekiyor.
 
@@ -183,3 +183,5 @@ https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
 https://nextjs.org/docs/app/api-reference/components/image
 
 27 Eylül — İkon/hız paketinin canlı olduğu doğrulandı. Kullanıcının isteğiyle alt alandaki yönetim/önizleme bağlantıları ve geliştirme sürümü penceresi kaldırılan yeni paket hazırlandı; yayın bekliyor.
+
+27 Eylül — Mobil sohbet klavyesi için görsel ekran hizalama düzeltmesi, alt alanda Fanz ikonu ve yeni sanatçılar için Semicenk SEO kalite kapısı eklendi; fiziksel iPhone testi ve yayın bekliyor.
