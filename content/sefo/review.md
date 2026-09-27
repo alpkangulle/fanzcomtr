@@ -1,0 +1,14 @@
+# Sefo arşivi — 27 Eylül 2026 kaynak ve yayın kaydı
+
+Durum: üretim veritabanı kopyasında hazırlanıp doğrulandı. Canlı sürüm henüz değiştirilmedi.
+
+- Apple Music Sefo sanatçı künyesi: https://music.apple.com/tr/artist/sefo/1360733410 (27 Eylül 2026 kontrol). iTunes sanatçı lookup sonucu 58 yayın; bunlardan 57’si Sefo ya da ortak sanatçı yayını olarak diskografiye, Anadolu Hayat Emeklilik adına yayımlanan konuk İyi Gelecek yalnız şarkı künyesine aktarılır. 71 tekilleştirilmiş şarkı; 2024 Türkiye’m ve 2026 Türkiye'm ayrı kayıtlar. Parça tarihleri, sırası, süresi, kapak ve Apple Music adresi katalog JSON ve tracks JSON kayıtlarında.
+- Sefo resmî YouTube kanalı: https://www.youtube.com/@sefo362/videos (27 Eylül 2026 kontrol). 53 video künyesinden 48 doğru şarkı/sürüm eşleşmesi; aynı adlı Bonita ortak sanatçı künyesi yanlış eşleşmesin diye dışlandı. Video kaynağı ve kalan 23 eşleşmemiş şarkı match-report.json içinde. Doğrulanmamış videoyu uydurma bağlantıyla tamamlamayın.
+- Sony Music Türkiye: https://www.sonymusic.com.tr/haberler/sefodan-yeni-sarki-sipanbabur/ (26 Haziran 2026), https://www.sonymusic.com.tr/haberler/sefodan-yeni-sarki-yine-seni-severdim/ (17 Nisan), https://www.sonymusic.com.tr/haberler/sefo-ve-irem-dericiden-beklenen-duet/ (20 Mart), https://www.sonymusic.com.tr/haberler/sefo-sena-sahin-bi-bilsen/ (23 Ocak). Dört ayrı haber, albüm künyesinden bir IMPARATOR pt.1 haberi.
+- Biyografi: https://www.kralmuzik.com.tr/biyografisi/sefo ve Apple Music katalog kaydı. Doğum, erken yayınlar ve iş birlikleri ayrı doğrulandı.
+- Gelecek konserler: https://www.bubilet.com.tr/istanbul/etkinlik/sefo-/seans/264337 (3 Ekim 2026, İstanbul, 21.00) ve https://www.biletix.com/etkinlik/5THY0/TURKIYE/tr (31 Ekim 2026, Konya, 20.30). Etkinlik koşulları bilet sağlayıcısının son duyurusundan yeniden okunmalıdır. Kart görselleri konser afişi değil, resmî yayın kapaklarıdır.
+- Portre kaynağı Apple Music sanatçı görseli. 58 yerel yayın kapağı 58 benzersiz dosya/hash ile kontrol edildi. Kapaklar albüm, haber ve konser kartlarında kaynak etiketiyle sunulur.
+
+Import batch-1 ve batch-2; revision null ile yeni Sefo kayıtlarını yedekli ve atomik içerik komutuyla aktarır. import-sefo.py iki batch için ayrı seed makbuzu bırakır, sonraki aktivasyonda editör değişikliklerini korur. Üretim DB kopyasında iki dry-run ve uygulama ile tekrar çalıştırma kontrolü geçti. QA sunucusunda 143 Sefo URL’si HTTP 200, tek H1, self-canonical, indexlenebilir meta ve resmî videolu sayfada oynatıcı kontrolünden geçti. Sitemap 143 adres içerdi; portre ve iki farklı yayın kapağı image/200. Bu üretim yayını veya Google indekslenme sonucu değildir.
+
+Sonraki adım: root aktivasyon; canlı symlink, HTTPS, kapak/video, JSON-LD ve SEO kuyruğunu tekrar kontrol et. Kullanıcı ayrı talep ederse 12 saatlik yalnız içerik otomasyonu kur.

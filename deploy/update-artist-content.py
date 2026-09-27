@@ -11,7 +11,7 @@ ap.add_argument('--dry-run',action='store_true')
 args=ap.parse_args()
 payload=json.loads(Path(args.batch).read_text())
 artist_id=payload.get('artist')
-assert artist_id in {'semicenk','manifest','blok3','burak-bulut'},'Unsupported artist'
+assert artist_id in {'semicenk','manifest','blok3','burak-bulut','sefo'},'Unsupported artist'
 ops=payload.get('operations',[])
 assert isinstance(ops,list) and 0<len(ops)<=100,'Expected 1–100 operations'
 def text(v,n=20000):

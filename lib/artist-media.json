@@ -88,5 +88,14 @@
     "license": "Hakları saklıdır",
     "licenseUrl": "https://www.apple.com/legal/internet-services/itunes/",
     "caption": "Burak Bulut sanatçı görseli; konser kaydı değildir."
+  },
+  "sefo": {
+    "src": "/images/artists/sefo.png",
+    "source": "https://music.apple.com/tr/artist/sefo/1360733410",
+    "download": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/42/28/07/42280799-59bc-e70d-a451-5c3ed4573ae2/76e9cedf-2939-44fa-a719-758f64b007c9_file_cropped.png/1200x630cw.png",
+    "author": "Apple Music sanatçı görseli",
+    "license": "Hakları saklıdır",
+    "licenseUrl": "https://www.apple.com/legal/internet-services/itunes/",
+    "caption": "Sefo sanatçı görseli; konser fotoğrafı değildir."
   }
 }

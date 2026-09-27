@@ -20,6 +20,8 @@ test -f "$release/public/images/artists/semicenk.png"
 test -f "$release/public/images/artists/manifest.jpg"
 test -f "$release/public/images/artists/blok3.png"
 test -f "$release/public/images/artists/burak-bulut.png"
+test -f "$release/public/images/artists/sefo.png"
+test -f "$release/public/images/albums/sefo-6782922492.jpg"
 test -f "$release/public/images/albums/blok3-6773420726.jpg"
 test -f "$release/public/images/manifest/zamansizdik.webp"
 test -f "$release/public/images/manifest/londra-ovo-arena-afis.jpg"
@@ -48,6 +50,7 @@ runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$rele
 runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$release/deploy/import-semicenk.py"
 runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$release/deploy/import-semicenk-archive.py"
 runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$release/deploy/import-dynamic-content.py"
+runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$release/deploy/import-sefo.py"
 if [ "$previous" != "$release" ]; then switch_to "$release"; fi
 if ! systemctl restart fans-platform.service; then rollback; exit 1; fi
 if ! runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$release/deploy/import-comment-history.py"; then rollback; exit 1; fi
@@ -59,11 +62,14 @@ done
 if [ "$healthy" != true ]; then rollback; exit 1; fi
 if ! curl -fsS --max-time 15 "$origin/" | /usr/bin/python3 -c 'import sys;s=sys.stdin.read();sys.exit(0 if "peek-rail" in s and "cover-link" in s else 1)'; then rollback; exit 1; fi
 if ! curl -fsS --max-time 15 "$origin/sohbetler" -o /dev/null; then rollback; exit 1; fi
-for artist in semicenk blok3 burak-bulut tarkan mabel-matiz manifest sezen-aksu duman hadise ceza; do
+for artist in semicenk blok3 burak-bulut sefo tarkan mabel-matiz manifest sezen-aksu duman hadise ceza; do
  if ! curl -fsS --max-time 15 "$origin/$artist" | python3 -c 'import sys;s=sys.stdin.read();h=[s.find(">"+x+"</h2>") for x in ("Haberler","Konserler","Şarkılar","Albümler")];sys.exit(0 if all(i>=0 for i in h) and h==sorted(h) and "Fan Club Topluluğu" in s else 1)'; then rollback; exit 1; fi
 done
 
-if ! curl -fsS --max-time 10 "$origin/api/channels" | /usr/bin/python3 -c 'import json,sys;d=json.load(sys.stdin);sys.exit(0 if len(d.get("channels",[]))==10 else 1)'; then rollback; exit 1; fi
+if ! curl -fsS --max-time 10 "$origin/api/channels" | /usr/bin/python3 -c 'import json,sys;d=json.load(sys.stdin);sys.exit(0 if len(d.get("channels",[]))==11 else 1)'; then rollback; exit 1; fi
+for path in sefo sefo/biyografi sefo/albumler sefo/haberler sefo/konserler sefo/sarkilar/sipanbabur; do
+ if ! curl -fsS --max-time 15 "$origin/$path" -o /dev/null; then rollback; exit 1; fi
+done
 for path in haberler konserler albumler; do
  if ! curl -fsS --max-time 15 "$origin/semicenk/$path" -o /dev/null; then rollback; exit 1; fi
 done
@@ -103,4 +109,5 @@ except:
 finally:
  db.close()
 PYQUOTA
+runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" SITE_ORIGIN="$origin" /home/deploy/.nvm/versions/node/v22.23.2/bin/node "$release/deploy/seo-worker.mjs" >/dev/null 2>&1 &
 printf 'Yayında: %s\nÖnceki sürüm: %s\n%s/semicenk\n' "$release" "$previous" "$origin"
