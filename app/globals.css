@@ -379,3 +379,24 @@ body:has(.chat-expanded) .global-header{display:none}
  .lobby-channel-dialog .chat-header{padding:10px 14px}.lobby-channel-dialog .chat-header h2{font-size:17px}.lobby-channel-dialog .demo-badge{display:none}
  .lobby-channel-dialog .message-scroll{padding:12px}.lobby-channel-dialog .message p{color:#f4f6f0}.lobby-channel-dialog .message-meta{flex-wrap:wrap;gap:6px}
 }
+
+/* Keep form controls at the mobile browser's natural focus scale. */
+@media (max-width:1024px),(pointer:coarse){
+ html body input,html body textarea,html body select,html body [contenteditable="true"],html body [contenteditable="plaintext-only"]{font-size:16px!important}
+}
+.embedded-channel .message-panel{background-color:#11170f;background-image:linear-gradient(180deg,rgba(8,13,8,.66),rgba(8,13,8,.79)),var(--channel-photo,none);background-size:cover;background-position:center 28%;background-repeat:no-repeat}
+.embedded-channel .message-panel .message-scroll{background:transparent}
+.embedded-channel .message>div:last-child{background:rgba(12,18,12,.82);border:1px solid #ffffff14;border-radius:10px;padding:7px 10px;min-width:0}
+.embedded-channel .message.own>div:last-child{background:rgba(31,44,23,.90);border-color:#ddef842b}
+.embedded-channel .message .message-meta strong{color:#f3f6ee}
+.embedded-channel .message .message-meta time{color:#c6d0bf}
+.embedded-channel .room-welcome{background:#10180dc9;border:1px solid #ffffff15;border-radius:14px;padding:20px 16px;margin:6px auto 22px;max-width:640px}
+.embedded-channel .room-welcome p,.embedded-channel .room-welcome small,.embedded-channel .first-message{color:#e1e8dc}
+.embedded-channel .first-message{background:#10180dd9;padding:12px;border-radius:10px;width:fit-content;max-width:100%}
+.embedded-channel .composer{background:#1e271bf5}
+.channel-photo-source{display:block;flex-shrink:0;padding:5px 14px;background:#171d14;color:#b9c5ae;font-size:10px;text-align:right;text-decoration:underline;text-underline-offset:2px;line-height:1.5}
+.lobby-channel-dialog{height:var(--chat-viewport-height,100dvh)}
+@media(max-width:700px){
+ .artist-page .embedded-channel.chat-expanded,.song-page .embedded-channel.chat-expanded{height:var(--chat-viewport-height,100dvh)}
+ .lobby-channel-dialog .chat-profile-tab{overflow:auto;min-height:0}
+}
