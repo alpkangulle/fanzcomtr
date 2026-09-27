@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
-import {artistIds,siteConfig} from '@/lib/site-config';
+import {artistIds} from '@/lib/site-config';
 
 export default function SiteHeader(){
  const path=usePathname();
@@ -18,7 +18,7 @@ export default function SiteHeader(){
  ];
  return <header className="global-header">
   <div className="global-header-inner">
-   <Link className="global-brand" href="/" aria-label="Keşfet ana sayfası">{siteConfig.mark}<span aria-hidden="true">✳︎</span></Link>
+   <Link className="global-brand" href="/" aria-label="Fanz ana sayfası"><img src="/images/fanz-logo.png" alt="Fanz" width="1792" height="1024" /></Link>
    <nav className="global-links" aria-label="Site menüsü">{links.map(link=><Link key={link.label} href={link.href} aria-current={link.active?'page':undefined}>{link.label}</Link>)}</nav>
   </div>
  </header>;
