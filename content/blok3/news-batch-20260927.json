@@ -1,0 +1,43 @@
+{
+  "artist": "blok3",
+  "operations": [
+    {
+      "type": "entry",
+      "id": "blok3-news-arena-tour-2026-27",
+      "kind": "haberler",
+      "slug": "arena-tour-2026-27",
+      "expectedRevision": null,
+      "values": {
+        "title": "BLOK3 Arena Tour 2026/27: Avrupa salonları ve güncel turne rotası",
+        "summary": "BLOK3’ün Avrupa arena turnesi duyuruldu; Mannheim, Rotterdam ve Viyana dahil güncel salon ve bilet adresleri kaynaklarıyla derlendi.",
+        "body": "BLOK3 için Arena Tour 2026/27 duyurusu 10 Ağustos 2026’da yayımlandı. İlk haberlerde belirtilen bazı tarihler daha sonra değiştiği için bu arşiv kaydı, eski turne listesini kesin program gibi tekrarlamıyor. 27 Eylül’de kontrol edilen resmî turne bağlantıları Mannheim’da 24 Ekim, Rotterdam’da 9 Kasım ve Viyana’da 28 Kasım 2026 tarihlerini gösteriyor. Bilet satın almadan önce her şehrin salon veya yetkili bilet sayfasındaki son duyuruyu esas almak gerekiyor.\n\nTürkiye’deki KAYIP PERSONA dönemi konserleriyle Avrupa salonları aynı takvimin ayrı durakları. BLOK3 konserleri sayfasında doğrulanmış Türkiye tarihleri şehir ve mekân bazında bulunuyor; sanatçının 2026 müziğine başlamak için KAYIP PERSONA albümü ve şarkı rehberi bağlantıları ayrı ayrıntılar sunuyor. Bu haber, turnenin kapsamına dair tarihli bir arşiv notudur: açıklanmamış sahne programı, satış miktarı veya gerçekleşmiş konser iddiası eklenmedi.\n\nKaynaklar: A24’ün 10 Ağustos tarihli duyurusu; resmî turne bağlantı sayfası ve salon takvimleri. Son kontrol: 27 Eylül 2026.",
+        "date": "2026-08-10",
+        "source": "https://www.a24.com.tr/blok3ten-avrupa-cikarmasi-haberi-40233565h.html",
+        "url": "https://linktr.ee/blok3worldtour",
+        "cover": "/images/artists/blok3.png",
+        "status": "published",
+        "seo_title": "BLOK3 Avrupa Turnesi 2026/27: Arena Tour Tarihleri ve Salonlar",
+        "seo_description": "BLOK3 Arena Tour 2026/27 duyurusu, Mannheim, Rotterdam ve Viyana salonlarının güncel tarihleri ve resmî turne bağlantıları."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "blok3-news-ekim-2026-turkiye-konser-takvimi",
+      "kind": "haberler",
+      "slug": "ekim-2026-turkiye-konser-takvimi",
+      "expectedRevision": null,
+      "values": {
+        "title": "BLOK3 Ekim 2026 konserleri: Antalya’dan Eskişehir’e turne takvimi",
+        "summary": "27 Eylül’de kontrol edilen resmî bilet takviminde BLOK3 için Ekim ayında Antalya, Ankara, Adana, Bursa, Samsun, Kayseri, Sakarya ve Eskişehir konserleri var.",
+        "body": "BLOK3’ün Ekim 2026 Türkiye konserlerini 27 Eylül itibarıyla Bubilet’in sanatçı ve etkinlik sayfalarından yeniden kontrol ettik. Program 3 Ekim Antalya Konyaaltı Atatürk Stadı ile başlıyor; 10 Ekim Ankara Atatürk Orman Çiftliği ve 11 Ekim Adana Mimar Sinan Açıkhava Tiyatrosu tarihleri izliyor. 14 Ekim Bursa Merinos Park, 16 Ekim Samsun Doğu Park Amfi Tiyatro, 17 Ekim Kayseri KUMSmall AVM Açık Otopark, 18 Ekim Sakarya Sapanca Festival ve Fuar Alanı ile 31 Ekim Eskişehir Fuar ve Kongre Merkezi listede. Kasım ayındaki Konya duyurusu ayrı konser sayfasında yer alıyor.\n\nHer şehir için BLOK3 konserleri bölümünde ayrı adres, tarih, mekân, saat ve resmî bilet bağlantısı bulunuyor. Bu takvim albüm tanıtımının yerine geçmiyor; KAYIP PERSONA yayını ve şarkı rehberi, konser öncesinde dinlemek isteyenler için kendi sayfalarında. Bilet kategorileri, giriş koşulları ve olası değişiklikleri organizatörün güncel etkinlik sayfasından kontrol et; bu haber yalnızca 27 Eylül tarihli doğrulanmış programın özeti.\n\nGörsel, BLOK3’ün KUSURA BAKMA yayın kapağıdır; belirli bir konserin afişi değildir. Kaynak kontrolü: 27 Eylül 2026, Bubilet resmî sanatçı ve etkinlik sayfaları.",
+        "date": "2026-09-27",
+        "source": "https://www.bubilet.com.tr/sanatci/blok3-",
+        "url": "https://www.bubilet.com.tr/sanatci/blok3-",
+        "cover": "/images/albums/blok3-1855504623.jpg",
+        "status": "published",
+        "seo_title": "BLOK3 Ekim 2026 Konserleri: Şehirler, Tarihler ve Biletler",
+        "seo_description": "BLOK3’ün Ekim 2026 Antalya, Ankara, Adana, Bursa, Samsun, Kayseri, Sakarya ve Eskişehir konserleri; doğrulanmış mekân ve resmî bilet bağlantıları."
+      }
+    }
+  ]
+}
