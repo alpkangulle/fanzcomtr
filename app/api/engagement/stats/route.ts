@@ -1,8 +1,13 @@
 import {channelDb} from '@/lib/channel-db';
-import {validArtist} from '@/lib/site-config';
-import {getSong} from '@/lib/songs';
+import {validTarget} from '@/lib/engagement-target';
 export const runtime='nodejs';export const dynamic='force-dynamic';
-export async function GET(req:Request){const raw=new URL(req.url).searchParams.get('targets')??'',targets=[...new Set(raw.split(',').filter(Boolean))];if(!targets.length||targets.length>40||targets.some(t=>!(/^(entry|artist):[a-z0-9-]{1,80}$/.test(t)||/^song:[a-z0-9-]+:[a-z0-9-]+$/.test(t))))return Response.json({error:'Geçersiz içerik.'},{status:400});
- const ids=targets.filter(t=>t.startsWith('entry:')).map(t=>t.slice(6)),db=channelDb(),published=ids.length?await db.prepare(`SELECT id FROM artist_entries WHERE id IN (${ids.map(()=>'?').join(',')}) AND status='published'`).bind(...ids).all():{results:[]};const valid=new Set(published.results.map(r=>'entry:'+String(r.id)));for(const t of targets){if(t.startsWith('artist:')&&validArtist(t.slice(7)))valid.add(t);const match=t.match(/^song:([a-z0-9-]+):([a-z0-9-]+)$/);if(match&&await getSong(match[1],match[2]))valid.add(t)}
- const result:Record<string,{likes:number;comments:number;views:number}>={};for(const t of valid)result[t]={likes:0,comments:0,views:0};const items=Object.keys(result);if(items.length){const q=items.map(()=>'?').join(',');const [likes,comments,views]=await Promise.all([db.prepare(`SELECT target,COUNT(*) AS total FROM content_likes WHERE target IN (${q}) GROUP BY target`).bind(...items).all(),db.prepare(`SELECT target,COUNT(*) AS total FROM content_comments WHERE target IN (${q}) AND deleted=0 GROUP BY target`).bind(...items).all(),db.prepare(`SELECT target,COUNT(*) AS total FROM content_view_events WHERE target IN (${q}) GROUP BY target`).bind(...items).all()]);for(const r of likes.results)result[String(r.target)].likes=Number(r.total);for(const r of comments.results)result[String(r.target)].comments=Number(r.total);for(const r of views.results)result[String(r.target)].views=Number(r.total)}return Response.json({stats:result},{headers:{'Cache-Control':'no-store'}})
+export async function GET(req:Request){
+ const targets=[...new Set((new URL(req.url).searchParams.get('targets')??'').split(',').filter(Boolean))];
+ if(!targets.length||targets.length>40||targets.some(t=>t.length>220))return Response.json({error:'Geçersiz içerik.'},{status:400});
+ const db=channelDb(),stats:Record<string,{likes:number;comments:number;views:number}>={};
+ for(const t of targets)if(await validTarget(t)){
+  const r=await db.prepare('SELECT (SELECT COUNT(*) FROM content_likes WHERE target=?) AS likes,(SELECT COUNT(*) FROM approved_page_comments WHERE target=?) AS comments,(SELECT COUNT(*) FROM content_view_events WHERE target=?) AS views').bind(t,t,t).first<{likes:number;comments:number;views:number}>();
+  if(r)stats[t]=r;
+ }
+ return Response.json({stats},{headers:{'Cache-Control':'no-store'}});
 }

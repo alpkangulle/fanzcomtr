@@ -8,7 +8,7 @@ export async function GET(req:Request){const url=new URL(req.url),scope=url.sear
  let where='1=1',args:string[]=[];if(scope==='following'){where='EXISTS(SELECT 1 FROM artist_follows f WHERE f.artist=e.artist AND f.visitor_key=?)';args=[visitor]}else if(scope==='liked'){where=member?'EXISTS(SELECT 1 FROM content_likes l WHERE l.target=\'entry:\'||e.id AND l.member_id=?)':'0=1';args=member?[member.id]:[]}
  const rows=await db.prepare(`SELECT e.id,e.artist,e.kind,e.slug,e.title,e.summary,substr(e.body,1,650) AS excerpt,e.cover,e.date,e.updated,
  (SELECT COUNT(*) FROM content_likes l WHERE l.target='entry:'||e.id) AS likes,
- (SELECT COUNT(*) FROM content_comments c WHERE c.target='entry:'||e.id AND c.deleted=0) AS comments,
+ (SELECT COUNT(*) FROM approved_page_comments c WHERE c.target='entry:'||e.id AND c.deleted=0) AS comments,
  (SELECT COUNT(*) FROM content_view_events v WHERE v.target='entry:'||e.id) AS views
  FROM artist_entries e WHERE e.status='published' AND (${where}) ORDER BY e.updated DESC LIMIT 60`).bind(...args).all();
  const entries=rows.results.map(r=>({type:'artist',id:String(r.id),artist:String(r.artist),kind:String(r.kind),slug:String(r.slug),title:String(r.title),summary:String(r.summary),excerpt:String(r.excerpt??'').replace(/\s+/g,' ').trim().slice(0,220),cover:String(r.cover),date:String(r.date),created:Number(r.updated),likes:Number(r.likes),comments:Number(r.comments),views:Number(r.views)}));

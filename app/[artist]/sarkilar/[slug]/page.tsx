@@ -4,6 +4,7 @@ import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import {getSong,allSongs,songHref} from '@/lib/songs';
 import {artists} from '@/lib/artists';
+import SimilarArtists from '@/components/similar-artists';
 import Engagement from '@/components/engagement';
 import ArtistChannel from '@/components/artist-channel';
 import MobileNav from '@/components/mobile-nav';
@@ -28,4 +29,4 @@ export default async function Page({params}:Props){
  {s.videoId&&<section className="official-video"><h2>Resmî video / kayıt</h2><div className="video-frame"><iframe src={'https://www.youtube-nocookie.com/embed/'+s.videoId} title={artistName+' – '+s.name+' resmî kayıt'} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen referrerPolicy="strict-origin-when-cross-origin"/></div><p><a href={'https://www.youtube.com/watch?v='+s.videoId} target="_blank" rel="noopener noreferrer">YouTube’da izle ↗</a>{s.info&&<> · <a href={s.info.videoSource} target="_blank" rel="noreferrer">Resmî yayın kaynağı</a></>}</p></section>}
  {!s.videoId&&!s.info&&<section className="official-video"><h2>Dinleme bilgisi</h2><Link href={'/'+artist+'/albumler/'+s.albumSlug}>Yayının dinleme bağlantısına git →</Link></section>}
  {related.length>0&&<section className="song-neighbors"><h2>{neighbors.length?'Aynı yayındaki diğer şarkılar':'Aynı dönemden şarkılar'}</h2><div>{related.map(x=><Link key={x.slug} href={songHref(x)}>{x.name} →</Link>)}</div></section>}
- <Engagement target={'song:'+artist+':'+s.slug}/><ArtistChannel artist={artist} name={artistName}/></main><MobileNav active="search"/></>}
+ <Engagement target={'song:'+artist+':'+s.slug}/><SimilarArtists artist={artist} section="sarkilar"/><ArtistChannel artist={artist} name={artistName}/></main><MobileNav active="search"/></>}

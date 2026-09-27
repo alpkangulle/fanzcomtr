@@ -36,6 +36,7 @@ runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$rele
 runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$release/deploy/import-dynamic-content.py"
 if [ "$previous" != "$release" ]; then switch_to "$release"; fi
 if ! systemctl restart fans-platform.service; then rollback; exit 1; fi
+if ! runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$release/deploy/import-comment-history.py"; then rollback; exit 1; fi
 healthy=false
 for attempt in {1..20}; do
  if curl -fs --max-time 2 http://127.0.0.1:3042/api/health | /usr/bin/python3 -c 'import json,sys; d=json.load(sys.stdin);sys.exit(0 if d.get("status")=="ok" and d.get("database")=="ok" else 1)' 2>/dev/null; then healthy=true; break; fi
