@@ -1,3 +1,4 @@
+import {triggerSeoCheck} from '@/lib/seo-trigger';
 import {randomUUID} from 'node:crypto';
 import {adminSession,sameOrigin} from '@/lib/admin-auth';
 import {validArtist} from '@/lib/site-config';
@@ -10,7 +11,7 @@ export async function GET(request:Request){
  if(!validArtist(artist))return Response.json({error:'Sanatçı bulunamadı.'},{status:404});
  try{const rows=await channelDb().prepare('SELECT * FROM artist_entries WHERE artist=? ORDER BY updated DESC').bind(artist).all();return Response.json({entries:rows.results},{headers:{'Cache-Control':'no-store'}})}catch{return Response.json({error:'İçerikler yüklenemedi.'},{status:503})}
 }
-export async function POST(request:Request){
+async function savePost(request:Request){
  if(!adminSession(request)||!sameOrigin(request))return Response.json({error:'Oturum veya istek kaynağı geçersiz.'},{status:403});
  const raw=await request.text();if(raw.length>45000)return Response.json({error:'İçerik çok uzun.'},{status:413});
  let input;try{input=JSON.parse(raw)}catch{return Response.json({error:'Geçersiz istek.'},{status:400})}
@@ -24,3 +25,5 @@ export async function POST(request:Request){
   return Response.json({entry:row},{headers:{'Cache-Control':'no-store'}});
  }catch(e){if(e instanceof Error&&e.message.includes('UNIQUE'))return Response.json({error:'Bu adres zaten kullanılıyor. Farklı bir adres seç.'},{status:409});console.error('Entry save failed',e);return Response.json({error:'Kaydedilemedi. Formdaki metin korunuyor.'},{status:503})}
 }
+
+export async function POST(request:Request){const response=await savePost(request);if(response.ok)triggerSeoCheck();return response}

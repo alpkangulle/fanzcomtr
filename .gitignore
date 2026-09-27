@@ -1,7 +1,14 @@
-node_modules/
+node_modules
 .next/
 .env*
 !.env.example
 .data/
 *.sqlite*
 *.tsbuildinfo
+
+seo-webp/
+google-service-account.json
+seo-qa.log
+seo-build.log
+
+next-env.d.ts

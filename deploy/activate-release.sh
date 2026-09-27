@@ -45,4 +45,8 @@ for path in haberler konserler albumler; do
 done
 if ! curl -fsS --max-time 5 "$origin/api/member/session" | /usr/bin/python3 -c 'import json,sys;d=json.load(sys.stdin);sys.exit(0 if "member" in d else 1)'; then rollback; exit 1; fi
 curl -fsS --max-time 15 "$origin/sezen-aksu" -o /dev/null
+for path in admin/seo indexnow.txt; do
+ if ! curl -fsS --max-time 15 "$origin/$path" -o /dev/null; then rollback; exit 1; fi
+done
+if [ "$(curl -s --max-time 10 -o /dev/null -w '%{http_code}' "$origin/api/admin/seo")" != 401 ]; then rollback; exit 1; fi
 printf 'Yayında: %s\nÖnceki sürüm: %s\n%s/semicenk\n' "$release" "$previous" "$origin"

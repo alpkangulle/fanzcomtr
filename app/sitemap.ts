@@ -26,5 +26,15 @@ export default async function sitemap():Promise<MetadataRoute.Sitemap>{
  }
  for(const r of entries)pages.push({url:`${siteOrigin}/${r.artist}/${r.kind}/${r.slug}`,lastModified:modified(r.updated)});
  pages.push({url:siteOrigin+'/top-listeler'},{url:siteOrigin+'/gorsel-kaynaklari'});
+ const bios=(await channelDb().prepare('SELECT artist,updated FROM artist_content').all()).results;
+ const overrides=(await channelDb().prepare('SELECT path,updated FROM seo_overrides').all()).results;
+ for(const page of pages){
+  const path=new URL(page.url).pathname;
+  const override=overrides.find(o=>o.path===path);
+  const bio=bios.find(b=>path==='/'+b.artist||path==='/'+b.artist+'/biyografi');
+  const current=page.lastModified?new Date(page.lastModified).getTime():0;
+  const changed=Math.max(current,Number(override?.updated)||0,Number(bio?.updated)||0);
+  if(changed)page.lastModified=new Date(changed);
+ }
  return pages;
 }
