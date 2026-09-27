@@ -35,7 +35,7 @@ rollback(){
  nginx -t && systemctl reload nginx || true
  systemctl restart fans-platform.service || true
 }
-trap rollback ERR
+trap 'code=$?; echo "Geçiş denetimi satır $LINENO üzerinde durdu (kod: $code)."; rollback' ERR
 
 cat > "$new_site" <<'NGINX'
 server {
@@ -109,10 +109,12 @@ mv -f "$temp_env" "$env_file"
 ln -sfn "$release" "$base/current.next"
 mv -Tf "$base/current.next" "$base/current"
 systemctl restart fans-platform.service
+healthy=false
 for attempt in {1..20}; do
- if curl -fsS --max-time 2 http://127.0.0.1:3042/api/health | python3 -c 'import json,sys;d=json.load(sys.stdin);sys.exit(0 if d.get("status")=="ok" and d.get("database")=="ok" else 1)' 2>/dev/null; then break; fi
+ if curl -fsS --max-time 2 http://127.0.0.1:3042/api/health 2>/dev/null | python3 -c 'import json,sys;d=json.load(sys.stdin);sys.exit(0 if d.get("status")=="ok" and d.get("database")=="ok" else 1)' 2>/dev/null; then healthy=true; break; fi
  sleep 1
 done
+if [ "$healthy" != true ]; then echo 'Uygulama sağlık denetimi başarısız.'; false; fi
 curl -fsS --max-time 10 --resolve fanz.com.tr:443:127.0.0.1 https://fanz.com.tr/semicenk | python3 -c 'import sys;s=sys.stdin.read();sys.exit(0 if "https://fanz.com.tr/semicenk" in s and "Semicenk Fan Topluluğu" in s else 1)'
 
 cat > "$old_site" <<'NGINX'
@@ -137,9 +139,18 @@ NGINX
 write_new_site ''
 nginx -t
 systemctl reload nginx
-curl -fsSI --max-time 10 --resolve fanz.com.tr:443:127.0.0.1 https://fanz.com.tr/semicenk | grep -qi '^HTTP/.* 200'
-if curl -fsSI --max-time 10 --resolve fanz.com.tr:443:127.0.0.1 https://fanz.com.tr/semicenk | grep -qi '^x-robots-tag:.*noindex'; then false; fi
-curl -fsSI --max-time 10 --resolve fans.wai.com.tr:443:127.0.0.1 https://fans.wai.com.tr/semicenk | grep -qi '^location: https://fanz.com.tr/semicenk'
+verified=false
+for attempt in {1..20}; do
+ new_headers="$(curl -fsSI --max-time 5 --resolve fanz.com.tr:443:127.0.0.1 https://fanz.com.tr/semicenk 2>/dev/null || true)"
+ old_headers="$(curl -fsSI --max-time 5 --resolve fans.wai.com.tr:443:127.0.0.1 https://fans.wai.com.tr/semicenk 2>/dev/null || true)"
+ if [[ "$new_headers" == *' 200'* && "${new_headers,,}" != *'x-robots-tag: noindex'* && "${old_headers,,}" == *'location: https://fanz.com.tr/semicenk'* ]]; then verified=true; break; fi
+ sleep 1
+done
+if [ "$verified" != true ]; then
+ echo 'Son HTTPS/301/noindex denetimi başarısız.'
+ printf 'Yeni site başlıkları:\n%s\nEski site başlıkları:\n%s\n' "$new_headers" "$old_headers"
+ false
+fi
 trap - ERR
 echo "Yeni alan adı yayında: https://fanz.com.tr/semicenk"
 echo "Önceki sürüm: $previous"
