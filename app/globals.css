@@ -273,3 +273,5 @@ body:has(.chat-expanded) .global-header{display:none}
 .announcement-track span{line-height:40px;max-height:40px;white-space:nowrap}
 .announcement-contact{height:40px;min-height:40px}.announcement-contact svg{flex:none}
 @media(max-width:800px){.announcement-bar{height:36px;min-height:36px;max-height:36px}.announcement-track span{line-height:36px;max-height:36px}.announcement-contact{height:36px;min-height:36px}}
+/* Align the desktop announcement with the centered page content. */
+@media(min-width:801px){.announcement-bar{width:min(calc(100% - 40px),1360px);margin:10px auto 0;border:1px solid #a2c12d;border-radius:12px}}
