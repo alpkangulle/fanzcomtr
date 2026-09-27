@@ -55,6 +55,10 @@ done
 if [ "$healthy" != true ]; then rollback; exit 1; fi
 if ! curl -fsS --max-time 15 "$origin/" | /usr/bin/python3 -c 'import sys;s=sys.stdin.read();sys.exit(0 if "peek-rail" in s and "cover-link" in s else 1)'; then rollback; exit 1; fi
 if ! curl -fsS --max-time 15 "$origin/sohbetler" -o /dev/null; then rollback; exit 1; fi
+for artist in semicenk tarkan mabel-matiz manifest sezen-aksu duman hadise ceza; do
+ if ! curl -fsS --max-time 15 "$origin/$artist" | python3 -c 'import sys;s=sys.stdin.read();h=[s.find(">"+x+"</h2>") for x in ("Haberler","Konserler","Şarkılar","Albümler")];sys.exit(0 if all(i>=0 for i in h) and h==sorted(h) else 1)'; then rollback; exit 1; fi
+done
+
 if ! curl -fsS --max-time 10 "$origin/api/channels" | /usr/bin/python3 -c 'import json,sys;d=json.load(sys.stdin);sys.exit(0 if len(d.get("channels",[]))==8 else 1)'; then rollback; exit 1; fi
 for path in haberler konserler albumler; do
  if ! curl -fsS --max-time 15 "$origin/semicenk/$path" -o /dev/null; then rollback; exit 1; fi

@@ -7,14 +7,14 @@ Bu dosya, her anlamlı çalışma sonunda güncellenir. “Hazırlandı” ile �
 1. GÜNCEL YAYIN DURUMU
 
 Son doğrulanan canlı sürüm:
-20260927-manifest-pilot
-Kaynak commit: 99a2c19c638a529999ed8f6b78ebe3d45a90c58d
-27 Eylül canlı kontrolü: current bu sürüme işaret ediyor; Manifest kayıtları ve SEO sayfaları canlıda.
+20260927-manifest-media
+Kaynak commit: 0bc6d27dd4318387af361207cbf44444685c5d44
+27 Eylül canlı kontrolü: current bu sürüme işaret ediyor; Manifest kaynaklı görsel galerisi ve görsel kredileri canlı sürüme dahildir.
 
-Hazırlanan paket: 20260927-manifest-media — galeri ve görsel kaynak etiketleri henüz canlıda değil.
-Manifest görsel güncellemesi üretim veritabanına 49 işlemle uygulandı; işlem öncesi yedek /home/deploy/fans/shared/content-backups/manifest-20260927T162400801198Z.sqlite. Mevcut canlı sürümün public dizinine yeni dosya adları eklenmiş olduğundan içerik sayfalarının yeni görselleri HTTP 200 ile doğrulandı. Yeni paket, görsel kaynak etiketlerini ve galerinin tekrar azaltan düzenini etkinleştirir. Etkinleştirmeyi root yapmalı; sonucunu symlink ve HTTP üzerinden ayrıca doğrula.
+Hazırlanan paket: 20260927-artist-sections — sekiz sanatçının ana sayfa bölüm düzeni henüz canlıda değil.
+Kullanıcının ekran görüntüsünde Manifest ana sayfasındaki “Haberler, konserler ve albümler” tek karma kaydırma alanı ile “Şarkılar ve daha fazlası” başlığı vardı. Yeni sürümde her sanatçının ana sayfasında Haberler, Konserler, Şarkılar ve Albümler ayrı başlıklar, ayrı kart sıraları ve ilgili “Tümünü gör” bağlantılarıyla bu sırada yer alır. Semicenk’in zaten ayrı bölümleri aynı düzene getirildi. Konserde yaklaşan kayıt yoksa geçmiş arşiv gösterilir; şarkı kartları var olan katalog veya album şarkı kayıtlarından oluşturulur. Manifest’in şarkı rehberi kartında eski hazırlık metni kaldırıldı.
 Yayın komutu (sunucuda root):
-bash /home/deploy/fans/releases/20260927-manifest-media/deploy/activate-release.sh
+bash /home/deploy/fans/releases/20260927-artist-sections/deploy/activate-release.sh
 
 2. HEDEF VE ÇALIŞMA ŞEKLİ
 
@@ -57,6 +57,11 @@ Ayrı test veritabanı ve port 3044 ile 57 adres: HTTP 200, tek H1, canonical, a
 Canlı veritabanında 24 içerik görseli 16 ayrı dosyaya gider; haber ile anlattığı yayın aynı resmî kapağı bilinçli olarak paylaşır. manifestival ve deluxe ile bazı remikslerin resmî sanat tasarımı aynı veya çok benzerdir; farklı görselmiş gibi gösterilmez. Galeride bu görsel tekrarları azaltılır ve kayıt sayfaları ayrı tutulur. Şarkılar ait oldukları yayın kapağını paylaşır; bu doğru künye ilişkisidir. Konser arşiv fotoğrafı ilgili Ankara gününün sahnesi diye sunulmaz. Kaynak ve lisans görünür tutulur.
 Gelecek sanatçılar için görsel kuralı: her yayın kendi doğrulanmış kapağına, haber anlattığı yayın/olaya, konser mümkünse organizatör afişine bağlanır. Genel sanatçı fotoğrafı tekrar eden varsayılan kapak olarak kullanılmaz. Çözünürlük, gerçek görsel içerik, kaynak/lisans, dosya boyutu ve kırık adres kontrol edilir. Resmî kapaklar gerçekten aynıysa yapay farklılık uydurulmaz.
 Ayrı veritabanı ve port 3045 denetiminde 55 ilgili adres HTTP 200, tek H1, index ve paylaşım görseli; 24 içerik kapağı uygun yerel dosyaya gider. Canlıda iki örnek görsel HTTP 200 ve türü doğrulandı. Galeri ve etiketlerin canlı doğrulaması yeni sürüm aktivasyonundan sonra yapılacak.
+
+3C. SANATÇI ANA SAYFASI BÖLÜM DÜZENİ
+
+Her sanatçının ana sayfasında içerikler türüne göre ayrı sunulur: Haberler → Konserler → Şarkılar → Albümler. Karma “Haberler, konserler ve albümler” ve belirsiz “Şarkılar ve daha fazlası” başlıkları kullanılmaz. Her sıranın kendi ilgili bölüm bağlantısı vardır; kartlar kendi sayfasına gider. Tek H1 sanatçı adıdır; dört bölüm H2 olarak kalır.
+Ayrı test veritabanı ve port 3046 üzerinde sekiz ana sayfa HTTP 200, H2 sırası doğru, tek H1; tüm görünür kart hedefleri HTTP 200. Üretim derlemesi SITE_ORIGIN=https://fanz.com.tr ile başarılı. Gerçek mobil cihaz ve canlı aktivasyon sonucu ayrıca kontrol edilmelidir.
 
 4. KORUNACAK SEO KURALLARI
 
