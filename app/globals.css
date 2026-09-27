@@ -277,3 +277,26 @@ body:has(.chat-expanded) .global-header{display:none}
 @media(min-width:801px){.announcement-bar{width:min(calc(100% - 40px),1360px);margin:10px auto 0;border:1px solid #a2c12d;border-radius:12px}}
 
 .seo-artist-content{max-width:1200px;margin:24px auto 120px;padding:24px;display:grid;grid-template-columns:2fr 1fr;gap:28px;color:#e4e4e7}.seo-artist-content p{white-space:pre-wrap;line-height:1.7;margin:12px 0}.seo-artist-content nav{display:flex;flex-wrap:wrap;gap:12px}.seo-artist-content a{color:#ddf25b}.seo-artist-content aside section{padding:18px;background:#18181b;border-radius:10px;margin-bottom:12px}.seo-contact{position:fixed;right:18px;bottom:165px;z-index:25;display:flex;gap:8px}.seo-contact a{background:#ddf25b;color:#141510;padding:9px 14px;border-radius:22px;font-size:13px;font-weight:650}body:has(.channel-fullscreen) .seo-contact{display:none}@media(max-width:700px){.seo-artist-content{grid-template-columns:1fr;padding:18px;margin-bottom:130px}}
+
+/* Source-backed artist editorial pages */
+.editorial-prose{max-width:78ch;line-height:1.8;overflow-wrap:anywhere}
+.editorial-prose p{margin:.75rem 0 1.25rem}
+.editorial-prose h3{font-size:1.3rem;line-height:1.4;margin:2rem 0 .75rem}
+.editorial-prose a,.editorial-related a{ text-decoration:underline;text-underline-offset:3px}
+.editorial-prose .primary{text-decoration:none}
+.editorial-cover-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;margin:24px 0}
+.editorial-cover-grid figure{margin:0;min-width:0}
+.editorial-cover-grid img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:12px}
+.editorial-cover-grid figcaption{padding:10px 0}
+.editorial-cover-grid figcaption strong,.editorial-cover-grid figcaption span{display:block}
+.editorial-cover-grid figcaption span{font-size:.85rem;opacity:.7;margin-top:4px}
+.editorial-song-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.editorial-song-list a{display:flex;flex-direction:column;padding:16px;border:1px solid #7774;border-radius:12px;text-decoration:none}
+.editorial-song-list span{font-size:.8rem;opacity:.75}
+.editorial-stats{display:flex;gap:20px;flex-wrap:wrap;margin:24px 0}
+.editorial-stats a{padding:14px 20px;border:1px solid #7774;border-radius:12px}
+.editorial-stats strong{font-size:1.5rem;margin-right:6px}
+.editorial-related{margin:24px 0;padding:20px;border:1px solid #7774;border-radius:12px}
+.editorial-gallery>h3{margin-top:36px}
+.editorial-home .feed-heading{gap:12px;align-items:center}
+@media(max-width:600px){.editorial-cover-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.editorial-song-list{grid-template-columns:1fr}.editorial-stats{gap:8px}.editorial-stats a{padding:10px 12px}.editorial-home .feed-heading{align-items:flex-start}.editorial-home .feed-heading h2{font-size:1.3rem}.editorial-home .feed-heading>a{font-size:.8rem;white-space:nowrap}}

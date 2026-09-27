@@ -21,8 +21,9 @@ export default async function sitemap():Promise<MetadataRoute.Sitemap>{
    if(section.length)pages.push({url:`${siteOrigin}/${artist.id}/${kind}`,lastModified:latest(section)});
   }
   const songs=await allSongs(artist.id);
-  if(songs.some(s=>s.videoId))pages.push({url:`${siteOrigin}/${artist.id}/sarkilar`,lastModified:latest(own.filter(r=>r.kind==='albumler'))});
-  for(const song of songs)if(song.videoId)pages.push({url:siteOrigin+songHref(song),lastModified:latest(own.filter(r=>r.id===song.albumId))});
+  if(artist.id==='semicenk')pages.push({url:siteOrigin+'/semicenk/sarki-sozleri',lastModified:latest(own)});
+  if(songs.some(s=>s.videoId||s.info))pages.push({url:`${siteOrigin}/${artist.id}/sarkilar`,lastModified:latest(own.filter(r=>r.kind==='albumler'))});
+  for(const song of songs)if(song.videoId||song.info)pages.push({url:siteOrigin+songHref(song),lastModified:latest(own.filter(r=>r.id===song.albumId))});
  }
  for(const r of entries)pages.push({url:`${siteOrigin}/${r.artist}/${r.kind}/${r.slug}`,lastModified:modified(r.updated)});
  pages.push({url:siteOrigin+'/top-listeler'},{url:siteOrigin+'/gorsel-kaynaklari'});

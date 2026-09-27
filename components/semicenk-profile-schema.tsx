@@ -1,0 +1,2 @@
+import {siteOrigin} from '@/lib/seo';
+export default function SemicenkProfileSchema(){const data={'@context':'https://schema.org','@type':'Person',name:'Semicenk',alternateName:'Cenk Baş',jobTitle:'Şarkıcı ve söz yazarı',url:siteOrigin+'/semicenk',image:siteOrigin+'/images/artists/semicenk.png',sameAs:['https://music.apple.com/tr/artist/semicenk/1581975222'],description:'Cenk Baş’ın Semicenk adıyla yayımladığı müzik çalışmaları ve kariyer arşivi.'};return <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(data).replace(/</g,'\\u003c')}}/>}
