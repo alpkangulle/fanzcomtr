@@ -14,6 +14,10 @@ test -f "$release/public/fonts/dm-sans-latin.woff2"
 test -f "$base/shared/runtime.env"
 test -f "$base/shared/fans.sqlite"
 test -d "$previous"
+case "$(readlink "$release/node_modules" 2>/dev/null || true)" in
+ "$base/current"|"$base/current/"*) echo 'node_modules bağı current üzerinden kurulmuş; geçişte döngü oluşturur.'; exit 1;;
+esac
+test -f "$release/node_modules/next/dist/bin/next" || { echo 'Next.js bağımlılığı eksik'; exit 1; }
 exec 9>"$base/shared/deploy.lock"
 flock -n 9 || { echo 'Başka bir yayın işlemi sürüyor.'; exit 1; }
 switch_to() {
