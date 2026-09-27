@@ -1,4 +1,6 @@
 # FANZ — Her sanatçı için çalışma standardı
+
+Kalıcı kullanıcı kararı ve yeni sanatçı kontrol listesi: content/YENI_SANATCI_KURALLARI.txt.
 Güncelleme: 27 Eylül 2026
 
 Kullanıcı kararı: Semicenk pilotunda geliştirilen ve Manifest'te uygulanan içerik, görsel, Fan Club kimliği, sayfa düzeni ve SEO yaklaşımı seçilen her sanatçıya uygulanacak. Aynı metinler kopyalanmayacak; her sanatçı için ayrı kaynak araştırması yapılacak. Sanatçılar sırayla ele alınacak; mevcut tamamlanma durumu varsayılmayacak.

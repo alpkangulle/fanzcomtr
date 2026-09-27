@@ -1,6 +1,6 @@
 # FANZ çalışma sürekliliği
 
-Bu depo üzerinde işe başlamadan önce docs/PROJE_DURUMU.txt dosyasını okuyun. Kullanıcı bu belgeyi tamamlanan işler, SEO kuralları, yayın durumu ve sonraki aşamalar için sürekli güncel tutmamızı istedi.
+Bu depo üzerinde işe başlamadan önce docs/PROJE_DURUMU.txt ve content/YENI_SANATCI_KURALLARI.txt dosyalarını okuyun. Kullanıcı bu belgeyi tamamlanan işler, SEO kuralları, yayın durumu ve sonraki aşamalar için sürekli güncel tutmamızı istedi.
 
 Her anlamlı değişiklikle aynı commit içinde belgeyi güncelleyin. Doğrulanmış canlı sürümü, hazırlanmış sürümü, test sonucunu ve bekleyen yayın adımını ayrı yazın. Yayın gerçekleştiğini canlı symlink ve HTTP kontrolleriyle doğrulamadan "canlıda" demeyin. Yeni özellikler için ilgili kuralları ve sonraki adımı kaydedin; eski önemli kararları silmeyin. Kullanıcının elindeki metin belgesi bu dosyanın dışa aktarılan kopyasıdır.
 

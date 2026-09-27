@@ -1,0 +1,22 @@
+FANZ — YENİ SANATÇI İÇERİK VE SEO KURALLARI
+Kullanıcı kararı: 27 Eylül 2026
+Durum: Her yeni seçilen sanatçı ve sonradan eklenen içeriği için kalıcı çalışma standardı.
+
+1. Kapsam
+Her yeni sanatçı, Semicenk, Manifest, BLOK3 ve Burak Bulut için izlenen bütünleşik yaklaşımla hazırlanır. Biyografi, kaynaklı haberler, doğrulanmış konserler, albüm/EP/single yayınları, tekilleştirilmiş şarkılar, resmî YouTube videoları, kapak/fotoğraflar, galeri, sohbet ve topluluk etkileşimleri birlikte incelenir. Kategori boşsa doğrulanmamış kayıtla doldurulmaz. Kullanıcı başka bir sanatçıyı seçmeden diğer sanatçıların arşivini topluca değiştirme.
+
+2. İçerik niteliği
+Her metin sanatçıya ve olaya özgü, yeterli ayrıntı taşıyan doğal Türkçe olmalıdır. Kısa demo açıklamaları, aynı paragrafın farklı sayfalarda yinelenmesi, kopya haber, tam şarkı sözü, uydurma tarih/saat/fotoğraf, doğrulanmamış iddia veya sahte fan etkinliği yayımlanmaz. Ortak çalışma sanatçı künyesini korur; bir konuk şarkı diğer sanatçının bütün albümünü bu sanatçıya taşımaz. Single, albüm içindeki aynı kayıt ve remiks/akustik sürümü doğru eşleştirilir. Haberler ve konser duyuruları tarihli güvenilir/resmî kaynaklara dayanır. İptal/erteleme, etkinlik durumu, bilet çağrısı ve yapılandırılmış veriyle birlikte güncellenir.
+
+3. Fotoğraf ve video
+Her yeni haber, konser ve müzik yayını görünür, çalışan, kaliteli ve kaynaklı bir görsel taşır. Özel afiş/kapak hızlıca bulunmazsa uzun arama yapmadan farklı ve kaynağı bilinen sanatçı fotoğrafı kullanılabilir. Aynı listede aynı fotoğraf veya yeniden kırpılmış kopyası tekrar edilmez. Sanatçı fotoğrafı konser afişi/sahne karesi diye tanıtılmaz.
+Her şarkı için doğru resmî YouTube video bağlantısı ayrıca araştırılır. Sanatçının, doğrulanmış yapımcının, ortak sanatçının veya resmî yayıncının kanalı ve video adı karşılaştırılır; fan cover/remix yanlış şarkıya bağlanmaz. Resmî video yoksa boş bırakılır ve durum kaydına yazılır. Var olan her video ilgili şarkının kendi sayfasında görünür.
+Şarkı sayfası açılınca gömülü YouTube oynatıcısı otomatik başlamayı dener. Modern tarayıcıların otomatik oynatma kuralı nedeniyle başlangıç sessizdir; ziyaretçi oynatıcının sesini açabilir. Tarayıcı veya cihaz engellerse zorla oynatma vaadi verilmez. Mobilde satır içi oynatma kullanılır.
+
+4. SEO ve iç bağlantılar
+Sanatçı ana sayfası başlık/açıklamasında Fan Club Topluluğu kimliği önceliklidir. Haber, konser, albüm ve şarkı sayfasının aranabilir, içeriğe özgü başlığı ve meta açıklaması; self-canonical, tek H1, doğru robots/X-Robots-Tag, ilgili JSON-LD ve sitemap kaydı bulunur. Biyografi, diskografi, haber, konser ve şarkı sayfaları arasında doğal ve kalın bağlamsal iç bağlantılar kurulur. Mevcut elle yazılmış SEO metinleri keyfî değiştirilmez.
+Her yeni yayımlanan URL mevcut içerik importer'ının tetiklediği SEO işleyicisiyle otomatik Google ve IndexNow bildirim kuyruklarına alınır; 15 dakikalık timer yedek kontroldür. Kuyruk, API kabulü ve Google indekslenmesi üç ayrı durumdur. Kota dolarsa pending dürüstçe raporlanır; SEO başlık/açıklaması bildirim için değiştirilmez.
+
+5. Yayın ve doğrulama
+Önce canlı symlink, güncel veritabanı, AGENTS.md, docs/PROJE_DURUMU.txt, content/artist-update-standard.md ve content/dynamic-content.md okunur. Yeni sanatçı için gerekli uygulama rotası ve importer desteği ayrı hazırlanır. İçerik ekleme aracı önce --dry-run, sonra yedekli ve revision korumalı atomik çalıştırılır; kullanıcı/editör değişiklikleri ezilmez. Test üretim veritabanının kopyasında yapılır. Canlı aktivasyon gerektiriyorsa yetki sınırı aşılmaz; hazırlanmış içerik yayımlandı diye bildirilmez. Aktivasyondan sonra gerçek HTTPS üzerinde sayfa, görsel, video, SEO, sitemap ve bildirim kuyruğu kontrol edilir.
+Her yeni sanatçı otomasyonu ayrıca kullanıcı tarafından istenirse kurulur. Otomasyon araştırma/içerik yazımıyla sınırlıdır; kod, şema, sunucu, deploy ve ücretli servis değiştirmez. Kaynak, kontrol zamanı, kayıt kimlikleri, yayın URL'leri, yedekler ve bekleyen işler kalıcı durum dosyasına yazılır. Proje durum belgesi her anlamlı değişiklikle birlikte güncellenir.
