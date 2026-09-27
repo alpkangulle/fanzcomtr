@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 import {optimizeImages} from './optimize-seo-images.mjs';
 import {createSign,createHash} from 'node:crypto';
-import {readFileSync,existsSync} from 'node:fs';
+import {readFileSync,existsSync,realpathSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
 import {openSeo,readConfig,credentialsPath,safeUrls,trDay} from '../lib/seo-control.mjs';
 export async function runWorker({transport=fetch,dryRun=false,origin=(process.env.SITE_ORIGIN||'https://fanz.com.tr').replace(/\/$/,'')}={}){
  const db=openSeo(),start=Date.now();
@@ -69,4 +70,4 @@ export async function runWorker({transport=fetch,dryRun=false,origin=(process.en
  }catch(e){summary='Hata: '+e.message;throw e}
  finally{db.prepare('UPDATE seo_worker SET lease_until=0,last_run=?,last_message=? WHERE id=1').run(Date.now(),summary);db.close()}
 }
-if(process.argv[1]&&import.meta.url===new URL('file://'+process.argv[1]).href)runWorker({dryRun:process.argv.includes('--dry-run')}).then(r=>console.log(JSON.stringify(r))).catch(e=>{console.error(e.message);process.exitCode=1});
+if(process.argv[1]&&realpathSync(process.argv[1])===fileURLToPath(import.meta.url))runWorker({dryRun:process.argv.includes('--dry-run')}).then(r=>console.log(JSON.stringify(r))).catch(e=>{console.error(e.message);process.exitCode=1});

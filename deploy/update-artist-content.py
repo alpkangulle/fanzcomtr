@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Apply an approved artist content-only batch with backup, optimistic revisions and rollback."""
-import argparse,json,os,re,sqlite3,time
+import argparse,json,os,re,sqlite3,time,subprocess
 from pathlib import Path
 from datetime import date,datetime,timezone
 from urllib.parse import urlparse
@@ -116,7 +116,15 @@ try:
    result=db.execute('UPDATE '+table+' SET '+','.join(k+'=?' for k in data)+',revision=revision+1,updated=? WHERE '+where+' AND revision=?',list(data.values())+[now]+params+[expected])
    assert result.rowcount==1,'Concurrent edit; batch rolled back'
  db.commit()
- print(json.dumps({'applied':len(prepared),'backup':str(backup),'updated':now}))
+ seo_triggered=False
+ if os.environ.get('SEO_AUTOMATION_DISABLED')!='1':
+  try:
+   release=Path(__file__).resolve().parent.parent
+   subprocess.Popen(['/home/deploy/.nvm/versions/node/v22.23.2/bin/node',str(release/'deploy/seo-worker.mjs')],cwd=release,env=os.environ,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,start_new_session=True)
+   seo_triggered=True
+  except OSError:
+   pass
+ print(json.dumps({'applied':len(prepared),'backup':str(backup),'updated':now,'seo_triggered':seo_triggered}))
 except:
  db.rollback();raise
 finally:db.close()

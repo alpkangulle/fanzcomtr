@@ -33,3 +33,6 @@ Semicenk otomasyonu: 6ab9187d75e4819186a6e9a450332317
 Manifest otomasyonu: 6ab94eb28478819186a33883b46e091e
 Her ikisi: Europe/Istanbul, 08.00 ve 20.00, 12 saat aralık.
 Manifest'in ilk planlanan çalışması: 28 Eylül 2026 08.00. Kurulum, başarılı araştırma veya içerik yayını sayılmaz.
+
+
+Yeni URL veya önemli içerik değişikliği yayımlandığında dinamik sitemap gerçek güncelleme zamanını yansıtır. İçerik importer'ı SEO bildirim işleyicisini tetikler; 15 dakikalık timer eksik kalan URL'leri yakalar. Bildirim kuyruğundaki kabul, hata ve gerçek Search Console indeks durumları ayrı kaydedilir.

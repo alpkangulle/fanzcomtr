@@ -42,3 +42,10 @@ Arşiv: ataliweb-kaynak-arsivi-20260920(2).zip. PHP dosyaları doğrudan çalı�
 - Ayrı QA veritabanı ve yalnızca localhost:3043 üzerinde oturumsuz 401, farklı Origin 403, şablon önizleme/uygulama/mükerrerlik/geri dönüş, SSR başlık ve tanıtım metni, 87 URL site haritası ve özel sayfaların dışlanması doğrulandı.
 - 18 görselin daha küçük WebP sürümü hazırlandı; toplam 2.777.135 bayt tasarruf. WebP destekli istek WebP, diğer istek orijinal PNG aldı. Orijinaller değiştirilmedi.
 - Gerçek Google anahtarı olmadan dış Google bildirimi denenmedi. Kuyruk sağlayıcı testleri taklit yanıtlarla yapıldı.
+
+
+## 27 Eylül 2026 — URL bildirimi düzeltmesi
+
+Yayın yolu `/home/deploy/fans/current` bir symlink olduğundan Node'un `import.meta.url` değeri gerçek release yoluna çözülür. Eski giriş koşulu systemd tarafından mutlak `current` yolu ile çalıştırıldığında sessizce atlanıyordu. Giriş koşulu gerçek yol eşitliğiyle düzeltildi. İçerik importer'ı başarılı transaction sonrasında aynı işleyiciyi arka planda tetikler; 15 dakikalık timer kaçan veya dışarıdan eklenen kayıtları yakalar. Kuyruk ve fingerprint tekrar bildirimi önler. QA kopyasında symlink komutu 231 URL okudu ve importer sonrası last_run kaydı oluştu. Başlık ve meta açıklamaları değiştirilmez.
+
+Google bildirimi açık kalabilir; gerçek gönderim için Google Cloud servis hesabı JSON dosyası, Search Console mülk yetkisi ve ilgili API etkinleştirmesi gerekir. Dosya yoksa kuyruk hata durumunda bekler ve otomatik tekrar dener. Giriş anahtarı Git'e yazılmaz. Google'ın belirttiği Indexing API kapsamı JobPosting ve BroadcastEvent sayfalarıdır; FANZ'ın diğer URL bildirimleri kullanıcı tercihiyle yapılandırılmıştır. API yanıtı dizine alınma anlamına gelmez.
