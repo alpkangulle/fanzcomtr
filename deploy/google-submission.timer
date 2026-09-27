@@ -1,0 +1,11 @@
+[Unit]
+Description=Check Fanz sitemap for new public URLs every hour
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+RandomizedDelaySec=5m
+Unit=google-submission.service
+
+[Install]
+WantedBy=timers.target

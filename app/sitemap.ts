@@ -15,6 +15,7 @@ export default async function sitemap():Promise<MetadataRoute.Sitemap>{
  for(const artist of artists){
   const own=entries.filter(r=>r.artist===artist.id);
   pages.push({url:`${siteOrigin}/${artist.id}`,lastModified:latest(own)});
+  for(const section of ['biyografi','galeri'])pages.push({url:`${siteOrigin}/${artist.id}/${section}`,lastModified:latest(own)});
   for(const kind of ['haberler','konserler','albumler'] as const){
    const section=own.filter(r=>r.kind===kind);
    if(section.length)pages.push({url:`${siteOrigin}/${artist.id}/${kind}`,lastModified:latest(section)});

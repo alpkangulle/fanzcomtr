@@ -1,0 +1,13 @@
+[Unit]
+Description=Fanz public URL submission to Google
+After=network-online.target fans-platform.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=deploy
+WorkingDirectory=/home/deploy/fans/current
+EnvironmentFile=/home/deploy/fans/shared/runtime.env
+Environment=GOOGLE_SUBMISSION_STATE=/home/deploy/fans/shared/google-submissions.json
+ExecStart=/home/deploy/.nvm/versions/node/v22.23.2/bin/node /home/deploy/fans/current/deploy/submit-google-urls.mjs --notify-all
+
