@@ -9,6 +9,9 @@ new_site=/etc/nginx/sites-available/fanz.com.tr
 old_site=/etc/nginx/sites-available/fans.wai.com.tr
 previous="$(readlink -f "$base/current")"
 test -f "$release/.next/BUILD_ID"
+test -f "$release/public/images/artists/semicenk.png"
+test -f "$release/public/images/albums/semicenk.jpg"
+test -f "$release/public/fonts/dm-sans-latin.woff2"
 test -f "$env_file"
 test -f "$old_site"
 test -d "$previous"
