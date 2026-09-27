@@ -300,3 +300,20 @@ body:has(.chat-expanded) .global-header{display:none}
 .editorial-gallery>h3{margin-top:36px}
 .editorial-home .feed-heading{gap:12px;align-items:center}
 @media(max-width:600px){.editorial-cover-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.editorial-song-list{grid-template-columns:1fr}.editorial-stats{gap:8px}.editorial-stats a{padding:10px 12px}.editorial-home .feed-heading{align-items:flex-start}.editorial-home .feed-heading h2{font-size:1.3rem}.editorial-home .feed-heading>a{font-size:.8rem;white-space:nowrap}}
+
+/* Semicenk pilot: content headings and desktop hero geometry. */
+.artist-page[data-artist="semicenk"] .artist-name{font-size:clamp(34px,4.6vw,58px);line-height:1.08;font-weight:750;letter-spacing:-2px;color:var(--foreground);margin:10px 0 14px}
+.artist-page[data-artist="semicenk"] .entry-detail>h1,.artist-page[data-artist="semicenk"] .entries-section>h1,.artist-page[data-artist="semicenk"] .artist-content>h1{font-size:clamp(26px,3vw,36px);font-weight:700;line-height:1.25;letter-spacing:-.7px;margin:8px 0 24px;overflow-wrap:anywhere}
+.artist-page[data-artist="semicenk"] .entry-detail,.artist-page[data-artist="semicenk"] .artist-content{scroll-margin-top:120px}
+@media(min-width:701px){
+ .artist-page[data-artist="semicenk"] .artist-cover{align-self:stretch;height:auto;min-height:340px;background:#18181b}
+ .artist-page[data-artist="semicenk"] .artist-cover .artist-art{position:absolute;inset:0;height:100%;min-height:0;aspect-ratio:auto}
+ .artist-page[data-artist="semicenk"] .artist-cover img{display:block;width:100%;height:100%;object-fit:cover}
+ .artist-page[data-artist="semicenk"] .artist-navigation{position:relative;top:auto;margin-top:0;margin-bottom:24px}
+}
+@media(max-width:700px){
+ .artist-page[data-artist="semicenk"] .artist-name{font-size:38px;letter-spacing:-1.4px;margin:8px 0 10px}
+ .artist-page[data-artist="semicenk"] .artist-cover{height:auto;min-height:0;aspect-ratio:1}
+ .artist-page[data-artist="semicenk"] .artist-cover .artist-art{min-height:0;height:100%;aspect-ratio:1}
+ .artist-page[data-artist="semicenk"] .entry-detail>h1,.artist-page[data-artist="semicenk"] .entries-section>h1,.artist-page[data-artist="semicenk"] .artist-content>h1{font-size:27px}
+}

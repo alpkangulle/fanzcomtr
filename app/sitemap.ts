@@ -1,3 +1,4 @@
+import pilotRevision from '@/lib/semicenk-seo-revision.json';
 import type {MetadataRoute} from 'next';
 import {artists} from '@/lib/artists';
 import {channelDb} from '@/lib/channel-db';
@@ -34,7 +35,7 @@ export default async function sitemap():Promise<MetadataRoute.Sitemap>{
   const override=overrides.find(o=>o.path===path);
   const bio=bios.find(b=>path==='/'+b.artist||path==='/'+b.artist+'/biyografi');
   const current=page.lastModified?new Date(page.lastModified).getTime():0;
-  const changed=Math.max(current,Number(override?.updated)||0,Number(bio?.updated)||0);
+  const changed=Math.max(current,Number(override?.updated)||0,Number(bio?.updated)||0,path==='/semicenk'||path.startsWith('/semicenk/')?Date.parse(pilotRevision.updatedAt):0);
   if(changed)page.lastModified=new Date(changed);
  }
  return pages;
