@@ -12,7 +12,7 @@ Kaynak commit: 1c447c4b29669a6c77f372f57229b379fbe57029
 27 Eylül canlı kontrolü: /home/deploy/fans/current bu sürüme işaret ediyor; ana sayfa HTTP 200. Klavye ve alt alan düzeltmeleri canlı sürüme dahildir.
 
 Hazırlanan paket: 20260927-manifest-pilot — SEO ve arayüz kodu henüz canlıda değil.
-Manifest içerik paketi ayrı veritabanı kopyasında doğrulandı. Üretim içeriğine uygulanması ve yeni sürümün root tarafından etkinleştirilmesi ayrı adımlardır. Canlı durumunu her adımın ardından yeniden doğrula.
+Manifest içerik paketi ayrı veritabanı kopyasında doğrulandı ve üretim veritabanına 50 işlemle uygulandı; işlem öncesi yedek /home/deploy/fans/shared/content-backups/manifest-20260927T160740153418Z.sqlite. Canlı veritabanında 24 içerik, 25 şarkı ve 1 biyografi kaydı doğrulandı. Mevcut canlı kod eski olduğu için Manifest şarkı ayrıntıları henüz noindex görünüyor. Yeni sürüm root tarafından etkinleştirilip HTTP kontrolleri geçince SEO kodu canlı olacak.
 Yayın komutu (sunucuda root):
 bash /home/deploy/fans/releases/20260927-manifest-pilot/deploy/activate-release.sh
 

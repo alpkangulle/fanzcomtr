@@ -16,6 +16,7 @@ for route in manifest.get('headers',[]):
   sys.exit('Bu derleme tüm siteyi noindex yapıyor. SITE_ORIGIN=https://fanz.com.tr ile yeniden derleyin.')
 PYSEO
 test -f "$release/public/images/artists/semicenk.png"
+test -f "$release/public/images/artists/manifest.jpg"
 test -f "$release/public/images/albums/semicenk.jpg"
 test -f "$release/public/fonts/dm-sans-latin.woff2"
 test -f "$base/shared/runtime.env"
@@ -56,6 +57,11 @@ if ! curl -fsS --max-time 10 "$origin/api/channels" | /usr/bin/python3 -c 'impor
 for path in haberler konserler albumler; do
  if ! curl -fsS --max-time 15 "$origin/semicenk/$path" -o /dev/null; then rollback; exit 1; fi
 done
+for path in manifest manifest/biyografi manifest/albumler manifest/sarkilar/toz-pembe manifest/konserler/konser-2026-10-16; do
+ if ! curl -fsS --max-time 15 "$origin/$path" -o /dev/null; then rollback; exit 1; fi
+done
+if ! curl -fsS --max-time 15 "$origin/manifest/sarkilar/toz-pembe" | python3 -c 'import sys;s=sys.stdin.read();sys.exit(1 if "noindex" in s or "Manifest" not in s else 0)'; then rollback; exit 1; fi
+
 if ! curl -fsS --max-time 5 "$origin/api/member/session" | /usr/bin/python3 -c 'import json,sys;d=json.load(sys.stdin);sys.exit(0 if "member" in d else 1)'; then rollback; exit 1; fi
 curl -fsS --max-time 15 "$origin/sezen-aksu" -o /dev/null
 for path in admin/seo indexnow.txt; do
