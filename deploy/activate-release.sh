@@ -8,6 +8,7 @@ origin="$(sed -n 's/^SITE_ORIGIN=//p' "$base/shared/runtime.env" | tail -1)"
 case "$origin" in https://fans.wai.com.tr|https://fanz.com.tr) ;; *) echo 'SITE_ORIGIN geçersiz'; exit 1;; esac
 previous="$(readlink -f "$base/current")"
 test -f "$release/.next/BUILD_ID"
+test -d "$release/.next/cache" || { echo "Next.js önbellek dizini eksik; systemd ReadWritePaths bu yolu gerektirir."; exit 1; }
 python3 - "$release/.next/routes-manifest.json" <<'PYSEO'
 import json,sys
 manifest=json.load(open(sys.argv[1]))
