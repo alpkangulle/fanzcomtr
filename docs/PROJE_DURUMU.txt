@@ -7,25 +7,16 @@ Bu dosya, her anlamlı çalışma sonunda güncellenir. “Hazırlandı” ile �
 1. GÜNCEL YAYIN DURUMU
 
 Son doğrulanan canlı sürüm:
-20260927-semicenk-final
-Kaynak commit: f35dd1cf9b9463dd7590e1147c19be195e9b72f7
-
-27 Eylül canlı kontrolleri:
-- /semicenk HTTP 200.
-- Tüm siteyi kapatan X-Robots-Tag: noindex başlığı artık yok.
-- robots.txt, https://fanz.com.tr/sitemap.xml adresini kullanıyor.
-- Eski fans.wai.com.tr adresi robots.txt içinde yok.
-
-Hazırlanan, henüz canlıya alınmayan paket:
 20260927-icon-speed
-İçeriği: yeni site ikonu, bağlama uygun kalın iç bağlantılar, görsel boyutlandırma/WebP/önbellek, sohbetin gerektiğinde yüklenmesi ve bu proje belgesi.
+Kaynak commit: e74b72eb5e3e8bf6616b9013b1bebae0fd664906
 
-Bu paketin yayın komutu (sunucuda root):
-bash /home/deploy/fans/releases/20260927-icon-speed/deploy/activate-icon-speed.sh
+27 Eylül canlı kontrolü: current symlink ikon/hız sürümüne işaret ediyor. 67 adres HTTP 200 döndü. Evrensel HTTP noindex başlığı yok. Sekiz sanatçının ana sayfası index, follow; diğer yedi sanatçının şarkı sözleri bölümleri ile profil/admin bilinçli noindex.
 
-Bu komut önce mevcut yedekleme ve sağlık kontrolleriyle sürümü aktive eder; ardından yalnız görsel optimizasyonu ayarını açar. Diğer SEO ayarlarını değiştirmez. Son görsel kontrolü başarısız olursa uygulamanın yayına alındığını, görsel kontrolünün başarısız olduğunu ayrı raporlar.
-
-Aktivasyondan sonra yapılacak ilk iş: canlı sürüm yolunu ve HTTP sonuçlarını kontrol ederek bu bölümdeki “hazırlanan” kaydını “canlıda” durumuna taşımak. Kullanıcı komutu çalıştırdığını söylemeden veya sunucuda doğrulama yapılmadan canlıya alındı yazılmaz.
+Hazırlanan paket: 20260927-footer-clean — henüz canlıda değil.
+Ana sayfanın altındaki Yönetim ve Önizleme hakkında bağlantıları, geliştirme sürümü bilgi penceresi ve kullanılmayan pencere kodu kaldırıldı. Fotoğraf kaynakları ve lisanslar bağlantısı doğrudan alt alanda korundu. Yönetici giriş adresi ve erişim denetimleri değişmedi.
+Doğrulama: üretim derlemesi/TypeScript başarılı; alt alanın kaynak kontrolünde yönetim/önizleme öğeleri yok, lisans bağlantısı korunuyor. Derlemede evrensel noindex başlığı yok.
+Yayın komutu (sunucuda root):
+bash /home/deploy/fans/releases/20260927-footer-clean/deploy/activate-release.sh
 
 2. HEDEF VE ÇALIŞMA ŞEKLİ
 
@@ -95,7 +86,7 @@ Search Console doğrulaması, URL İnceleme ve gerçek indeks durumu ayrıca inc
 - Mobil giriş alanları en az 16px; küçük yazıdan doğan odak yakınlaşmasını önleme düzeltmesi var. Kullanıcının erişilebilirlik amaçlı manuel yakınlaştırması engellenmez.
 - Tam ekran sohbet yüksekliği VisualViewport ile küçülen klavye alanına uyarlanır. Fiziksel iPhone testi henüz yapılmadı.
 
-6. İKON VE HIZ PAKETİ — YAYINA HAZIR
+6. İKON VE HIZ PAKETİ — CANLI SÜRÜME ALINDI
 
 İkon:
 Kullanıcının 27 Eylül'de gönderdiği siyah zeminli sarı/yeşil Z görseli esas alındı. Oran/tasarım korundu. 32, 48, 180, 192, 512 piksel PNG, çok boyutlu favicon.ico ve web manifest bağlantıları hazır. Apple dokunmatik ikon 180px. Başlıktaki mevcut geniş FANZ logosu değiştirilmedi.
@@ -190,3 +181,5 @@ https://developers.google.com/search/docs/crawling-indexing/links-crawlable
 https://developers.google.com/search/docs/appearance/favicon-in-search
 https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
 https://nextjs.org/docs/app/api-reference/components/image
+
+27 Eylül — İkon/hız paketinin canlı olduğu doğrulandı. Kullanıcının isteğiyle alt alandaki yönetim/önizleme bağlantıları ve geliştirme sürümü penceresi kaldırılan yeni paket hazırlandı; yayın bekliyor.
