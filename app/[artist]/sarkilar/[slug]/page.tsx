@@ -6,7 +6,7 @@ import {getSong,allSongs,songHref} from '@/lib/songs';
 import {artists} from '@/lib/artists';
 import SimilarArtists from '@/components/similar-artists';
 import Engagement from '@/components/engagement';
-import ArtistChannel from '@/components/artist-channel';
+import ArtistChannel from '@/components/deferred-artist-channel';
 import MobileNav from '@/components/mobile-nav';
 import {siteOrigin,socialMetadata} from '@/lib/seo';
 import {dateLabel} from '@/lib/entries-types';

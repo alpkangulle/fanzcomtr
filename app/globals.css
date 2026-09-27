@@ -400,3 +400,5 @@ body:has(.chat-expanded) .global-header{display:none}
  .artist-page .embedded-channel.chat-expanded,.song-page .embedded-channel.chat-expanded{height:var(--chat-viewport-height,100dvh)}
  .lobby-channel-dialog .chat-profile-tab{overflow:auto;min-height:0}
 }
+
+.editorial-keyword{font-weight:700;text-decoration:underline;text-underline-offset:3px;color:#ddf25b}.editorial-keyword:hover{color:#f0ff9b}.deferred-channel{scroll-margin-top:114px}.channel-placeholder{min-height:640px;background:#171b17;border:1px solid #343b31;border-radius:18px;padding:30px;margin-top:24px}.channel-placeholder h2{font-size:23px;margin-bottom:12px}.channel-placeholder p{margin-bottom:18px;color:#c7cfbf}

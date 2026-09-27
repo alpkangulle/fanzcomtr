@@ -2,7 +2,7 @@ import SemicenkSectionSchema from '@/components/semicenk-section-schema';
 import {controlledMetadata} from '@/lib/seo-templates';
 import SeoArtistContent from '@/components/seo-artist-content';
 import Engagement from '@/components/engagement';
-import ArtistChannel from '@/components/artist-channel';
+import ArtistChannel from '@/components/deferred-artist-channel';
 import SimilarArtists from '@/components/similar-artists';
 import Link from 'next/link';
 import {notFound} from 'next/navigation';

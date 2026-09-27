@@ -1,0 +1,192 @@
+FANZ — PROJE DURUMU, SEO KURALLARI VE SONRAKİ AŞAMALAR
+Son güncelleme: 27 Eylül 2026
+Site: https://fanz.com.tr
+Ana kayıt: Git deposunda docs/PROJE_DURUMU.txt
+Bu dosya, her anlamlı çalışma sonunda güncellenir. “Hazırlandı” ile “canlıda” aynı şey değildir.
+
+1. GÜNCEL YAYIN DURUMU
+
+Son doğrulanan canlı sürüm:
+20260927-semicenk-final
+Kaynak commit: f35dd1cf9b9463dd7590e1147c19be195e9b72f7
+
+27 Eylül canlı kontrolleri:
+- /semicenk HTTP 200.
+- Tüm siteyi kapatan X-Robots-Tag: noindex başlığı artık yok.
+- robots.txt, https://fanz.com.tr/sitemap.xml adresini kullanıyor.
+- Eski fans.wai.com.tr adresi robots.txt içinde yok.
+
+Hazırlanan, henüz canlıya alınmayan paket:
+20260927-icon-speed
+İçeriği: yeni site ikonu, bağlama uygun kalın iç bağlantılar, görsel boyutlandırma/WebP/önbellek, sohbetin gerektiğinde yüklenmesi ve bu proje belgesi.
+
+Bu paketin yayın komutu (sunucuda root):
+bash /home/deploy/fans/releases/20260927-icon-speed/deploy/activate-icon-speed.sh
+
+Bu komut önce mevcut yedekleme ve sağlık kontrolleriyle sürümü aktive eder; ardından yalnız görsel optimizasyonu ayarını açar. Diğer SEO ayarlarını değiştirmez. Son görsel kontrolü başarısız olursa uygulamanın yayına alındığını, görsel kontrolünün başarısız olduğunu ayrı raporlar.
+
+Aktivasyondan sonra yapılacak ilk iş: canlı sürüm yolunu ve HTTP sonuçlarını kontrol ederek bu bölümdeki “hazırlanan” kaydını “canlıda” durumuna taşımak. Kullanıcı komutu çalıştırdığını söylemeden veya sunucuda doğrulama yapılmadan canlıya alındı yazılmaz.
+
+2. HEDEF VE ÇALIŞMA ŞEKLİ
+
+Semicenk pilot sanatçıdır. İçerik, SEO, tasarım, sohbet ve hız yaklaşımı bu sanatçı üzerinde doğrulanır. Kullanıcı beğendikten sonra diğer sanatçılara özgün içeriklerle uygulanır. Sekiz sanatçı: Semicenk, Tarkan, Mabel Matiz, Manifest, Sezen Aksu, Duman, Hadise, Ceza.
+
+Diğer sanatçıların sayfa düzeni ortak düzeltmelerden yararlanır; ancak Semicenk kadar ayrıntılı içeriklerinin tamamlandığı varsayılmaz. Sonraki sanatçı seçilmeden toplu içerik üretimi yapılmaz.
+
+Kullanıcı Türkçe, kısa ve somut ilerleme bilgisi istiyor. İzin verilmiş işleri gereksiz tekrar onayına bağlamadan tamamlamak; gerçek erişim/yayın engellerini açıkça belirtmek gerekiyor.
+
+3. SEMİCENK İÇERİK DURUMU
+
+27 Eylül 2026 canlı veritabanında doğrulanan yayımlanmış kayıtlar:
+- 30 albüm/EP/single yayını.
+- 47 şarkı.
+- 13 haber.
+- 8 konser kaydı; geçmiş etkinlikler ve iptaller de arşive dahil.
+- 4 resmî canlı performans videosu.
+- Kaynaklı biyografi, görsel/kapak galerisi, şarkı rehberi ve ilgili sayfalar.
+
+Bu sayılar sabit hedef değildir. Yeni doğrulanmış içerikle değişebilir.
+
+Şarkı ayrıntıları, video bilgileri ve konser durumları veritabanından gelir. Statik katalog JSON dosyaları ilk aktarım kaynağıdır; yeni içerik için bunlar düzenlenmez. Ayrıntılı sözleşme: content/dynamic-content.md.
+İçerik yazma aracı: deploy/update-artist-content.py.
+Yazmadan önce --dry-run, güncel revision, otomatik yedek, atomik işlem ve yayın sonrası gerçek HTTP kontrolü kullanılır.
+
+Doğrulama kaynakları: sanatçı/yapımcı duyuruları, Eva Records, Apple Music, resmî YouTube yayınları, bilet sağlayıcıları ve konser salonları. Haber metinleri özgün hazırlanır. Kaynak ve kontrol zamanı tutulur. Konuk sanatçı kaydı başka sanatçının tüm albümünü Semicenk albümü hâline getirmez. Şarkı sözleri için mevcut uygulama resmî dinleme/söz ekranlarına bağlantı verir.
+
+4. KORUNACAK SEO KURALLARI
+
+- Her sayfanın içeriğine özgü, Türkçe ve aranabilir başlık/açıklaması olmalı.
+- Konser başlığında sanatçı, şehir, konser ifadesi ve tarih bulunmalı. İptal, erteleme ve yeni tarih durumu başlık, içerik ve yapılandırılmış veride tutarlı olmalı.
+- Her sayfada tek H1, kendisine işaret eden canonical, uygun paylaşım görseli ve doğru indeksleme ayarı bulunmalı.
+- Başlık/açıklama tekrarları, 404 bağlantılar ve bağlantısız kalan sayfalar kontrol edilmeli.
+- Ana sayfa ve bölüm sayfaları sanatçı, sayfa türü, içerik yolu ve gerektiğinde liste verisi taşır.
+- Haberlerde Article, konserlerde MusicEvent, müzikte MusicAlbum/MusicRecording kullanılır. Görünür içerikte olmayan bilgi şemaya eklenmez.
+- Semicenk fan sayfası sanatçının kendi hesabı veya resmî ProfilePage olarak gösterilmez.
+- Haber için ilk yayın zamanı veritabanında güvenilir biçimde tutulmadığından sabit/uydurma datePublished kullanılmaz. Kayıtlı dateModified korunur. Gelecekte ayrı ilk yayın alanı eklenirse önce veri modeli ve güncelleme aracı tasarlanmalı.
+- Konserin geçmişe geçmesi Türkiye takvim gününe göre değerlendirilir.
+- İç bağlantılar gerçek <a href> bağlantılarıdır. Bu pakette Semicenk biyografi/haber/yayın metninde katalogla eşleşen adlar kalın bağlantıya dönüşür. Aynı hedef bir metinde bir kez, toplam en fazla 6 farklı hedef; aynı sayfaya bağlantı yok. Şarkı rehberindeki uygun bağlantılar da kalındır.
+- Kalın yazı veya bağlantı sayısı tek başına sıralama garantisi değildir. Doğal bağlam, içerik kalitesi ve doğru hedef esas alınır.
+- Site haritasında yalnız uygun yayımlanmış sayfalar bulunur; son değişiklik zamanı gerçekten içerikle ilişkili olmalı. Yeni gelişme yoksa yapay güncelleme yapılmaz.
+- Admin ve kişisel profil sayfalarının noindex ayarları korunur.
+
+KRİTİK DERLEME KURALI:
+SITE_ORIGIN=https://fanz.com.tr npm run build
+
+Önceki hata: SITE_ORIGIN verilmeden yapılan derleme uygulamayı önizleme sanıp bütün siteye HTTP noindex başlığı ekliyordu. HTML meta etiketleri doğru olsa bile bu başlık indekslemeyi engelliyordu. Ayrıca robots.txt eski alan adına statik üretiliyordu.
+Düzeltme: üretim build'i SITE_ORIGIN olmadan durur; robots.txt çalışma anındaki alan adından üretilir; aktivasyon betiği evrensel noindex içeren derlemeyi reddeder ve yayın sonrası HTTP başlığı/robots.txt kontrolü yapar.
+
+Google tarafı:
+Search Console doğrulaması, URL İnceleme ve gerçek indeks durumu ayrıca incelenmelidir. Google dizine alınması, Rich Results Test sonucu veya sıralama artışı doğrulanmış değildir; bu sonuçlar vaat edilmez. Google Indexing API'nin her içerik türü için uygun olduğu varsayılmaz; mevcut SEO merkezinin bu ayarı ayrı bir değerlendirme konusudur.
+
+5. TASARIM VE TOPLULUKTA TAMAMLANANLAR
+
+- Kapak görseli boyutu, başlık ve masaüstü sanatçı menüsü düzeltmeleri sekiz sanatçıya uygulandı.
+- Biyografi metin ve başlık kontrastı düzeltildi.
+- Beğeni kutusu başlangıçta küçük kalp; tıklayınca açılır.
+- Kalp bulunan sanatçı/bölüm/içerik/şarkı sayfalarında yorum alanı var.
+- Misafir ad ve mesaj yazar; yorumlar onay bekler. Üye yorumları da moderasyondan geçer.
+- Sayfada en fazla 5 onaylı yorum gösterilir. Tümü alttan açılan panelde okunur; kapatma, Escape ve dokunma hareketleri desteklenir.
+- Yorum yönetimi: /admin/yorumlar. Herkese açık sayaçlar yalnız onaylı yorumları sayar.
+- Sohbetin üstünde “Benzer sanatçıları keşfet” bulunur; öneriler aynı içerik bölümüne gider.
+- Menüde Takip kaldırıldı. Kullanıcı /profil içinde sanatçı/fan takiplerini görebilir ve kaldırabilir. /takip eski bağlantısı profile yönlenir. Tekrarlanan kaldırma isteği tekrar takip başlatmaz.
+- Sohbet menüsü /sohbetler sayfasına gider. Sıralama: son 24 saatte mesaj yazan farklı katılımcılar, sonra silinmemiş mesaj sayısı, sonra çevrimiçi katılımcılar. Eşitlikte ad sırası. Liste 30 saniyede yenilenir.
+- Davet bağlantısı seçilen kanalı doğrudan açar. Kanal tam ekran açılır; düğme, Escape veya aşağı kaydırma ile küçültülür.
+- Sohbetlerde sanatçı fotoğrafı, koyu katman ve okunur mesaj kutuları var. Kaynak/lisans bağlantıları korunur.
+- Mobil giriş alanları en az 16px; küçük yazıdan doğan odak yakınlaşmasını önleme düzeltmesi var. Kullanıcının erişilebilirlik amaçlı manuel yakınlaştırması engellenmez.
+- Tam ekran sohbet yüksekliği VisualViewport ile küçülen klavye alanına uyarlanır. Fiziksel iPhone testi henüz yapılmadı.
+
+6. İKON VE HIZ PAKETİ — YAYINA HAZIR
+
+İkon:
+Kullanıcının 27 Eylül'de gönderdiği siyah zeminli sarı/yeşil Z görseli esas alındı. Oran/tasarım korundu. 32, 48, 180, 192, 512 piksel PNG, çok boyutlu favicon.ico ve web manifest bağlantıları hazır. Apple dokunmatik ikon 180px. Başlıktaki mevcut geniş FANZ logosu değiştirilmedi.
+
+Hız:
+- Mevcut Next.js/Nginx korunur; LiteSpeed kurulumu veya yeni ücretli servis yok.
+- Yerel görseller WebP destekleyen tarayıcılara uygun boyutta sunulur. Desteklemeyenlere orijinal dosya döner.
+- İzinli genişlikler: 160, 320, 640, 960, 1280.
+- WebP çıktıları disk üzerinde tekrar kullanılır; dosya içeriği/boyut/kaliteyle ilişkili anahtar değiştiğinde eski çıktı kullanılmaz.
+- ETag ve 304 yeniden doğrulaması; görsellerde tarayıcı önbelleği; sürümlü ikonlarda uzun önbellek var.
+- Yönetimdeki görsel kalite/etkinlik ayarı korunur. Yeni yayın betiği, kullanıcının hız isteği kapsamında kapalı olan görsel optimizasyonunu açar.
+- Sanatçı ana görseli uygun srcset/sizes ve öncelikle; keşif kartları ertelenmiş yükleme ile sunulur.
+- Sayfa içi sohbet, kullanıcı yaklaştığında yüklenir ve bağlanır. /sohbetler üzerinden bilinçli açılan kanal hemen çalışır.
+- Dinamik HTML, oturumlar, yorumlar ve sohbetler ortak tam sayfa önbelleğine alınmaz; kişiye özel/veritabanı içerikleri güncel kalır.
+
+Kontrollü karşılaştırma:
+Aynı sunucuda iki ayrı QA veritabanı; 390x844 mobil görünüm, 2x piksel oranı, kapalı tarayıcı önbelleği, ilk 5 saniye:
+Eski sürüm indirilen veri: 2.822.432 bayt.
+Yeni sürüm indirilen veri: 1.724.898 bayt.
+Yaklaşık %39 daha az aktarılan veri. Toplam istek sayısı iki ölçümde de 52; üst bölümdeki sohbet API isteği 2'den 0'a indi.
+Semicenk ana görseli: orijinal 621.362 bayt, 640px WebP 35.098 bayt.
+Bu ölçümler indirme yükünü gösterir; saha Core Web Vitals sonucu veya tüm telefonlarda aynı hız artışı değildir. Lighthouse puanı uydurulmaz.
+
+7. SON DOĞRULAMALAR
+
+- Sekiz sanatçının ana/bölüm/detay sayfalarını kapsayan önceki 187 sayfalık masaüstü/mobil düzen taraması tamamlandı.
+- Son SEO denetiminde 106 Semicenk sayfası yeniden kontrol edildi: HTTP, başlık/açıklama, tekrarlar, canonical, tek H1, HTTP/meta indeksleme, paylaşım görseli, JSON-LD.
+- Son pakette de 106 SEO sayfası kontrolü geçti.
+- Önceki son SEO turunda 141 şema/görsel bağlantısı HTTP 200 döndü; pilotta kopuk veya bağlantısız sayfa bulunmadı.
+- Kalın bağlantılar, tekilleştirme/sayı sınırı ve kendine bağlantı vermeme kontrol edildi.
+- Sohbet üst bölümde bağlanmıyor; aşağı kaydırınca açılıyor. Kanal hedefi tek. Tam ekran sohbet yolu çalışıyor.
+- WebP yanıtı, PNG geri dönüşü, ETag 304, ikonlar ve manifest kontrol edildi.
+- Üretim build/TypeScript ve değiştirilmiş betiklerin sözdizimi kontrolü yapıldı.
+- Testler canlı veritabanında değil ayrı kopyalarda yapıldı. Test kullanıcıları/mesajları belgeye alınmaz.
+
+8. OTOMASYON
+
+“Semicenk arşivini güncelle” görevi etkin olarak görüldü.
+Kimlik: 6ab9187d75e4819186a6e9a450332317.
+Takvim: Europe/Istanbul, 12 saatte bir; başlangıç 27 Eylül 2026 20:00, ardından 08:00/20:00.
+Son kontrol sırasında last_run_time ve next_run_time alanları boştu; görevin başarılı bir çalışması henüz doğrulanmış değildir.
+
+Kapsam: yalnız kaynaklı Semicenk içerik araştırma/yazma/güncelleme. Kod, şema, tasarım, bağımlılık, servis veya deploy değişikliği yapmaz. Kaynak/revision/yedek/doğrulama zorunludur. Yeni içerik yoksa yapay haber oluşturmaz. Her çalışmanın sonunda gerçek yayınlananlar ve bekleyenler ayrı raporlanır.
+Otomasyon mevcut içerik durum kaydını da sürdürür. Ana proje dosyasına farklı bir kod/yayın işi ekleme yetkisi vermez.
+
+9. SONRAKİ AŞAMALAR
+
+A. İkon/hız paketini aktive et; canlı favicon/manifest/WebP/304, kalın bağlantı, sohbet ve SEO başlıklarını kontrol et. Belgeyi canlı durumuyla güncelle.
+B. Semicenk pilotunu kullanıcının son kontrolüyle kapat. Kalan doğrulamalar: fiziksel mobil klavye/zoom davranışı ve erişim sağlanırsa Search Console URL/indeksleme kontrolü.
+C. Kullanıcının seçeceği sıradaki sanatçı için içerik envanteri çıkar: biyografi, haber, konser, diskografi, şarkılar, videolar, galeri ve kaynaklar.
+D. Semicenk metnini kopyalamadan sanatçıya özel içerik ve SEO üret; başlık/açıklama, kaynak, tarih, iptal durumu, görsel atıf ve iç bağlantı kontrolünü uygula.
+E. Aynı kalite kapısıyla diğer sanatçılara sırayla geç. Her sanatçının “araştırıldı / içerik hazır / veri işlendi / test edildi / canlı” durumunu ayrı kaydet.
+F. Gerçek trafik oluşunca mobil saha hızını ve Google görünürlüğünü ölç; darboğaz bulunursa bir sonraki performans değişikliğini buna göre seç.
+
+10. TEKNİK DEVAMLILIK VE GÜNCELLEME USULÜ
+
+Depo: alpkangulle/fanzcomtr
+Canlı symlink: /home/deploy/fans/current
+Sürümler: /home/deploy/fans/releases
+Canlı SQLite: /home/deploy/fans/shared/fans.sqlite
+Servis: fans-platform.service
+Node uygulaması: localhost:3042
+QA: geçici 3043/3044; ayrı SQLite, SEO_AUTOMATION_DISABLED=1.
+İçerik kılavuzu: content/dynamic-content.md
+Önceki SEO raporu: content/semicenk-final-seo-audit.md
+
+Her yeni çalışma:
+1) AGENTS.md ve bu dosyayı oku.
+2) Gerçek canlı sürüm ile GitHub main'i kontrol et.
+3) Yetkili kapsamda çalış; üretim verisini test için değiştirme.
+4) Gereken doğrulamayı yap; hata kaldıysa açık yaz.
+5) Aynı dosyaya yapılan işi, ölçümü, canlı/yayına hazır durumunu ve sonraki adımı ekle.
+6) Kodu ve durum dosyasını birlikte commit et. Kullanıcıya bu metin belgesinin güncel kopyasını sun.
+7) Yayın tamamlanınca symlink/HTTP ile doğrula ve “canlı” durumunu güncelle.
+
+Belge kayıt tutmanın temelidir; her şeyin kendiliğinden hatırlandığı varsayılmaz. Otomasyonun içerik günlüğü ile kod/yayın günlüğü birbirine karıştırılmaz.
+
+Gizli anahtarlar, şifreler, servis hesabı dosyaları, kişisel mesajlar ve kullanıcı verileri bu belgeye veya Git'e yazılmaz. Yönetici yetkisi gerektiren yayın adımı hazır komutla kullanıcıya aktarılır; yetki engeli aşılmaz.
+
+11. KARAR VE DEĞİŞİKLİK GÜNLÜĞÜ
+
+27 Eylül — Semicenk kaynaklı arşivi ve özgün SEO başlıkları oluşturuldu.
+27 Eylül — Şarkı/video/konser ayrıntıları veritabanına taşındı; içerik güncelleme aracı hazırlandı.
+27 Eylül — Onaylı misafir yorumları, beş yorum önizlemesi, açılır yorum paneli ve benzer sanatçı bağlantıları eklendi.
+27 Eylül — Ortak sanatçı sayfa düzenleri, profil takip yönetimi ve sıralamalı sohbetler tamamlandı.
+27 Eylül — Mobil yazı alanı ölçeği ve sanatçı fotoğraflı sohbet arka planları eklendi.
+27 Eylül — Son SEO turunda evrensel HTTP noindex ve eski robots alan adı hataları düzeltildi; canlıda doğrulandı.
+27 Eylül — Bu paket: gönderilen Z ikonu, kalın bağlamsal bağlantılar, görsel optimizasyonu, ertelenen sohbet, karşılaştırmalı hız ölçümü ve sürekli güncellenecek proje belgesi hazırlandı. Yayın bekliyor.
+
+Kaynak rehberler:
+https://developers.google.com/search/docs/crawling-indexing/links-crawlable
+https://developers.google.com/search/docs/appearance/favicon-in-search
+https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+https://nextjs.org/docs/app/api-reference/components/image

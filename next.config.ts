@@ -9,7 +9,7 @@ const config:NextConfig={
   ...(!publicDomain?[{key:'X-Robots-Tag',value:'noindex, nofollow'}]:[]),
   {key:'X-Content-Type-Options',value:'nosniff'},
   {key:'Referrer-Policy',value:'strict-origin-when-cross-origin'}
- ]}]}
+ ]},{source:'/icons/:path*',headers:[{key:'Cache-Control',value:'public, max-age=31536000, immutable'}]},{source:'/fonts/:path*',headers:[{key:'Cache-Control',value:'public, max-age=86400'}]}]}
 };
 export default function nextConfig(phase:string){
  if(phase==='phase-production-build'&&!process.env.SITE_ORIGIN)throw new Error('SITE_ORIGIN must be explicitly set before building. Production: https://fanz.com.tr');
