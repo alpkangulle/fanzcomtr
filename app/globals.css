@@ -265,3 +265,11 @@ body:has(.chat-expanded) .global-header{display:none}
 @keyframes announcement-scroll{to{transform:translateX(-50%)}}
 @media(max-width:800px){.announcement-bar{min-height:37px;font-size:12px}.announcement-label{padding:0 10px;font-size:10px}.announcement-contact{min-height:37px;padding:0 10px;font-size:11px;gap:4px}.announcement-track span{padding-left:25px}}
 @media(prefers-reduced-motion:reduce){.announcement-track{animation:none}.announcement-window{overflow-x:auto;scrollbar-width:none}.announcement-window::-webkit-scrollbar{display:none}}
+/* Keep iOS text sizing and the moving copies in exactly one clipped row. */
+.announcement-bar{height:40px;min-height:40px;max-height:40px;-webkit-text-size-adjust:100%}
+.announcement-window,.announcement-track{height:100%;max-height:100%;white-space:nowrap}
+.announcement-window{display:flex;align-items:center}
+.announcement-track{flex-wrap:nowrap;align-items:center}
+.announcement-track span{line-height:40px;max-height:40px;white-space:nowrap}
+.announcement-contact{height:40px;min-height:40px}.announcement-contact svg{flex:none}
+@media(max-width:800px){.announcement-bar{height:36px;min-height:36px;max-height:36px}.announcement-track span{line-height:36px;max-height:36px}.announcement-contact{height:36px;min-height:36px}}
