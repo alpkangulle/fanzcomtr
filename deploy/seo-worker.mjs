@@ -3,7 +3,7 @@ import {optimizeImages} from './optimize-seo-images.mjs';
 import {createSign,createHash} from 'node:crypto';
 import {readFileSync,existsSync,realpathSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
-import {openSeo,readConfig,credentialsPath,safeUrls,trDay} from '../lib/seo-control.mjs';
+import {openSeo,readConfig,credentialsPath,safeUrls,quotaDay} from '../lib/seo-control.mjs';
 export async function runWorker({transport=fetch,dryRun=false,origin=(process.env.SITE_ORIGIN||'https://fanz.com.tr').replace(/\/$/,'')}={}){
  const db=openSeo(),start=Date.now();
  const lease=db.prepare('UPDATE seo_worker SET lease_until=? WHERE id=1 AND lease_until<?').run(start+600000,start);
@@ -48,7 +48,7 @@ export async function runWorker({transport=fetch,dryRun=false,origin=(process.en
     if(Date.now()-start>240000)break;
     const problem=provider==='indexnow'?indexKeyProblem:googleProblem;
     if(problem){db.prepare("UPDATE seo_queue SET status='error',message=?,next_attempt=?,updated=? WHERE provider=? AND url=?").run(problem,Date.now()+3600000,Date.now(),provider,row.url);report.errors++;continue}
-    const allowed=transaction(()=>{const day=trDay();db.prepare('INSERT OR IGNORE INTO seo_daily(provider,day,attempts) VALUES(?,?,0)').run(provider,day);const r=db.prepare('UPDATE seo_daily SET attempts=attempts+1 WHERE provider=? AND day=? AND attempts<?').run(provider,day,provider==='sitemap'?20:config.dailyLimit);return !!r.changes});
+    const allowed=transaction(()=>{const day=quotaDay(provider);db.prepare('INSERT OR IGNORE INTO seo_daily(provider,day,attempts) VALUES(?,?,0)').run(provider,day);const r=db.prepare('UPDATE seo_daily SET attempts=attempts+1 WHERE provider=? AND day=? AND attempts<?').run(provider,day,provider==='sitemap'?20:config.dailyLimit);return !!r.changes});
     if(!allowed)break;
     let status=0,message='',ok=false;
     try{

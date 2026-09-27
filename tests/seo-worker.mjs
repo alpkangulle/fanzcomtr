@@ -6,7 +6,7 @@ import {join} from 'node:path';
 import {generateKeyPairSync} from 'node:crypto';
 import {DatabaseSync} from 'node:sqlite';
 import {runWorker} from '../deploy/seo-worker.mjs';
-import {safeUrls,openSeo,readConfig,saveConfig,saveCredentials,configStatus,credentialsPath} from '../lib/seo-control.mjs';
+import {safeUrls,openSeo,readConfig,saveConfig,saveCredentials,configStatus,credentialsPath,quotaDay} from '../lib/seo-control.mjs';
 test('SEO queue: filtering, providers, quota, retries, removals, locking and secret storage',async()=>{
  const directory=mkdtempSync(join(tmpdir(),'fanz-seo-test-'));process.env.DATABASE_PATH=join(directory,'test.sqlite');process.env.SITE_ORIGIN='https://fanz.com.tr';
  const db=new DatabaseSync(process.env.DATABASE_PATH);db.exec(readFileSync(new URL('../deploy/migrations/012_seo_control.sql',import.meta.url),'utf8'));db.close();
@@ -42,4 +42,12 @@ test('SEO queue: filtering, providers, quota, retries, removals, locking and sec
  connection=openSeo();connection.prepare('UPDATE seo_worker SET lease_until=0').run();connection.close();
  const count=configStatus().queue.length;await runWorker({transport,dryRun:true});assert.equal(configStatus().queue.length,count);
  }finally{rmSync(directory,{recursive:true,force:true})}
+});
+
+test('Google daily quota follows Pacific midnight, including daylight saving',()=>{
+ assert.equal(quotaDay('google',new Date('2026-09-28T06:59:00Z')),'2026-09-27');
+ assert.equal(quotaDay('google',new Date('2026-09-28T07:00:00Z')),'2026-09-28');
+ assert.equal(quotaDay('google',new Date('2026-12-01T07:59:00Z')),'2026-11-30');
+ assert.equal(quotaDay('google',new Date('2026-12-01T08:00:00Z')),'2026-12-01');
+ assert.equal(quotaDay('indexnow',new Date('2026-09-28T06:59:00Z')),'2026-09-28');
 });
