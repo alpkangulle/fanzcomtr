@@ -81,4 +81,22 @@ done
 if [ "$(curl -s --max-time 10 -o /dev/null -w '%{http_code}' "$origin/api/admin/seo")" != 401 ]; then rollback; exit 1; fi
 if ! curl -fsS --max-time 10 "$origin/robots.txt" | python3 -c 'import sys;s=sys.stdin.read();sys.exit(0 if "Sitemap: https://fanz.com.tr/sitemap.xml" in s and "fans.wai.com.tr" not in s else 1)'; then rollback; exit 1; fi
 if ! curl -fsSI --max-time 10 "$origin/semicenk" | python3 -c 'import sys;s=sys.stdin.read().lower();sys.exit(1 if any(line.startswith("x-robots-tag:") and ("noindex" in line or "none" in line) for line in s.splitlines()) else 0)'; then rollback; exit 1; fi
+runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" /usr/bin/python3 - <<'PYQUOTA'
+import json,os,sqlite3
+db=sqlite3.connect(os.environ['DATABASE_PATH'])
+try:
+ db.execute('BEGIN IMMEDIATE')
+ value,revision=db.execute('SELECT value,revision FROM seo_config WHERE id=1').fetchone()
+ config=json.loads(value)
+ if config['dailyLimit']!=180:
+  config['dailyLimit']=180
+  db.execute('UPDATE seo_config SET value=?,revision=revision+1 WHERE id=1 AND revision=?',(json.dumps(config,ensure_ascii=False,separators=(',',':')),revision))
+ db.commit()
+ print('Google günlük bildirim sınırı: 180')
+except:
+ db.rollback()
+ raise
+finally:
+ db.close()
+PYQUOTA
 printf 'Yayında: %s\nÖnceki sürüm: %s\n%s/semicenk\n' "$release" "$previous" "$origin"
