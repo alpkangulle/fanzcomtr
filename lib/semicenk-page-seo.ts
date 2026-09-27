@@ -1,6 +1,5 @@
 import {dateLabel,type Entry} from './entries-types';
-import {isCancelled} from './semicenk-events';
-import catalog from './semicenk-catalog.json';
+import {isCancelled,isPostponed} from './semicenk-events';
 import type {Song} from './songs';
 const news:Record<string,{title:string;description:string}>={
  'tek-yurek-milli-takima-destek':{title:'Semicenk Tek Yürek: Millî Takım İçin Hazırlanan Şarkı',description:'Semicenk’in millî futbol takımına destek için hazırladığı Tek Yürek, 29 Mayıs 2026’da yayımlandı. Şarkının çıkış hikâyesi ve yayın künyesi.'},
@@ -12,14 +11,15 @@ const news:Record<string,{title:string;description:string}>={
 };
 export function semicenkEntrySeo(e:Entry){
  if(e.kind==='konserler'){
-  const heading='Semicenk '+e.city+' Konseri – '+dateLabel(e.date)+(isCancelled(e)?' (İptal)':'');
-  if(isCancelled(e))return {title:heading,heading,description:'Semicenk’in 27 Eylül 2026 Oberhausen konseri iptal edildi. Turbinenhalle 1’in resmî iptal duyurusu ve etkinliğin arşiv bilgileri.'};
+  const heading='Semicenk '+e.city+' Konseri – '+dateLabel(e.date)+(isCancelled(e)?' (İptal)':isPostponed(e)?' (Ertelendi)':e.event_status==='rescheduled'?' (Yeni Tarih)':'');
+  if(isCancelled(e))return {title:heading,heading,description:'Semicenk’in '+dateLabel(e.date)+' '+e.city+' konseri iptal edildi. '+e.venue+' için iptal duyurusu ve etkinliğin arşiv bilgileri.'};
+  if(isPostponed(e))return {title:heading,heading,description:'Semicenk’in '+e.city+' konseri ertelendi. '+e.venue+' etkinliğinin güncel durumu ve resmî duyuru bağlantısı.'};
   const when=dateLabel(e.date)+(e.time?', saat '+e.time.replace(':','.'):'');
   if(e.date<new Date().toISOString().slice(0,10))return {title:heading+' | Konser Arşivi',heading,description:heading+': '+e.venue+'. Geçmiş etkinliğin tarih, mekân ve kaynak bilgileri.'};
   return {title:heading+' | Bilet ve Mekân',heading,description:'Semicenk '+e.city+' konseri '+when+': '+e.venue+'. Konser duyurusu, program bilgileri ve resmî bilet satış bağlantısı.'};
  }
- if(e.kind==='haberler'){const n=news[e.slug];return {...(n??{title:e.title.includes('Semicenk')?e.title:'Semicenk: '+e.title,description:e.summary}),heading:n?.title??e.title};}
- const r=catalog.releases.find(r=>r.id===e.id),name=r?.title??e.title,format=r?.format??'Albüm',count=e.tracks.split('\n').filter(Boolean).length,credits=r?.artist??'Semicenk';
+ if(e.kind==='haberler'){const n=e.seo_title?{title:e.seo_title,description:e.seo_description||e.summary}:news[e.slug];return {...(n??{title:e.title.includes('Semicenk')?e.title:'Semicenk: '+e.title,description:e.summary}),heading:n?.title??e.title};}
+ const name=e.release_name||e.title,format=e.release_format||'Albüm',count=e.tracks.split('\n').filter(Boolean).length,credits=e.release_credits||'Semicenk';
  const title='Semicenk '+name+' ('+e.date.slice(0,4)+') – '+(format==='Single'?'Single Künyesi':format+' Şarkıları');
  const songs=e.tracks.split('\n').filter(Boolean);
  const detail=count>1?count+' şarkılık '+format.toLocaleLowerCase('tr')+'; '+songs.slice(0,2).join(', ')+' ve tüm parça listesi.':'Single künyesi, kapak görseli ve resmî dinleme bağlantısı.';

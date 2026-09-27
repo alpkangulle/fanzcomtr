@@ -33,6 +33,7 @@ runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$rele
 (cd "$release" && runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" /home/deploy/.nvm/versions/node/v22.23.2/bin/node deploy/migrate.mjs)
 runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$release/deploy/import-semicenk.py"
 runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$release/deploy/import-semicenk-archive.py"
+runuser -u deploy -- env DATABASE_PATH="$base/shared/fans.sqlite" python3 "$release/deploy/import-dynamic-content.py"
 if [ "$previous" != "$release" ]; then switch_to "$release"; fi
 if ! systemctl restart fans-platform.service; then rollback; exit 1; fi
 healthy=false

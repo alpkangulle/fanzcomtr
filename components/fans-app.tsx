@@ -1,4 +1,6 @@
 "use client";
+import {ArtistCatalogContext} from './artist-catalog-context';
+import {emptyCatalog,type ArtistCatalog} from '@/lib/artist-catalog-types';
 import {useEffect,useState} from 'react';
 import {Search, ArrowUpRight, ArrowLeft, MessageCircle, Heart, Eye, Plus, Check, Send, Smile, Users, Compass, House, Music2, Headphones, Share2, Trophy, X} from 'lucide-react';
 import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
@@ -25,7 +27,7 @@ import {isEntryKind,type Entry} from '@/lib/entries-types';
 import {siteConfig,sections} from '@/lib/site-config';
 import {artists} from '@/lib/artists';
 import {artistMedia,MediaCredit,ArtistPhoto} from '@/components/artist-photo';
-export default function FansApp({initialArtist,section,content,entries=[],entry,today='',discovery=[],shouts=[]}:{initialArtist?:string;section?:string;content?:{biography:string;sources:string}|null;entries?:Entry[];entry?:Entry;today?:string;discovery?:Entry[];shouts?:Shout[]}){
+function FansAppContent({initialArtist,section,content,entries=[],entry,today='',discovery=[],shouts=[]}:{initialArtist?:string;section?:string;content?:{biography:string;sources:string}|null;entries?:Entry[];entry?:Entry;today?:string;discovery?:Entry[];shouts?:Shout[]}){
  const router=useRouter();
  const ArtistHeading=initialArtist==='semicenk'&&(section||entry)?'p':'h1';
  const SectionHeading=initialArtist==='semicenk'?'h1':'h2';
@@ -57,4 +59,8 @@ export default function FansApp({initialArtist,section,content,entries=[],entry,
  <MobileNav active={view==='following'?'following':initialArtist?'':'search'}/>
  <Dialog open={info} onOpenChange={setInfo}><DialogContent><DialogTitle>{siteConfig.name} · Geliştirme sürümü</DialogTitle><DialogDescription>Her sanatçının ana sayfasında tek ortak kanal bulunur. Misafir mesajları sunucuda saklanır ve kanaldaki diğer ziyaretçilere iletilir. Takip listen bu tarayıcıda saklanır; cihazlar arasında eşitlenmez. Bu sürüm geliştirme aşamasındadır.</DialogDescription><p className="credit"><Link href="/gorsel-kaynaklari">Fotoğraf kaynakları ve lisanslar</Link></p></DialogContent></Dialog>
  </div>
+}
+
+export default function FansApp({catalog=emptyCatalog,...props}:Parameters<typeof FansAppContent>[0]&{catalog?:ArtistCatalog}){
+ return <ArtistCatalogContext.Provider value={catalog}><FansAppContent {...props}/></ArtistCatalogContext.Provider>;
 }

@@ -1,0 +1,3 @@
+export type CatalogSong={name:string;slug:string;albumId:string;albumSlug:string;albumTitle:string;date:string;cover:string;position:number;credits:string;duration:number;url:string;description:string;videoId:string|null;videoSource:string;externalAlbumUrl?:string;updated?:number};
+export type ArtistCatalog={songs:Record<string,CatalogSong>;releases:{id:string;slug:string;title:string;format:string;date:string;cover:string;url:string;artist:string;count:number}[];videos:{id:string;title:string;series:string;publisher:string;source:string;checked_at:string;updated:number}[];updated:number};
+export const emptyCatalog:ArtistCatalog={songs:{},releases:[],videos:[],updated:0};
