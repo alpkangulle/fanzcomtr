@@ -50,3 +50,6 @@ Activate once using deploy/activate-release.sh as root. It backs up the database
 - Existing desktop/mobile geometry checks pass at 1440, 1920 and 390 pixels.
 - tests/dynamic-content.py uses a running isolated QA server and copied database. It confirms song creation and gallery video edit visible immediately without restart, sitemap update, canceled/postponed/rescheduled states and previous date, Berlin winter offset, dry-run no writes, conflict atomicity and seed replay preserving edits.
 - Test fixtures are removed/restored in finally; no test content is inserted into production.
+
+## BLOK3 başlangıç arşivi (27 Eylül 2026)
+BLOK3 için aynı revision/yedek/atomik importer desteklenir. Yeni biyografi ilk kayıt olarak expectedRevision null ile açılır. Kaynaklı hazırlık dosyası content/blok3/batch-20260927.json, katalog üreticisi content/blok3/build-batch.py; mevcut canlı release bu paketi etkinleştirene kadar doğrudan üretim importu yapılmaz.

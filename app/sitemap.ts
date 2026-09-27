@@ -23,13 +23,13 @@ export default async function sitemap():Promise<MetadataRoute.Sitemap>{
    if(section.length)pages.push({url:`${siteOrigin}/${artist.id}/${kind}`,lastModified:latest(section)});
   }
   const songs=await allSongs(artist.id);
-  if(artist.id==='semicenk'||artist.id==='manifest')pages.push({url:siteOrigin+'/'+artist.id+'/sarki-sozleri',lastModified:latest(own)});
+  if(artist.id==='semicenk'||artist.id==='manifest'||artist.id==='blok3')pages.push({url:siteOrigin+'/'+artist.id+'/sarki-sozleri',lastModified:latest(own)});
   if(songs.some(s=>s.videoId||s.info))pages.push({url:`${siteOrigin}/${artist.id}/sarkilar`,lastModified:latest(own.filter(r=>r.kind==='albumler'))});
   for(const song of songs)if(song.videoId||song.info)pages.push({url:siteOrigin+songHref(song),lastModified:song.updated?new Date(song.updated):latest(own.filter(r=>r.id===song.albumId))});
  }
  for(const r of entries)pages.push({url:`${siteOrigin}/${r.artist}/${r.kind}/${r.slug}`,lastModified:modified(r.updated)});
  pages.push({url:siteOrigin+'/sohbetler'},{url:siteOrigin+'/top-listeler'},{url:siteOrigin+'/gorsel-kaynaklari'});
- for(const id of ['semicenk','manifest']){const catalog=await artistCatalog(id);for(const p of pages)if([id,id+'/sarkilar',id+'/sarki-sozleri',id+'/galeri'].some(s=>new URL(p.url).pathname==='/'+s))p.lastModified=new Date(Math.max(p.lastModified?new Date(p.lastModified).getTime():0,catalog.updated));}
+ for(const id of ['semicenk','manifest','blok3']){const catalog=await artistCatalog(id);for(const p of pages)if([id,id+'/sarkilar',id+'/sarki-sozleri',id+'/galeri'].some(s=>new URL(p.url).pathname==='/'+s))p.lastModified=new Date(Math.max(p.lastModified?new Date(p.lastModified).getTime():0,catalog.updated));}
  const bios=(await channelDb().prepare('SELECT artist,updated FROM artist_content').all()).results;
  const overrides=(await channelDb().prepare('SELECT path,updated FROM seo_overrides').all()).results;
  for(const page of pages){

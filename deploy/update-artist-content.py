@@ -11,7 +11,7 @@ ap.add_argument('--dry-run',action='store_true')
 args=ap.parse_args()
 payload=json.loads(Path(args.batch).read_text())
 artist_id=payload.get('artist')
-assert artist_id in {'semicenk','manifest'},'Unsupported artist'
+assert artist_id in {'semicenk','manifest','blok3'},'Unsupported artist'
 ops=payload.get('operations',[])
 assert isinstance(ops,list) and 0<len(ops)<=100,'Expected 1–100 operations'
 def text(v,n=20000):
@@ -91,7 +91,7 @@ for op in ops:
    keys.update(kind=op['kind'],slug=op['slug'])
  elif kind=='biography':
   key=artist_id;table='artist_content';where='artist=?';params=[key];keys={'artist':key}
-  assert expected is not None and values.keys()=={'biography','sources'}
+  assert values.keys()=={'biography','sources'}
   text(values['biography']);text(values['sources'])
   for source in values['sources'].splitlines():url(source)
   data=values

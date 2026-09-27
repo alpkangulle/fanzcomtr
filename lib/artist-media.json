@@ -70,5 +70,14 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "caption": "Veron Algos, Ceza ile Birlikte (2018)"
+  },
+  "blok3": {
+    "src": "/images/artists/blok3.png",
+    "source": "https://music.apple.com/tr/artist/blok3/1633245914",
+    "download": "https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/9c/b5/82/9cb582a4-5e8c-d217-a412-7d2d39e37e43/mza_1833975138894458457.png/1200x630cw.png",
+    "author": "Apple Music sanatçı görseli",
+    "license": "Hakları saklıdır",
+    "licenseUrl": "https://www.apple.com/legal/internet-services/itunes/",
+    "caption": "BLOK3 sanatçı görseli; konser kaydı değildir."
   }
 }
