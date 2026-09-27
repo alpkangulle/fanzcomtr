@@ -7,14 +7,14 @@ Bu dosya, her anlamlı çalışma sonunda güncellenir. “Hazırlandı” ile �
 1. GÜNCEL YAYIN DURUMU
 
 Son doğrulanan canlı sürüm:
-20260927-icon-speed
-Kaynak commit: e74b72eb5e3e8bf6616b9013b1bebae0fd664906
+20260927-footer-clean
+Kaynak commit: 3035ffee96206a5e57fcb937f85ea04a066fd065
 
-27 Eylül canlı kontrolü: current symlink ikon/hız sürümüne işaret ediyor. 67 adres HTTP 200 döndü. Evrensel HTTP noindex başlığı yok. Sekiz sanatçının ana sayfası index, follow; diğer yedi sanatçının şarkı sözleri bölümleri ile profil/admin bilinçli noindex.
+27 Eylül canlı kontrolü: current symlink alt alan temizliği sürümüne işaret ediyor; /semicenk HTTP 200. 67 adres HTTP 200 döndü. Evrensel HTTP noindex başlığı yok. Sekiz sanatçının ana sayfası index, follow; diğer yedi sanatçının şarkı sözleri bölümleri ile profil/admin bilinçli noindex.
 
 Hazırlanan paket: 20260927-chat-keyboard — henüz canlıda değil.
 Ana sayfanın altındaki Yönetim ve Önizleme hakkında bağlantıları, geliştirme sürümü bilgi penceresi ve kullanılmayan pencere kodu kaldırıldı. Fotoğraf kaynakları ve lisanslar bağlantısı doğrudan alt alanda korundu. Yönetici giriş adresi ve erişim denetimleri değişmedi.
-Yeni pakette mobil klavye açılırken sohbet penceresi görsel ekranın üst konumu ve yüksekliğiyle hizalanır; yazma kutusu klavyenin üstünde, mesajlar kaydırılabilir alanda kalır. Tam ekran sohbet ve sohbetler lobisi aynı düzeltmeyi paylaşır. Klavye açıkken görsel kaynak şeridi gizlenir. Alt alandaki eski fans metni yerine kullanıcının Z ikonu konur; site adı Fanz olarak düzeltilir. Mobil 390x844 tarayıcıda görsel ekranı 240px yukarı ve 430px yüksekliğe getiren klavye benzetiminde sohbet 240–670px alanına, gönderim kutusu 610–664px aralığına oturdu. Fiziksel iPhone testi bekliyor. Önceki alt alan yönetim/önizleme temizliği de bu sürümde bulunur.
+Yeni pakette mobil klavye açılırken sohbet penceresi görsel ekranın üst konumu ve yüksekliğiyle hizalanır; yazma kutusu klavyenin üstünde, mesajlar kaydırılabilir alanda kalır. Tam ekran sohbet ve sohbetler lobisi aynı düzeltmeyi paylaşır. Klavye açıkken görsel kaynak şeridi gizlenir. Alt alandaki eski fans metni yerine kullanıcının Z ikonu konur; site adı Fanz olarak düzeltilir. Mobil 390x844 tarayıcıda görsel ekranı 240px yukarı ve 430px yüksekliğe getiren klavye benzetiminde sohbet 240–670px alanına, gönderim kutusu 610–664px aralığına oturdu. Fiziksel iPhone testi bekliyor. Önceki alt alan yönetim/önizleme temizliği canlıda doğrulandı; bu sürümde de bulunur.
 Yayın komutu (sunucuda root):
 bash /home/deploy/fans/releases/20260927-chat-keyboard/deploy/activate-release.sh
 
