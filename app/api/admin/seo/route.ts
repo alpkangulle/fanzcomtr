@@ -19,7 +19,7 @@ export async function POST(request:Request){
  try{
  const d=JSON.parse(raw);
  if(d.action==='settings')saveConfig(d.config);
- else if(d.action==='credentials')saveCredentials(d.credentials);
+ else if(d.action==='credentials'){saveCredentials(d.credentials);resetErrors();}
  else if(d.action==='preview')return Response.json({preview:previewTemplates(d.template)});
  else if(d.action==='apply'){const applied=applyTemplates(d.template);triggerSeoCheck();return Response.json({applied});}
  else if(d.action==='restore'){const rows=previewTemplates(d.template);clearOverrides(rows.map(r=>r.path));}

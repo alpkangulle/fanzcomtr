@@ -43,7 +43,7 @@ export async function runWorker({transport=fetch,dryRun=false,origin=(process.en
   let indexKeyProblem='';
   if(config.indexNowEnabled){try{const key=await request(origin+'/indexnow.txt');if(!key.ok||(await key.text()).trim()!==config.indexNowKey)indexKeyProblem='IndexNow doğrulama dosyası eşleşmiyor.'}catch{indexKeyProblem='IndexNow doğrulama dosyasına erişilemedi.'}}
   for(const provider of [...providers,...(config.googleEnabled?['sitemap']:[])]){
-   const rows=db.prepare("SELECT * FROM seo_queue WHERE provider=? AND status IN ('pending','error') AND next_attempt<=? ORDER BY updated,url LIMIT 200").all(provider,Date.now());
+   const rows=db.prepare("SELECT * FROM seo_queue WHERE provider=? AND status IN ('pending','error') AND next_attempt<=? ORDER BY updated DESC,url LIMIT 200").all(provider,Date.now());
    for(const row of rows){
     if(Date.now()-start>240000)break;
     const problem=provider==='indexnow'?indexKeyProblem:googleProblem;
