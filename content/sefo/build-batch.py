@@ -6,6 +6,7 @@ from datetime import datetime
 catalog=json.loads(Path('content/sefo/apple-catalog.json').read_text())
 tracks=json.loads(Path('content/sefo/tracks.json').read_text())
 videos=json.loads(Path('content/sefo/official-videos.json').read_text())
+supplemental=json.loads(Path('content/sefo/supplemental-videos.json').read_text())
 db=sqlite3.connect(os.environ['DATABASE_PATH'])
 artist='sefo';source='https://music.apple.com/tr/artist/sefo/1360733410'
 def slug(s):
@@ -85,6 +86,8 @@ for key,vid in manual.items():
  if key in video_map and vid is None:del video_map[key]
  if vid and key in songs:video_map[key]=next(v for v in videos if v['id']==vid)
 video_map.pop('turkiye-m',None)
+for key,v in supplemental.items():
+ if key in songs:video_map[key]=v
 for key,v in video_map.items():songs[key]['videoId']=v['id'];songs[key]['videoSource']=v['source']
 for key,value in songs.items():ops.append({'type':'song','slug':key,'expectedRevision':rev('artist_songs',key),'status':'published','values':value})
 
