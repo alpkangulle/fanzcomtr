@@ -79,5 +79,14 @@
     "license": "Hakları saklıdır",
     "licenseUrl": "https://www.apple.com/legal/internet-services/itunes/",
     "caption": "BLOK3 sanatçı görseli; konser kaydı değildir."
+  },
+  "burak-bulut": {
+    "src": "/images/artists/burak-bulut.png",
+    "source": "https://music.apple.com/tr/artist/burak-bulut/841584918",
+    "download": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages116/v4/de/90/6a/de906ac3-fcdf-d2bb-6b36-2b473a34c32e/da3417ff-0037-46f8-b7c1-4efcd6473611_file_cropped.png/1200x630cw.png",
+    "author": "Apple Music sanatçı görseli",
+    "license": "Hakları saklıdır",
+    "licenseUrl": "https://www.apple.com/legal/internet-services/itunes/",
+    "caption": "Burak Bulut sanatçı görseli; konser kaydı değildir."
   }
 }

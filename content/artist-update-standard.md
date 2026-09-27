@@ -24,7 +24,7 @@ Statik galeri/arayüz gibi desteklenmeyen değişiklikler kaynaklarıyla bekleye
 Her anlamlı geliştirmede bu standart ve ana durum belgesi gerekiyorsa birlikte güncellenir; AGENTS.md'nin aynı commit kuralı korunur.
 
 ## Otomasyon ve kayıt standardı
-Her sanatçı için otomasyon ayrıca yetkilendirilir; bu karar tüm sanatçılar için kendiliğinden görev oluşturmaz. Semicenk ve Manifest görevleri etkindir.
+Her sanatçı için otomasyon ayrıca yetkilendirilir; bu karar tüm sanatçılar için kendiliğinden görev oluşturmaz. Semicenk, Manifest ve BLOK3 görevleri etkindir; Burak Bulut için ayrı görev talebi henüz yoktur.
 Her görev tüm kategorileri araştırır, önce mevcut veri ve son başarılı kategori kontrolüyle karşılaştırır. Gecikmiş indeksleme için örtüşen pencere kullanır; tekrar kayıt oluşturmaz.
 Kaynak URL'leri, kontrol zamanı, uygulanan kayıt kimlikleri, gerçek yayın URL'leri, yedek ve bekleyen işler kalıcı kayıtta tutulur. Erişim hatasında başarılı kontrol zamanı ilerletilmez. Yeni bilgi yoksa boş içerik üretilmez.
 Manifest kayıt yolu: /home/deploy/fans/shared/content-state/manifest.json
