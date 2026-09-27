@@ -7,14 +7,10 @@ Bu dosya, her anlamlı çalışma sonunda güncellenir. “Hazırlandı” ile �
 1. GÜNCEL YAYIN DURUMU
 
 Son doğrulanan canlı sürüm:
-20260927-artist-sections
-Kaynak commit: dbad15238258aab46b17f55317f72288396c0cce
-27 Eylül canlı kontrolü: current bu sürüme işaret ediyor; sekiz sanatçıda ayrı Haberler, Konserler, Şarkılar, Albümler sıraları canlı sürüme dahildir.
-
-Hazırlanan paket: 20260927-fanclub-editorial — sekiz sanatçı kök SEO metadatası ve Manifest iç bağlantı arayüzü henüz canlıda değil.
-Manifest üretim veritabanına 50 işlemlik uzun içerik ve 13 işlemlik özgün giriş özeti paketi uygulanmıştır. Yedekler: /home/deploy/fans/shared/content-backups/manifest-20260927T164646613327Z.sqlite ve /home/deploy/fans/shared/content-backups/manifest-20260927T164834412207Z.sqlite. Mevcut canlı kod uzun gövdeleri ve yeni giriş cümlelerini gösteriyor; tüm sanatçıların Fan Club başlığı ile Manifest’in ek iç bağlantı bileşenleri yeni sürümün aktivasyonunu bekliyor. Aktivasyon sonrası canlı HTTP metadata ve içerik kontrollerini tekrar yap.
-Yayın komutu (sunucuda root):
-bash /home/deploy/fans/releases/20260927-fanclub-editorial/deploy/activate-release.sh
+20260927-fanclub-editorial
+Kaynak commit: 4b9228a (Prioritize fan clubs and expand sourced Manifest editorial pages)
+27 Eylül 2026 kurulum kontrolü: current symlink bu sürüme işaret ediyor. https://fanz.com.tr/manifest HTTP 200; başlık “Manifest Fan Club Topluluğu: Sohbet, Şarkılar ve Haberler | Fanz.com.tr”. Bu kontrol tüm alt sayfaların veya gerçek mobil cihazların yeniden denetlendiği anlamına gelmez.
+Manifest'in önceki 50 işlemlik uzun içerik ve 13 işlemlik giriş özeti paketinin kayıtları korunur. Yedekler: /home/deploy/fans/shared/content-backups/manifest-20260927T164646613327Z.sqlite ve /home/deploy/fans/shared/content-backups/manifest-20260927T164834412207Z.sqlite.
 
 2. HEDEF VE ÇALIŞMA ŞEKLİ
 
@@ -214,3 +210,16 @@ https://nextjs.org/docs/app/api-reference/components/image
 27 Eylül — İkon/hız paketinin canlı olduğu doğrulandı. Kullanıcının isteğiyle alt alandaki yönetim/önizleme bağlantıları ve geliştirme sürümü penceresi kaldırılan yeni paket hazırlandı; yayın bekliyor.
 
 27 Eylül — Mobil sohbet klavyesi için görsel ekran hizalama düzeltmesi, alt alanda Fanz ikonu ve yeni sanatçılar için Semicenk SEO kalite kapısı eklendi; fiziksel iPhone testi ve yayın bekliyor.
+
+
+27 EYLÜL 2026 — ORTAK SANATÇI STANDARDI VE MANIFEST OTOMASYONU
+Kullanıcı, Semicenk ve Manifest üzerinde yapılan çalışmanın her seçilen sanatçı için tekrar kullanılmasını istedi. Kalıcı standart: content/artist-update-standard.md. Diğer sanatçıların içeriği tamamlanmış sayılmaz; ayrı araştırma ve kalite kontrolü gerekir.
+Manifest arşivini güncelle görevi oluşturuldu ve etkin olduğu araç tarafından doğrulandı. Kimlik: 6ab94eb28478819186a33883b46e091e. Europe/Istanbul saat diliminde 08.00 ve 20.00, her 12 saatte bir; ilk planlanan çalışma 28 Eylül 2026 08.00. Semicenk görevi değiştirilmedi.
+Tüm kategoriler araştırılır; desteklenen içerik doğrulanarak importer ile yayımlanır. Desteklenmeyen statik galeri/arayüz işlemleri kaynaklı bekleyen iş olarak saklanır. Kod/deploy/restart yetkisi verilmez.
+Canlı migration adı deploy/migrations/013_dynamic_artist_content.sql, seed semicenk-dynamic-v1 ve importer Manifest desteği doğrulandı. Kurulum anındaki yayımlanmış Manifest kayıtları: 13 yayın, 25 şarkı, 8 haber, 3 konser; artist_live_videos içinde Manifest kaydı yok. Bu son bilgi statik galerinin boş olduğu anlamına gelmez.
+Kalıcı kontrol kaydı: /home/deploy/fans/shared/content-state/manifest.json. Görev talimatının kopyası: aynı dizinde manifest/automation-prompt.txt. Kurulum başarılı araştırma/yayın çalışması değildir; son başarılı içerik kontrolü başlangıçta boş bırakılır. Bu çalışma uygulama kodunu, içerik veritabanını veya servisleri değiştirmedi.
+
+27 EYLÜL 2026 — GÖRSEL VE MİSAFİR YORUM KONTROLÜ
+Canlı Semicenk veritabanında 10 konserin ikisinde kapak boş, diğerlerinde aynı sanatçı görseli tekrarlıydı. Revision kontrollü importer önce dry-run sonra yedekli atomik uygulanarak 9 konser ve 4 haber kapağı güncellendi; yüklenmeyen Ankara dış görseli çalışan yerel fotoğrafa çevrildi. Son durumda 10 konserde boş kapak yok; 9 farklı URL var. Canlı Girne/İzmir/İstanbul/Kocaeli kartları tarayıcıda yüklendi. Bilet sitesi görseli ile sanatçı fotoğrafı aynı şey olarak adlandırılmayacak. Dış görsellerin doğru kaynak künyesi için components/artist-entries.tsx değişikliği hazırlandı; derleme/yayın adımı henüz yapılmadı.
+Manifest'in 3 konser, 8 haber ve 13 yayın görselinde boş kayıt yok; her kategori içinde dosya SHA-256 değerleri farklı. Canlı yerel afiş HTTP yanıtları 200 image/jpeg. Manifest otomasyonu 08.00/20.00 Europe/Istanbul etkin olarak yeniden doğrulandı; ilk içerik kontrolü hâlâ bekleniyor. İki otomasyonun görsel kuralı, özel görsel bulunmazsa aramayı uzatmadan farklı ve kaynaklı sanatçı fotoğrafı kullanacak şekilde güncellendi. Manifest durum kaydı shared/content-state/manifest.json içinde saklandı.
+Misafir yorum formu Manifest biyografi ve konser sayfalarında tarayıcıdan doğrulandı. Canlı API'de sekiz sanatçının artist hedefleri üyeliksiz isteği üyelik engeli olmadan alan doğrulamasına kadar işliyor; geçersiz isimle yan etkisiz 400 alındı. Kök/bölüm/detay/şarkı sayfaları ortak Engagement bileşenini kullanıyor; yeni sanatçı standardına da aynı kural yazıldı. Gerçek yorum verisi test amacıyla eklenmedi.
