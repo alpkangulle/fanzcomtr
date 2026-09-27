@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "zamansizdik",
+    "path": "/images/manifest/zamansizdik.webp",
+    "source": "https://music.apple.com/us/album/zamans%C4%B1zd%C4%B1k-single/1793603953",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d4/e5/c7/d4e5c75b-62c9-40d6-7ed3-afbc91222777/cover.jpg/100x100bb.jpg",
+    "bytes": 154196,
+    "sha256": "8cd29a04e763bf640ea9e1596ede035c58cf1b43e72e4d11981aac870f0c724a"
+  },
+  {
+    "slug": "ariyo",
+    "path": "/images/manifest/ariyo.webp",
+    "source": "https://music.apple.com/us/album/ar%C4%B1yo-single/1803619028",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0d/b7/92/0db79257-1e43-c720-10c6-3848ab26fc9c/cover.jpg/100x100bb.jpg",
+    "bytes": 133270,
+    "sha256": "d476f2a1c0ab184ef3072a422e77d90a1cc61cdd6cc2e167825f18b0b95ecea1"
+  },
+  {
+    "slug": "manifestival",
+    "path": "/images/manifest/manifestival.webp",
+    "source": "https://music.apple.com/tr/album/manifestival/1813439256",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/20/fa/4c/20fa4ca9-d5a7-0384-1031-9bd99a77b662/cover.jpg/100x100bb.jpg",
+    "bytes": 180900,
+    "sha256": "2a6622e9b6d74b965aa3366400e98066b3681f5f5d48737c16d68d13b5f7431b"
+  },
+  {
+    "slug": "manifestival-deluxe",
+    "path": "/images/manifest/manifestival-deluxe.webp",
+    "source": "https://music.apple.com/tr/album/manifestival-deluxe/1836369123",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/25/4f/69/254f69f5-cb43-1cf5-a1a6-bf81065ad93d/cover.jpg/100x100bb.jpg",
+    "bytes": 161154,
+    "sha256": "de7d97b5d26c805304e636fea1ba9a78e2a4ce8a2b92333af9c1982a72736baf"
+  },
+  {
+    "slug": "ruya",
+    "path": "/images/manifest/ruya.webp",
+    "source": "https://music.apple.com/us/album/r%C3%BCya-single/1839930351",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/17/c0/e1/17c0e142-91f5-136a-d5a0-dee2da26d2c4/cover.jpg/100x100bb.jpg",
+    "bytes": 220776,
+    "sha256": "727d1af7bfc3193c1337a3efae52b8bd2a6c5b6a16f2b985f055514130bdad05"
+  },
+  {
+    "slug": "amator",
+    "path": "/images/manifest/amator.webp",
+    "source": "https://music.apple.com/tr/album/amat%C3%B6r-single/1855827116",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ba/08/4b/ba084b1e-3728-504e-95b2-8a092cb3e766/cover.jpg/100x100bb.jpg",
+    "bytes": 141982,
+    "sha256": "3e31fd7eb08e5ebe5a4c1ec67d8765d145ed337052295833bf3a3120494c7744"
+  },
+  {
+    "slug": "basrol-sensin",
+    "path": "/images/manifest/basrol-sensin.webp",
+    "source": "https://music.apple.com/tr/album/ba%C5%9Frol-sensin-1-y%C4%B1l-%C3%B6zel-single/1875885663",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/64/e8/54/64e854c4-85f6-655e-1a0d-f09481360fb3/cover.jpg/100x100bb.jpg",
+    "bytes": 113256,
+    "sha256": "5eec616fa72e1af45231236df1c899b760717269b277be24065c1444c54fbd06"
+  },
+  {
+    "slug": "manifest-arem-arman-remix",
+    "path": "/images/manifest/manifest-arem-arman-remix.webp",
+    "source": "https://music.apple.com/us/album/manifest-arem-arman-remix-single/1879510798",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2c/c6/b3/2cc6b37b-fc01-f4fa-3112-4e78cc43b7e2/cover.jpg/100x100bb.jpg",
+    "bytes": 175918,
+    "sha256": "8f78ac648cda875c3d2f65103069fa98972f4173fa56dbf75bd23450c4b40f6d"
+  },
+  {
+    "slug": "zehir-arem-arman-remix",
+    "path": "/images/manifest/zehir-arem-arman-remix.webp",
+    "source": "https://music.apple.com/us/album/zehir-arem-arman-remix-single/1880680385",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0d/59/b2/0d59b23c-c6ec-5728-8f2b-4cff1657413a/cover.jpg/100x100bb.jpg",
+    "bytes": 201014,
+    "sha256": "88cdcf6311f7d8fed8b60e575832981fc4d89d0b96923bd931d68ad25c96e7e0"
+  },
+  {
+    "slug": "daha-iyi",
+    "path": "/images/manifest/daha-iyi.webp",
+    "source": "https://music.apple.com/tr/album/daha-i-yi-single/1889304032",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/63/84/4f/63844ff7-2b89-9eb3-5fe6-196fd8fe36fd/cover.jpg/100x100bb.jpg",
+    "bytes": 58286,
+    "sha256": "298bc7e97d3cad8b3d81aa8ab30b5eb8d5ca62603583c70697d80d8da10c04dd"
+  },
+  {
+    "slug": "hileli",
+    "path": "/images/manifest/hileli.webp",
+    "source": "https://music.apple.com/tr/album/hileli-single/1895942716",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/79/75/10/79751090-3fc2-2d45-980a-1e9c0b6de57f/cover.jpg/100x100bb.jpg",
+    "bytes": 197972,
+    "sha256": "04204297e3e2b0d71869a141894fb5fd56acf4301b7f7a7455b5395cb67fed6c"
+  },
+  {
+    "slug": "toz-pembe",
+    "path": "/images/manifest/toz-pembe.webp",
+    "source": "https://music.apple.com/tr/album/toz-pembe-single/6784751861",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/aa/76/39/aa763935-fdb9-8f53-d3aa-7d473de75dba/cover.jpg/100x100bb.jpg",
+    "bytes": 72772,
+    "sha256": "64a6d01d3f68582c2309d14ea60c8a6782a59ce1a115be88347edeae066e118c"
+  },
+  {
+    "slug": "pvg-manifest-live-remix",
+    "path": "/images/manifest/pvg-manifest-live-remix.webp",
+    "source": "https://music.apple.com/us/album/pvg-manifest-live-remix-single/6793467822",
+    "artworkSource": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c9/29/c1/c929c1a7-2bb4-899a-8163-7282d9d30531/cover.jpg/100x100bb.jpg",
+    "bytes": 302420,
+    "sha256": "f53b731f42920fa497185fd07009d3a370f04f211959344a774704e862751d3b"
+  },
+  {
+    "slug": "konser-bursa",
+    "path": "/images/manifest/konser-bursa.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Manifest_Bursa_050626.jpg",
+    "license": "CC0",
+    "bytes": 122486,
+    "sha256": "b4b4c982327085ce9af373cc8be9461ba8889e95d2f7f5837891b32bf782042e"
+  },
+  {
+    "slug": "konser-sahne-1",
+    "path": "/images/manifest/konser-sahne-1.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Manifest_at_concert.jpg",
+    "license": "CC0",
+    "bytes": 93447,
+    "sha256": "0244d6e30d1bbe76cfd3de24223bb65f50164d98df27e369cd8011a48213b4d7"
+  },
+  {
+    "slug": "konser-sahne-2",
+    "path": "/images/manifest/konser-sahne-2.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Manifest_at_concert_2.jpg",
+    "license": "CC0",
+    "bytes": 89913,
+    "sha256": "3f49cd80378a00e656ff36113ed71ee9a0e8c2494501044d476560e3190c4a2d"
+  },
+  {
+    "slug": "manifestival-ankara-afis",
+    "path": "/images/manifest/manifestival-ankara-afis.jpg",
+    "source": "https://www.biletix.com/static/images/live/event/groupimages/536572193_19201080.png",
+    "eventSource": "https://www.biletix.com/etkinlik-grup/536572193/TURKIYE/tr/manifestival",
+    "sha256": "93585bd5b9c3bf5ed93e13331258998cf7cbe0ec93350527236c9eb0d5172409",
+    "bytes": 142509
+  },
+  {
+    "slug": "londra-ovo-arena-afis",
+    "path": "/images/manifest/londra-ovo-arena-afis.jpg",
+    "source": "https://www.ovoarena.co.uk/assets/img/1440-x-810-a2bc1bcdde.jpg",
+    "eventSource": "https://www.ovoarena.co.uk/events/detail/manifest",
+    "sha256": "bf88479a5f10c886437cad64d93736ecb30d2d8faf0e2cfe2c1cf1d5e0c67050",
+    "bytes": 68171
+  }
+]

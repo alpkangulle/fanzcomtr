@@ -7,14 +7,14 @@ Bu dosya, her anlamlı çalışma sonunda güncellenir. “Hazırlandı” ile �
 1. GÜNCEL YAYIN DURUMU
 
 Son doğrulanan canlı sürüm:
-20260927-chat-keyboard
-Kaynak commit: 1c447c4b29669a6c77f372f57229b379fbe57029
-27 Eylül canlı kontrolü: /home/deploy/fans/current bu sürüme işaret ediyor; ana sayfa HTTP 200. Klavye ve alt alan düzeltmeleri canlı sürüme dahildir.
+20260927-manifest-pilot
+Kaynak commit: 99a2c19c638a529999ed8f6b78ebe3d45a90c58d
+27 Eylül canlı kontrolü: current bu sürüme işaret ediyor; Manifest kayıtları ve SEO sayfaları canlıda.
 
-Hazırlanan paket: 20260927-manifest-pilot — SEO ve arayüz kodu henüz canlıda değil.
-Manifest içerik paketi ayrı veritabanı kopyasında doğrulandı ve üretim veritabanına 50 işlemle uygulandı; işlem öncesi yedek /home/deploy/fans/shared/content-backups/manifest-20260927T160740153418Z.sqlite. Canlı veritabanında 24 içerik, 25 şarkı ve 1 biyografi kaydı doğrulandı. Mevcut canlı kod eski olduğu için Manifest şarkı ayrıntıları henüz noindex görünüyor. Yeni sürüm root tarafından etkinleştirilip HTTP kontrolleri geçince SEO kodu canlı olacak.
+Hazırlanan paket: 20260927-manifest-media — galeri ve görsel kaynak etiketleri henüz canlıda değil.
+Manifest görsel güncellemesi üretim veritabanına 49 işlemle uygulandı; işlem öncesi yedek /home/deploy/fans/shared/content-backups/manifest-20260927T162400801198Z.sqlite. Mevcut canlı sürümün public dizinine yeni dosya adları eklenmiş olduğundan içerik sayfalarının yeni görselleri HTTP 200 ile doğrulandı. Yeni paket, görsel kaynak etiketlerini ve galerinin tekrar azaltan düzenini etkinleştirir. Etkinleştirmeyi root yapmalı; sonucunu symlink ve HTTP üzerinden ayrıca doğrula.
 Yayın komutu (sunucuda root):
-bash /home/deploy/fans/releases/20260927-manifest-pilot/deploy/activate-release.sh
+bash /home/deploy/fans/releases/20260927-manifest-media/deploy/activate-release.sh
 
 2. HEDEF VE ÇALIŞMA ŞEKLİ
 
@@ -50,6 +50,13 @@ Apple Music, Shazam/MusicBrainz, Biletix, OVO Arena Wembley ve resmî YouTube ka
 
 Manifest için ayrı kök, bölüm, şarkı ve içerik başlık/açıklamaları; MusicGroup, bölüm ve liste şemaları; tek H1; kendine canonical; uygun robots; site haritası ve iç bağlantılar eklendi. Şarkı rehberi ve kaynaklı galeri hazırlandı. Şarkı kayıtları veritabanından okunur; geçmişte yalnız Semicenk için çalışan ayrıntı yolu Manifest’e açıldı.
 Ayrı test veritabanı ve port 3044 ile 57 adres: HTTP 200, tek H1, canonical, açıklama, index ayarı ve benzersiz başlık. Manifest iç bağlantılarında kırık hedef bulunmadı; site haritasında 56 alt adres ve rehber var. Üretim derlemesi SITE_ORIGIN=https://fanz.com.tr ile başarılı. Google indeks durumu ve gerçek mobil cihaz doğrulanmadı.
+
+3B. MANIFEST GÖRSEL SEÇKİSİ — 27 EYLÜL 2026
+
+Önceki sorun: 11 yayın ve 3 konser aynı grup portresini, 8 haber aynı albüm kapağını kullanıyordu. 13 albüm/single için Apple Music kayıt numarasıyla eşleştirilmiş özgün yayın kapakları yerel, sıkıştırılmış 1000px WebP olarak kaydedildi. İki resmî etkinlik afişi ile bir açık kaynak sahne fotoğrafı konser sayfalarına seçildi. Galeride üç CC0 sahne fotoğrafı ve doğrulanmış resmî video küçük görselleri bulunur. Görsel listesi, kaynak URL'leri ve dosya özetleri content/manifest/media-20260927.json içindedir; güncelleme paketi content/manifest/media-batch-20260927.json, yeniden üretim aracı build-media-batch.py.
+Canlı veritabanında 24 içerik görseli 16 ayrı dosyaya gider; haber ile anlattığı yayın aynı resmî kapağı bilinçli olarak paylaşır. manifestival ve deluxe ile bazı remikslerin resmî sanat tasarımı aynı veya çok benzerdir; farklı görselmiş gibi gösterilmez. Galeride bu görsel tekrarları azaltılır ve kayıt sayfaları ayrı tutulur. Şarkılar ait oldukları yayın kapağını paylaşır; bu doğru künye ilişkisidir. Konser arşiv fotoğrafı ilgili Ankara gününün sahnesi diye sunulmaz. Kaynak ve lisans görünür tutulur.
+Gelecek sanatçılar için görsel kuralı: her yayın kendi doğrulanmış kapağına, haber anlattığı yayın/olaya, konser mümkünse organizatör afişine bağlanır. Genel sanatçı fotoğrafı tekrar eden varsayılan kapak olarak kullanılmaz. Çözünürlük, gerçek görsel içerik, kaynak/lisans, dosya boyutu ve kırık adres kontrol edilir. Resmî kapaklar gerçekten aynıysa yapay farklılık uydurulmaz.
+Ayrı veritabanı ve port 3045 denetiminde 55 ilgili adres HTTP 200, tek H1, index ve paylaşım görseli; 24 içerik kapağı uygun yerel dosyaya gider. Canlıda iki örnek görsel HTTP 200 ve türü doğrulandı. Galeri ve etiketlerin canlı doğrulaması yeni sürüm aktivasyonundan sonra yapılacak.
 
 4. KORUNACAK SEO KURALLARI
 

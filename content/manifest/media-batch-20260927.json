@@ -1,0 +1,796 @@
+{
+  "artist": "manifest",
+  "operations": [
+    {
+      "type": "entry",
+      "id": "manifest-albumler-zamansizdik",
+      "kind": "albumler",
+      "slug": "zamansizdik",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/zamansizdik.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-ariyo",
+      "kind": "albumler",
+      "slug": "ariyo",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/ariyo.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "real-manifest-albumler",
+      "kind": "albumler",
+      "slug": "manifestival",
+      "expectedRevision": 2,
+      "values": {
+        "cover": "/images/manifest/manifestival.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-manifestival-deluxe",
+      "kind": "albumler",
+      "slug": "manifestival-deluxe",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/manifestival-deluxe.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-ruya",
+      "kind": "albumler",
+      "slug": "ruya",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/ruya.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-amator",
+      "kind": "albumler",
+      "slug": "amator",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/amator.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-basrol-sensin",
+      "kind": "albumler",
+      "slug": "basrol-sensin",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/basrol-sensin.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-manifest-arem-arman-remix",
+      "kind": "albumler",
+      "slug": "manifest-arem-arman-remix",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/manifest-arem-arman-remix.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-zehir-arem-arman-remix",
+      "kind": "albumler",
+      "slug": "zehir-arem-arman-remix",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/zehir-arem-arman-remix.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-daha-iyi",
+      "kind": "albumler",
+      "slug": "daha-iyi",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/daha-iyi.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-hileli",
+      "kind": "albumler",
+      "slug": "hileli",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/hileli.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-toz-pembe",
+      "kind": "albumler",
+      "slug": "toz-pembe",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/toz-pembe.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-albumler-pvg-manifest-live-remix",
+      "kind": "albumler",
+      "slug": "pvg-manifest-live-remix",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/pvg-manifest-live-remix.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "real-manifest-haberler",
+      "kind": "haberler",
+      "slug": "manifestival-yayinda",
+      "expectedRevision": 2,
+      "values": {
+        "cover": "/images/manifest/manifestival.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-manifestival-deluxe-yayinda",
+      "kind": "haberler",
+      "slug": "manifestival-deluxe-yayinda",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/manifestival-deluxe.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-ruya-single-yayinda",
+      "kind": "haberler",
+      "slug": "ruya-single-yayinda",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/ruya.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-amator-single-yayinda",
+      "kind": "haberler",
+      "slug": "amator-single-yayinda",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/amator.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-daha-iyi-single-yayinda",
+      "kind": "haberler",
+      "slug": "daha-iyi-single-yayinda",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/daha-iyi.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-manifest-ajda-pekkan-hileli",
+      "kind": "haberler",
+      "slug": "manifest-ajda-pekkan-hileli",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/hileli.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-toz-pembe-single-yayinda",
+      "kind": "haberler",
+      "slug": "toz-pembe-single-yayinda",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/toz-pembe.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-haberler-pvg-live-remix-yayinda",
+      "kind": "haberler",
+      "slug": "pvg-live-remix-yayinda",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/pvg-manifest-live-remix.webp"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "real-manifest-konserler",
+      "kind": "konserler",
+      "slug": "konser-2026-06-06",
+      "expectedRevision": 2,
+      "values": {
+        "cover": "/images/manifest/manifestival-ankara-afis.jpg"
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-konserler-konser-2026-06-07",
+      "kind": "konserler",
+      "slug": "konser-2026-06-07",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/konser-sahne-1.jpg",
+        "body": "Biletix’in iki günlük programına göre Manifestival Ankara 7 Haziran 2026 tarihinde de Atatürk Orman Çiftliği’nde duyuruldu. Bu kayıt festivalin ikinci gününe ayrılmıştır; kapı açılış saati, giriş kuralları ve sahne akışı için resmî bilet sayfası izlenmelidir.\n\nGörsel, bu etkinliğin kendi sahnesinden değil Manifest’in arşiv performanslarından seçilmiştir. Geçmiş etkinliğin kesin gerçekleşme teyidi bu arşiv kaydının kapsamı değildir.\n\nKaynak kontrolü: 27 Eylül 2026."
+      }
+    },
+    {
+      "type": "entry",
+      "id": "manifest-konserler-konser-2026-10-16",
+      "kind": "konserler",
+      "slug": "konser-2026-10-16",
+      "expectedRevision": 1,
+      "values": {
+        "cover": "/images/manifest/londra-ovo-arena-afis.jpg"
+      }
+    },
+    {
+      "type": "song",
+      "slug": "amator",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Amatör",
+        "slug": "amator",
+        "albumId": "manifest-albumler-amator",
+        "albumSlug": "amator",
+        "albumTitle": "Amatör",
+        "date": "2025-12-05",
+        "cover": "/images/manifest/amator.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 164,
+        "url": "https://music.apple.com/tr/album/amat%C3%B6r-single/1855827116",
+        "description": "Amatör, 2025-12-05 tarihli single kaydıdır. Yayın ve ortak sanatçı bilgisi Apple Music’te listelenir.",
+        "videoId": "JzH6uWBtC3I",
+        "videoSource": "https://www.youtube.com/watch?v=JzH6uWBtC3I"
+      }
+    },
+    {
+      "type": "song",
+      "slug": "ariyo",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Arıyo",
+        "slug": "ariyo",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 4,
+        "credits": "Manifest · Hypers Music",
+        "duration": 133,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in 2025 tarihli yayını. Albümün özgün parça sıralamasında yer alır.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "ariyo-zeki-arkun-remix",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Arıyo (Zeki Arkun Remix)",
+        "slug": "ariyo-zeki-arkun-remix",
+        "albumId": "manifest-albumler-manifestival-deluxe",
+        "albumSlug": "manifestival-deluxe",
+        "albumTitle": "manifestival (deluxe)",
+        "date": "2025-09-05",
+        "cover": "/images/manifest/manifestival-deluxe.webp",
+        "position": 13,
+        "credits": "Manifest · Hypers Music",
+        "duration": 174,
+        "url": "https://music.apple.com/tr/album/manifestival-deluxe/1836369123",
+        "description": "Manifest’in 2025 tarihli yayını. Deluxe sürümde yer alan ayrı düzenlemedir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "basrol-sensin-1-yil-ozel",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Başrol Sensin (1. Yıl Özel)",
+        "slug": "basrol-sensin-1-yil-ozel",
+        "albumId": "manifest-albumler-basrol-sensin",
+        "albumSlug": "basrol-sensin",
+        "albumTitle": "Başrol Sensin (1. Yıl Özel)",
+        "date": "2026-02-13",
+        "cover": "/images/manifest/basrol-sensin.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 193,
+        "url": "https://music.apple.com/tr/album/ba%C5%9Frol-sensin-1-y%C4%B1l-%C3%B6zel-single/1875885663",
+        "description": "Başrol Sensin (1. Yıl Özel), 2026-02-13 tarihli single kaydıdır. Yayın ve ortak sanatçı bilgisi Apple Music’te listelenir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "daha-iyi",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Daha İyi",
+        "slug": "daha-iyi",
+        "albumId": "manifest-albumler-daha-iyi",
+        "albumSlug": "daha-iyi",
+        "albumTitle": "Daha İyi",
+        "date": "2026-04-03",
+        "cover": "/images/manifest/daha-iyi.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 199,
+        "url": "https://music.apple.com/tr/album/daha-i-yi-single/1889304032",
+        "description": "Daha İyi, 2026-04-03 tarihli single kaydıdır. Yayın ve ortak sanatçı bilgisi Apple Music’te listelenir.",
+        "videoId": "vso1LpaQRbo",
+        "videoSource": "https://www.youtube.com/watch?v=vso1LpaQRbo"
+      }
+    },
+    {
+      "type": "song",
+      "slug": "durma",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Durma",
+        "slug": "durma",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 10,
+        "credits": "Manifest · Hypers Music",
+        "duration": 189,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in 2025 tarihli yayını. Albümün özgün parça sıralamasında yer alır.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "hayir",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Hayır",
+        "slug": "hayir",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 7,
+        "credits": "Manifest · Hypers Music",
+        "duration": 129,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in 2025 tarihli yayını. Albümün özgün parça sıralamasında yer alır.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "hayir-aydeed-remix",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Hayır (AYDEED Remix)",
+        "slug": "hayir-aydeed-remix",
+        "albumId": "manifest-albumler-manifestival-deluxe",
+        "albumSlug": "manifestival-deluxe",
+        "albumTitle": "manifestival (deluxe)",
+        "date": "2025-09-05",
+        "cover": "/images/manifest/manifestival-deluxe.webp",
+        "position": 15,
+        "credits": "Manifest · Hypers Music",
+        "duration": 172,
+        "url": "https://music.apple.com/tr/album/manifestival-deluxe/1836369123",
+        "description": "Manifest’in 2025 tarihli yayını. Deluxe sürümde yer alan ayrı düzenlemedir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "hileli",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Hileli",
+        "slug": "hileli",
+        "albumId": "manifest-albumler-hileli",
+        "albumSlug": "hileli",
+        "albumTitle": "Hileli (Ajda Pekkan ile)",
+        "date": "2026-05-08",
+        "cover": "/images/manifest/hileli.webp",
+        "position": 1,
+        "credits": "Manifest ve Ajda Pekkan",
+        "duration": 202,
+        "url": "https://music.apple.com/tr/album/hileli-single/1895942716",
+        "description": "Hileli (Ajda Pekkan ile), 2026-05-08 tarihli single kaydıdır. Yayın ve ortak sanatçı bilgisi Apple Music’te listelenir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "intro",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Intro",
+        "slug": "intro",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 62,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in 2025 tarihli yayını. Albümün özgün parça sıralamasında yer alır.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "kts",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "KTS",
+        "slug": "kts",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 3,
+        "credits": "Manifest · Hypers Music",
+        "duration": 147,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in 2025 tarihli yayını. Albümün özgün parça sıralamasında yer alır.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "manifest",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Manifest",
+        "slug": "manifest",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 5,
+        "credits": "Manifest, Arem Ozguc ve Arman Aydin",
+        "duration": 150,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in 2025 tarihli yayını. Albümün özgün parça sıralamasında yer alır.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "manifest-arem-arman-remix",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Manifest (Arem & Arman Remix)",
+        "slug": "manifest-arem-arman-remix",
+        "albumId": "manifest-albumler-manifest-arem-arman-remix",
+        "albumSlug": "manifest-arem-arman-remix",
+        "albumTitle": "Manifest (Arem & Arman Remix)",
+        "date": "2026-02-27",
+        "cover": "/images/manifest/manifest-arem-arman-remix.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 153,
+        "url": "https://music.apple.com/us/album/manifest-arem-arman-remix-single/1879510798",
+        "description": "Manifest (Arem & Arman Remix), 2026-02-27 tarihli single kaydıdır. Yayın ve ortak sanatçı bilgisi Apple Music’te listelenir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "outro",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Outro",
+        "slug": "outro",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 11,
+        "credits": "Manifest · Hypers Music",
+        "duration": 86,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in 2025 tarihli yayını. Albümün özgün parça sıralamasında yer alır.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "outro-extended-version",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Outro (Extended Version)",
+        "slug": "outro-extended-version",
+        "albumId": "manifest-albumler-manifestival-deluxe",
+        "albumSlug": "manifestival-deluxe",
+        "albumTitle": "manifestival (deluxe)",
+        "date": "2025-09-05",
+        "cover": "/images/manifest/manifestival-deluxe.webp",
+        "position": 16,
+        "credits": "Manifest · Hypers Music",
+        "duration": 181,
+        "url": "https://music.apple.com/tr/album/manifestival-deluxe/1836369123",
+        "description": "Manifest’in 2025 tarihli yayını. Deluxe sürümde yer alan ayrı düzenlemedir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "pvg-manifest-live-remix",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "pVg (Manifest Live Remix)",
+        "slug": "pvg-manifest-live-remix",
+        "albumId": "manifest-albumler-pvg-manifest-live-remix",
+        "albumSlug": "pvg-manifest-live-remix",
+        "albumTitle": "pVg (Manifest Live Remix)",
+        "date": "2026-07-24",
+        "cover": "/images/manifest/pvg-manifest-live-remix.webp",
+        "position": 1,
+        "credits": "Manifest, Motive ve Pango",
+        "duration": 246,
+        "url": "https://music.apple.com/us/album/pvg-manifest-live-remix-single/6793467822",
+        "description": "pVg (Manifest Live Remix), 2026-07-24 tarihli single kaydıdır. Yayın ve ortak sanatçı bilgisi Apple Music’te listelenir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "rampapapam-arem-ozguc-arman-aydin-remix",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Rampapapam (Arem Ozguc & Arman Aydin Remix)",
+        "slug": "rampapapam-arem-ozguc-arman-aydin-remix",
+        "albumId": "manifest-albumler-manifestival-deluxe",
+        "albumSlug": "manifestival-deluxe",
+        "albumTitle": "manifestival (deluxe)",
+        "date": "2025-09-05",
+        "cover": "/images/manifest/manifestival-deluxe.webp",
+        "position": 12,
+        "credits": "Manifest · Hypers Music",
+        "duration": 132,
+        "url": "https://music.apple.com/tr/album/manifestival-deluxe/1836369123",
+        "description": "Manifest’in 2025 tarihli yayını. Deluxe sürümde yer alan ayrı düzenlemedir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "ruya",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "RÜYA",
+        "slug": "ruya",
+        "albumId": "manifest-albumler-ruya",
+        "albumSlug": "ruya",
+        "albumTitle": "RÜYA",
+        "date": "2025-10-03",
+        "cover": "/images/manifest/ruya.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 195,
+        "url": "https://music.apple.com/us/album/r%C3%BCya-single/1839930351",
+        "description": "RÜYA, 2025-10-03 tarihli single kaydıdır. Yayın ve ortak sanatçı bilgisi Apple Music’te listelenir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "snap",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Snap",
+        "slug": "snap",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 2,
+        "credits": "Manifest · Hypers Music",
+        "duration": 150,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in 2025 tarihli yayını. Albümün özgün parça sıralamasında yer alır.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "toz-pembe",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Toz Pembe",
+        "slug": "toz-pembe",
+        "albumId": "manifest-albumler-toz-pembe",
+        "albumSlug": "toz-pembe",
+        "albumTitle": "Toz Pembe",
+        "date": "2026-07-03",
+        "cover": "/images/manifest/toz-pembe.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 161,
+        "url": "https://music.apple.com/tr/album/toz-pembe-single/6784751861",
+        "description": "Toz Pembe, 2026-07-03 tarihli single kaydıdır. Yayın ve ortak sanatçı bilgisi Apple Music’te listelenir.",
+        "videoId": "0pg0raFMNIU",
+        "videoSource": "https://www.youtube.com/watch?v=0pg0raFMNIU"
+      }
+    },
+    {
+      "type": "song",
+      "slug": "yasanacaksa",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Yaşanacaksa",
+        "slug": "yasanacaksa",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 9,
+        "credits": "Manifest · Hypers Music",
+        "duration": 166,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in 2025 tarihli yayını. Çıtır Kızlar’ın Yaşanacaksa Yaşanacak eserine dayanan bir yorumdur.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "zamansizdik",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Zamansızdık",
+        "slug": "zamansizdik",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 8,
+        "credits": "Manifest · Hypers Music",
+        "duration": 170,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in 2025 tarihli yayını. Albümün özgün parça sıralamasında yer alır.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "zehir",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Zehir",
+        "slug": "zehir",
+        "albumId": "real-manifest-albumler",
+        "albumSlug": "manifestival",
+        "albumTitle": "manifestival",
+        "date": "2025-06-13",
+        "cover": "/images/manifest/manifestival.webp",
+        "position": 6,
+        "credits": "Manifest ve Pango",
+        "duration": 185,
+        "url": "https://music.apple.com/tr/album/manifestival/1813439256",
+        "description": "Manifest’in 2025 tarihli yayını. Albümün özgün parça sıralamasında yer alır.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "zehir-arem-arman-remix",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Zehir (Arem & Arman Remix)",
+        "slug": "zehir-arem-arman-remix",
+        "albumId": "manifest-albumler-zehir-arem-arman-remix",
+        "albumSlug": "zehir-arem-arman-remix",
+        "albumTitle": "Zehir (Arem & Arman Remix)",
+        "date": "2026-03-06",
+        "cover": "/images/manifest/zehir-arem-arman-remix.webp",
+        "position": 1,
+        "credits": "Manifest · Hypers Music",
+        "duration": 174,
+        "url": "https://music.apple.com/us/album/zehir-arem-arman-remix-single/1880680385",
+        "description": "Zehir (Arem & Arman Remix), 2026-03-06 tarihli single kaydıdır. Yayın ve ortak sanatçı bilgisi Apple Music’te listelenir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    },
+    {
+      "type": "song",
+      "slug": "zehir-motive-remix",
+      "expectedRevision": 1,
+      "status": "published",
+      "values": {
+        "name": "Zehir (Motive Remix)",
+        "slug": "zehir-motive-remix",
+        "albumId": "manifest-albumler-manifestival-deluxe",
+        "albumSlug": "manifestival-deluxe",
+        "albumTitle": "manifestival (deluxe)",
+        "date": "2025-09-05",
+        "cover": "/images/manifest/manifestival-deluxe.webp",
+        "position": 14,
+        "credits": "Manifest · Hypers Music",
+        "duration": 232,
+        "url": "https://music.apple.com/tr/album/manifestival-deluxe/1836369123",
+        "description": "Manifest’in 2025 tarihli yayını. Deluxe sürümde yer alan ayrı düzenlemedir.",
+        "videoId": null,
+        "videoSource": ""
+      }
+    }
+  ]
+}

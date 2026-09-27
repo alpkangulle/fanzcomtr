@@ -17,6 +17,8 @@ for route in manifest.get('headers',[]):
 PYSEO
 test -f "$release/public/images/artists/semicenk.png"
 test -f "$release/public/images/artists/manifest.jpg"
+test -f "$release/public/images/manifest/zamansizdik.webp"
+test -f "$release/public/images/manifest/londra-ovo-arena-afis.jpg"
 test -f "$release/public/images/albums/semicenk.jpg"
 test -f "$release/public/fonts/dm-sans-latin.woff2"
 test -f "$base/shared/runtime.env"
@@ -61,6 +63,10 @@ for path in manifest manifest/biyografi manifest/albumler manifest/sarkilar/toz-
  if ! curl -fsS --max-time 15 "$origin/$path" -o /dev/null; then rollback; exit 1; fi
 done
 if ! curl -fsS --max-time 15 "$origin/manifest/sarkilar/toz-pembe" | python3 -c 'import sys;s=sys.stdin.read();sys.exit(1 if "noindex" in s or "Manifest" not in s else 0)'; then rollback; exit 1; fi
+for image in zamansizdik.webp londra-ovo-arena-afis.jpg; do
+ if ! curl -fsS --max-time 15 "$origin/images/manifest/$image" -o /dev/null; then rollback; exit 1; fi
+done
+
 
 if ! curl -fsS --max-time 5 "$origin/api/member/session" | /usr/bin/python3 -c 'import json,sys;d=json.load(sys.stdin);sys.exit(0 if "member" in d else 1)'; then rollback; exit 1; fi
 curl -fsS --max-time 15 "$origin/sezen-aksu" -o /dev/null
